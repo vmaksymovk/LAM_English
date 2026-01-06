@@ -1211,6 +1211,70 @@
                 gap: 0.75rem;
             }
         }
+
+        /* NOWY STYL: Komunikat o wybranym kursie */
+        .course-selection-banner {
+            background: linear-gradient(135deg, #e6f4e6 0%, #f0f9f0 100%);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            display: none;
+        }
+
+        .course-selection-banner.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .course-selection-banner h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .course-selection-banner p {
+            color: var(--text-light);
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* NOWY STYL: Trust badges */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .trust-badge i {
+            color: var(--primary-color);
+        }
+
+        .privacy-notice {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            text-align: center;
+            margin-top: 1rem;
+            font-style: italic;
+        }
     </style>
 
     <script>
@@ -1295,7 +1359,7 @@
             </div>
         </section>
 
-        <section class="contact-section" aria-labelledby="contact-heading">
+        <section class="contact-section" id="contact-form" aria-labelledby="contact-heading">
             <div class="section-container">
                 <div class="section-title">
                     <h2 id="contact-heading">Skontaktuj się z nami</h2>
@@ -1303,12 +1367,24 @@
                         godzinach 8:00-20:00.</p>
                 </div>
 
+                <!-- NOWY: Banner z wybranym kursem -->
+                <div id="courseSelectionBanner" class="course-selection-banner">
+                    <h4><i class="fas fa-check-circle"></i> PIERWSZY KROK ZOSTAŁ WŁAŚNIE PODJĘTY</h4>
+                    <p id="courseSelectionText">Dokończ zgłoszenie poniżej, abyśmy mogli przedstawić Ci szczegóły oferty.</p>
+                </div>
+
                 <div class="contact-grid">
-                    <div class="contact-form" id="contact-form" itemprop="mainEntity" itemscope itemtype="https://schema.org/ContactPage">
+                    <div class="contact-form" itemprop="mainEntity" itemscope itemtype="https://schema.org/ContactPage">
                         <h3>Wyślij wiadomość</h3>
                         <p>Wypełnij poniższe pola, aby skontaktować się z nami</p>
 
                         <form id="contactForm" action="https://formspree.io/f/mvgklngp" method="POST" itemscope itemtype="https://schema.org/ContactPoint">
+                            <!-- Ukryte pola dla danych kursu -->
+                            <input type="hidden" id="hidden-course" name="selected_course" value="">
+                            <input type="hidden" id="hidden-level" name="course_level" value="">
+                            <input type="hidden" id="hidden-type" name="course_type" value="">
+                            <input type="hidden" id="hidden-price" name="course_price" value="">
+
                             <div class="form-group">
                                 <label for="contact-name">Imię i nazwisko *</label>
                                 <input type="text" id="contact-name" name="name" class="form-control"
@@ -1322,7 +1398,7 @@
                                 <div class="error-message" id="contactEmailError"></div>
                             </div>
                             <div class="form-group">
-                                <label for="contact-phone">Numer telefonu (opcjonalnie)</label>
+                                <label for="contact-phone">Numer telefonu (opcjonalnie, dla szybszego kontaktu)</label>
                                 <input type="tel" id="contact-phone" name="phone" class="form-control"
                                     placeholder="Wprowadź swój numer telefonu" itemprop="telephone">
                             </div>
@@ -1345,12 +1421,26 @@
                                 <div class="error-message" id="contactMessageError"></div>
                             </div>
 
+                            
+
                             <input type="hidden" name="_subject" value="Nowa wiadomość kontaktowa - Language Academy Maksymov">
                             <input type="text" name="_gotcha" style="display:none">
 
                             <button type="submit" class="button" aria-label="Wyślij formularz kontaktowy">
                                 <i class="fas fa-paper-plane"></i> Wyślij wiadomość
                             </button>
+                                <!-- NOWE: Trust badges -->
+                            <div class="trust-badges">
+                                <div class="trust-badge">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Twoje dane są bezpieczne</span>
+                                </div>
+                                <div class="trust-badge">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Odpowiadamy w 24h</span>
+                                </div>
+                            </div>
+                            <p class="privacy-notice">Wysyłając formularz, wyrażasz zgodę na przetwarzanie danych w celu kontaktu.</p>
                         </form>
 
                         <div class="success-message" id="contactSuccessMessage">
@@ -1679,6 +1769,82 @@
 
     <script defer>
         document.addEventListener('DOMContentLoaded', function () {
+            // 1. ODCZYT PARAMETRÓW URL I WYPEŁNIENIE FORMULARZA
+            const urlParams = new URLSearchParams(window.location.search);
+            const courseParam = urlParams.get('course');
+            const typeParam = urlParams.get('type');
+            const priceParam = urlParams.get('price');
+
+            if (courseParam) {
+                // Znajdź select z kursami
+                const courseSelect = document.getElementById('contact-course');
+                const hiddenCourse = document.getElementById('hidden-course');
+                const hiddenLevel = document.getElementById('hidden-level');
+                const hiddenType = document.getElementById('hidden-type');
+                const hiddenPrice = document.getElementById('hidden-price');
+                const courseBanner = document.getElementById('courseSelectionBanner');
+                const bannerText = document.getElementById('courseSelectionText');
+                
+                // Ustaw ukryte pola
+                if (hiddenCourse) hiddenCourse.value = courseParam;
+                if (hiddenType && typeParam) hiddenType.value = typeParam;
+                if (hiddenPrice && priceParam) hiddenPrice.value = priceParam;
+                
+                // Spróbuj dopasować wartość do selecta
+                let foundMatch = false;
+                if (courseSelect) {
+                    for (let option of courseSelect.options) {
+                        if (option.text.includes(courseParam) || courseParam.includes(option.text)) {
+                            option.selected = true;
+                            foundMatch = true;
+                            break;
+                        }
+                    }
+                    
+                    // Jeśli nie znaleziono dokładnego matcha, ustaw pierwszą opcję z częściowym match
+                    if (!foundMatch) {
+                        for (let option of courseSelect.options) {
+                            if (option.text.toLowerCase().includes(courseParam.toLowerCase()) || 
+                                courseParam.toLowerCase().includes(option.text.toLowerCase())) {
+                                option.selected = true;
+                                foundMatch = true;
+                                break;
+                            }
+                        }
+                    }
+                }
+                
+                // Wyświetl banner z informacją o wybranym kursie
+                if (courseBanner && bannerText) {
+                    let bannerMessage = `Zapytanie o kurs: <strong>${courseParam}</strong>`;
+                    if (typeParam) {
+                        bannerMessage += ` - ${typeParam === 'group' ? 'zajęcia grupowe' : 'zajęcia indywidualne'}`;
+                    }
+                    bannerMessage += `. Dokończ zgłoszenie poniżej, abyśmy mogli przedstawić Ci szczegóły oferty.`;
+                    
+                    bannerText.innerHTML = bannerMessage;
+                    courseBanner.classList.add('show');
+                    
+                    // Przewiń do bannera
+                    setTimeout(() => {
+                        courseBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 300);
+                }
+                
+                // Automatycznie uzupełnij wiadomość
+                const messageField = document.getElementById('contact-message');
+                if (messageField && !messageField.value.trim()) {
+                    let defaultMessage = `Interesuje mnie kurs: ${courseParam}`;
+                    if (priceParam) {
+                        defaultMessage += `. Chciałbym/chciałabym dowiedzieć się więcej o tym kursie.`;
+                    } else {
+                        defaultMessage += `. Chciałbym/chciałabym umówić się na darmową lekcję próbną.`;
+                    }
+                    messageField.value = defaultMessage;
+                }
+            }
+
+            // 2. ISTNIEJĄCY KOD DO MENU MOBILNEGO
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mainNav = document.getElementById('main-nav');
 
@@ -1701,6 +1867,7 @@
                 });
             }
 
+            // 3. FAQ ACCORDION
             const faqItems = document.querySelectorAll('.faq-item');
             faqItems.forEach(item => {
                 const question = item.querySelector('.faq-question');
@@ -1726,6 +1893,7 @@
                 });
             });
 
+            // 4. FORMULARZ KONTAKTOWY
             const contactForm = document.getElementById('contactForm');
             const successMessage = document.getElementById('contactSuccessMessage');
 
@@ -1783,7 +1951,8 @@
                                 if (window.dataLayer) {
                                     window.dataLayer.push({
                                         'event': 'form_submission',
-                                        'form_type': 'contact'
+                                        'form_type': 'contact',
+                                        'course_selected': courseParam || 'none'
                                     });
                                 }
                             } else {
@@ -1797,6 +1966,7 @@
                 });
             }
 
+            // 5. TRACKING DLA CTA
             const ctaButtons = document.querySelectorAll('.cta-button, .phone-cta, .button');
             ctaButtons.forEach(button => {
                 button.addEventListener('click', function () {
@@ -1805,7 +1975,8 @@
                             'event': 'cta_click',
                             'cta_type': this.classList.contains('phone-cta') ? 'phone' : 'button',
                             'cta_text': this.textContent.trim(),
-                            'cta_location': 'contact_page'
+                            'cta_location': 'contact_page',
+                            'course_prefilled': courseParam || 'none'
                         });
                     }
                 });
