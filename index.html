@@ -1345,6 +1345,65 @@
     .hero-image {
         display: none; /* UKRYWAMY ZDJĘCIE W MOBILE */
     }
+
+    /* ===== SPECJALNE DOSTOSOWANIE SEKCJI HERO ===== */
+/* Dodaj ten kod w istniejącym @media (max-width: 768px) */
+
+.hero h1 strong {
+    color: var(--primary-color);
+    display: inline;
+}
+
+.hero p strong {
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+.hero-benefit {
+    justify-content: center;
+    text-align: left;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+}
+
+.hero-benefit i {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    min-width: 24px;
+}
+
+.hero-benefit span {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.hero-benefit span strong {
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.hero-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.hero-actions .cta-button-large {
+    width: 100%;
+    max-width: 350px;
+    justify-content: center;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+.hero-actions .cta-button-secondary {
+    width: 100%;
+    max-width: 350px;
+    justify-content: center;
+    border-width: 2px;
+}
     
     /* Compact trust indicators - nowa wersja */
     .trust-indicators {
@@ -1634,6 +1693,39 @@
     .hero-benefit span {
         font-size: 0.9rem;
     }
+
+    .hero h1 {
+        font-size: 1.7rem;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+    }
+    
+    .hero h1 strong {
+        display: inline;
+        color: var(--primary-color);
+    }
+    
+    .hero p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-benefit {
+        max-width: 300px;
+        padding: 0.4rem 0;
+    }
+    
+    .hero-benefit span {
+        font-size: 0.95rem;
+    }
+    
+    .hero-actions .cta-button-large,
+    .hero-actions .cta-button-secondary {
+        max-width: 300px;
+        padding: 0.9rem 1.5rem;
+        font-size: 1rem;
+    }
     
     /* Single column trust indicators */
     .trust-indicators {
@@ -1844,6 +1936,26 @@
     
     .hero-benefit span {
         font-size: 0.85rem;
+    }
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero p {
+        font-size: 0.95rem;
+    }
+    
+    .hero-benefit {
+        max-width: 280px;
+    }
+    
+    .hero-benefit span {
+        font-size: 0.9rem;
+    }
+    
+    .hero-actions .cta-button-large,
+    .hero-actions .cta-button-secondary {
+        max-width: 280px;
     }
 }
 
