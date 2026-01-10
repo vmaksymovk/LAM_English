@@ -254,14 +254,13 @@
             flex-direction: column;
         }
 
-        /* CHANGED: H1 changed to div to fix multiple H1 issue */
-        .logo-text div {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin: 0;
-            letter-spacing: -0.5px;
-            color: var(--primary-color);
-        }
+        header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.5px;
+    color: var(--primary-color);
+}
 
         .tagline {
             font-size: 0.9rem;
@@ -1194,7 +1193,7 @@
                 display: none;
             }
 
-            .logo-text div {
+            header h1 {
                 font-size: 1.4rem;
             }
 
@@ -1263,7 +1262,7 @@
                 grid-template-columns: 1fr;
             }
 
-            .logo-text div {
+            header h1 {
                 font-size: 1.2rem;
             }
 
@@ -1285,8 +1284,7 @@
                 <img src="Images/Logo_New_Bigger.png" alt="Language Academy Maksymov Logo - Szkoła językowa online" width="80" height="80" loading="eager">
             </a>
             <div class="logo-text">
-                <!-- CHANGED: H1 changed to div to fix multiple H1 issue -->
-                <div>Language Academy Maksymov</div>
+                <h1 itemprop="name">Language Academy Maksymov</h1>
                 <p class="tagline">Profesjonalne kursy językowe online</p>
             </div>
         </div>
