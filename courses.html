@@ -256,12 +256,13 @@
 
         /* CHANGED: H1 changed to div to fix multiple H1 issue */
         .logo-text div {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin: 0;
-            letter-spacing: -0.5px;
-            color: var(--primary-color);
-        }
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0; /* Kluczowe: usuwa domyślne marginesy */
+    letter-spacing: -0.5px;
+    color: var(--primary-color);
+    line-height: 1.2; /* Dodaj tę samą wartość co w Code 1 */
+}
 
         .tagline {
             font-size: 0.9rem;
