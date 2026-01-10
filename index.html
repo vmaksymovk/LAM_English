@@ -433,28 +433,23 @@
         }
 
         .hero-benefits {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 2.5rem;
-    align-items: flex-start; /* ZMIANA: z center na flex-start */
-    max-width: 600px; /* DODANE: ogranicz szerokość */
-    margin-left: auto;
-    margin-right: auto;
-}
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
 
-.hero-benefit {
-    display: flex;
-    align-items: flex-start; /* ZMIANA: z center na flex-start */
-    gap: 1rem;
-    text-align: left;
-    width: 100%; /* DODANE: zajmuj całą dostępną szerokość */
-}
+        .hero-benefit {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
 
-.hero-benefit i {
-    flex-shrink: 0; /* ZAPEWNIA: że ikona się nie kurczy */
-    margin-top: 0.2rem; /* DODANE: lekko wyśrodkuj ikonę względem tekstu */
-}
+        .hero-benefit i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            width: 24px;
+        }
 
         .hero-actions {
             display: flex;
