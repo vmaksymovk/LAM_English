@@ -1178,7 +1178,12 @@
 
   
 
-/* ============================================= */
+
+
+
+
+
+        /* ============================================= */
 /* MOBILE MEDIA QUERIES - HEADER + CONTENT      */
 /* ============================================= */
 
@@ -1284,6 +1289,7 @@
         font-size: 2rem;
         line-height: 1.3;
         margin-bottom: 1rem;
+        text-align: center;
     }
     
     .hero p {
@@ -1296,17 +1302,25 @@
     .hero-benefits {
         margin-bottom: 1.5rem;
         align-items: center;
-        display: inline-flex;
+        display: flex;
         flex-direction: column;
         width: 100%;
+        gap: 0.8rem;
     }
     
     .hero-benefit {
         justify-content: center;
         width: 100%;
-        text-align: left;
+        text-align: center;
         max-width: 300px;
         margin: 0 auto;
+        gap: 0.8rem;
+    }
+    
+    .hero-benefit span {
+        text-align: center;
+        font-size: 0.95rem;
+        line-height: 1.4;
     }
     
     .hero-actions {
@@ -1330,28 +1344,24 @@
     }
     
     .hero-image {
-        order: -1;
-        margin-bottom: 2rem;
+        display: none; /* UKRYWAMY ZDJĘCIE W MOBILE */
     }
     
-    .hero-image img {
-        max-width: 100%;
-        height: auto;
-        border-radius: var(--border-radius);
-    }
-    
-    /* Trust indicators */
+    /* Compact trust indicators - nowa wersja */
     .trust-indicators {
         padding: 2rem 1rem;
         justify-content: center;
         gap: 1.5rem;
         flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
     }
     
     .trust-item {
-        min-width: 140px;
-        flex: 1 1 140px;
-        margin: 0.5rem;
+        min-width: 100%;
+        flex: 1 1 100%;
+        margin: 0.5rem 0;
+        max-width: 300px;
     }
     
     /* Features section */
@@ -1504,28 +1514,24 @@
         justify-content: center;
     }
     
+    /* Sticky CTA - jak w działającym kodzie */
     .sticky-cta {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            z-index: 999;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            align-items: flex-end;
-        }
-    
-    .phone-cta {
-                padding: 1rem;
-                border-radius: 50%;
-                width: 60px;
-                height: 60px;
-                justify-content: center;
-            }
-    
+        bottom: 1rem;
+        right: 1rem;
+    }
     
     .phone-cta span {
         display: none;
+    }
+    
+    .phone-cta {
+        padding: 1rem;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
     }
     
     /* Highlight box */
@@ -1548,14 +1554,17 @@
         font-size: 0.95rem;
     }
     
-    /* Trust indicators - 2 per row */
+    /* Trust indicators - 1 per row */
     .trust-indicators {
-        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
     }
     
     .trust-item {
-        min-width: 45%;
-        flex: 1 1 45%;
+        min-width: 100%;
+        flex: 1 1 100%;
+        max-width: 280px;
     }
     
     /* Ensure proper spacing */
@@ -1588,10 +1597,16 @@
         padding: 1rem;
         flex-direction: column;
         text-align: center;
+        gap: 0.5rem;
     }
     
     .step-number {
         margin: 0 auto 0.5rem;
+    }
+    
+    /* Compact trust items text */
+    .trust-text {
+        font-size: 0.85rem;
     }
 }
 
@@ -1604,9 +1619,22 @@
     
     .hero h1 {
         font-size: 1.5rem;
+        text-align: center;
+        line-height: 1.3;
     }
     
     .hero p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    
+    .hero-benefit {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .hero-benefit span {
         font-size: 0.9rem;
     }
     
@@ -1615,13 +1643,18 @@
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
+        padding: 1.5rem 0.5rem;
     }
     
     .trust-item {
         width: 100%;
-        max-width: 200px;
+        max-width: 250px;
         min-width: auto;
         flex: 1 1 100%;
+    }
+    
+    .trust-text {
+        font-size: 0.8rem;
     }
     
     /* Compact features */
@@ -1637,6 +1670,10 @@
     
     .feature h3 {
         font-size: 1.25rem;
+    }
+    
+    .feature p {
+        font-size: 0.9rem;
     }
     
     /* Better pricing display */
@@ -1730,8 +1767,8 @@
     
     /* Phone CTA icon only */
     .phone-cta {
-        width: 48px;
-        height: 48px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
         padding: 0;
         display: flex;
@@ -1740,7 +1777,7 @@
     }
     
     .phone-cta i {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         margin: 0;
     }
 }
@@ -1813,12 +1850,11 @@
         width: 120px;
         font-size: 0.7rem;
     }
+    
+    .hero-benefit span {
+        font-size: 0.85rem;
+    }
 }
-
-
-
-
-
 
 
 
