@@ -1504,30 +1504,25 @@
         justify-content: center;
     }
     
-    /* Sticky CTA - based on legal page (none) */
     .sticky-cta {
-        bottom: 1rem;
-        right: 1rem;
-    }
-    
-    .phone-cta {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 999;
             display: flex;
-            align-items: center;
-            background: var(--primary-color);
-            color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            box-shadow: var(--shadow-lg);
-            transition: var(--transition);
-            gap: 0.5rem;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: flex-end;
         }
     
-    .phone-cta i {
-        font-size: 1.2rem;
-        margin: 0;
-    }
+    .phone-cta {
+                padding: 1rem;
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                justify-content: center;
+            }
+    
     
     .phone-cta span {
         display: none;
