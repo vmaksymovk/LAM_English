@@ -2,7 +2,7 @@
 <html lang="pl">
 
 <head>
- <!-- Favicon & App Icons -->
+    <!-- Favicon & App Icons -->
     <link rel="icon" type="image/svg+xml" href="FaviconForWebPage/favicon.svg" />
     <link rel="shortcut icon" href="FaviconForWebPage/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="FaviconForWebPage/apple-touch-icon.png">
@@ -14,9 +14,9 @@
     <meta name="apple-mobile-web-app-title" content="LAM English">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Regulamin - Language Academy Maksymov | Szkoła Językowa Online</title>
+    <title>Regulamin Świadczenia Usług Edukacyjnych - LAM English | Language Academy Maksymov</title>
     <meta name="description"
-        content="Regulamin świadczenia usług przez Language Academy Maksymov. Zasady korzystania z kursów językowych online, płatności i warunki uczestnictwa.">
+        content="Regulamin świadczenia usług edukacyjnych online przez LAM English (Language Academy Maksymov). Zasady uczestnictwa w kursach, płatności, rezygnacji i ochrony własności intelektualnej.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -279,12 +279,13 @@
             margin: 1.5rem 0;
         }
 
-        .legal-warning-box {
-            background: rgba(221, 107, 32, 0.05);
-            border: 1px solid var(--accent-color);
+        .legal-info-box {
+            background: rgba(72, 187, 120, 0.05);
+            border: 1px solid var(--primary-light);
             border-radius: 8px;
             padding: 1.5rem;
             margin: 1.5rem 0;
+            border-left: 4px solid var(--primary-color);
         }
 
         .contact-info-legal {
@@ -306,6 +307,13 @@
             font-size: 1.4rem;
             color: var(--primary-color);
             margin: 1.5rem 0 1rem;
+        }
+
+        .legal-item h4 {
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+            margin: 1.2rem 0 0.8rem;
+            font-weight: 600;
         }
 
         .legal-item p,
@@ -339,6 +347,21 @@
             margin-top: 3rem;
             padding-top: 2rem;
             border-top: 1px solid #e2e8f0;
+        }
+
+        .permanent-link {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.02);
+            border-radius: 8px;
+        }
+
+        .friendly-icon {
+            color: var(--primary-color);
+            margin-right: 10px;
         }
 
         footer {
@@ -498,6 +521,18 @@
                 padding: 1.5rem;
             }
         }
+        li a[href^="mailto:"] {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    max-width: 100%;
+}
+
+li a[href^="mailto:"] span,
+li a[href^="mailto:"] {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
     </style>
 </head>
 
@@ -507,7 +542,8 @@
     <header id="header">
         <div class="logo-container">
             <a href="index.html" aria-label="Language Academy Maksymov - Strona główna">
-                <img src="Images/Logo_New_Bigger.png" alt="Language Academy Maksymov Logo - Szkoła językowa online" width="80" height="80" loading="eager">
+                <img src="Images/Logo_New_Bigger.png" alt="Language Academy Maksymov Logo - Szkoła językowa online"
+                    width="80" height="80" loading="eager">
             </a>
             <div class="logo-text">
                 <h1>Language Academy Maksymov</h1>
@@ -535,9 +571,14 @@
     <main id="main-content">
         <section class="legal-hero">
             <div class="legal-hero-content">
-                <h1>Regulamin świadczenia usług</h1>
-                <p>Niniejszy regulamin określa zasady korzystania z platformy edukacyjnej Language Academy Maksymov oraz warunki
-                    uczestnictwa w naszych kursach językowych.</p>
+                <h1>Regulamin Świadczenia Usług Edukacyjnych LAM English</h1>
+                <p>Witamy w LAM English! Poniższy regulamin został stworzony z myślą o transparentności i budowaniu
+                    wzajemnego zaufania. Wyjaśniamy w nim jasno zasady naszej współpracy, abyście mogli w pełni skupić
+                    się na tym, co najważniejsze - na nauce języka angielskiego.</p>
+                <div class="permanent-link">
+                    <p><i class="fas fa-link friendly-icon"></i> Ten regulamin jest dostępny w sposób trwały pod adresem:
+                        <strong>https://lam-english.com/terms-of-service.html</strong></p>
+                </div>
             </div>
         </section>
 
@@ -545,210 +586,282 @@
             <div class="legal-container">
                 <div class="legal-content">
                     <div class="legal-section-numbered">
-                        <h2>Postanowienia ogólne</h2>
+                        <h2>Witamy i zapraszamy do współpracy</h2>
                         <div class="legal-point">
-                            1.1. Niniejszy regulamin (zwany dalej "Regulaminem") określa zasady świadczenia usług drogą
-                            elektroniczną przez Language Academy Maksymov.
+                            1.1. Cieszymy się, że wybraliście LAM English (Language Academy Maksymov) do nauki języka
+                            angielskiego! Jesteśmy jednoosobową działalnością gospodarczą, z siedzibą w Warszawie,
+                            działającą pod adresem e-mail: language.english.academy@gmail.com, telefon: +48 576 076 648,
+                            NIP: [NUMER_NIP], REGON: [NUMER_REGON] (zwani dalej "nami" lub "LAM English").
                         </div>
                         <div class="legal-point">
-                            1.2. Usługodawcą jest firma Language Academy Maksymov z siedzibą w Warszawie, adres: [ADRES_SIEDZIBY],
-                            NIP: [NUMER_NIP], REGON: [NUMER_REGON], adres e-mail: language.english.academy@gmail.com,
-                            telefon: +48 576 076 648.
+                            1.2. Jesteście dla nas <strong>Uczniami/Konsumentami</strong> - osobami, które chcą rozwijać
+                            swoje umiejętności językowe. Zawieramy z Wami umowę o świadczenie usług edukacyjnych, aby
+                            wspólnie pracować nad Waszymi celami.
                         </div>
                         <div class="legal-point">
-                            1.3. Usługobiorcą jest osoba fizyczna zawierająca Umowę o świadczenie usług edukacyjnych ze
-                            Language Academy Maksymov.
+                            1.3. <strong>Nasze usługi</strong> to wszystko, co oferujemy: Kursy Grupowe, Zajęcia
+                            Indywidualne oraz darmowy Speaking Club - każda z tych form ma na celu pomóc Wam w mówieniu
+                            po angielsku.
                         </div>
                         <div class="legal-point">
-                            1.4. Warunkiem skorzystania z Usług jest zapoznanie się z Regulaminem oraz zaakceptowanie
-                            jego postanowień.
+                            1.4. <strong>Kurs</strong> to nasz wspólnie zaplanowany cykl spotkań, podczas których
+                            skupiamy się na praktycznej komunikacji.
+                        </div>
+                        <div class="legal-point">
+                            1.5. Spotykamy się na <strong>Platformach</strong> do wideorozmów (Zoom, Microsoft Teams,
+                            Google Meet), które wybieramy dla Waszej wygody.
+                        </div>
+                        <div class="legal-point">
+                            1.6. <strong>Speaking Club</strong> to nasza darmowa, otwarta społeczność online (np. na
+                            Messengerze/Facebooku), gdzie w luźnej atmosferze możecie ćwiczyć angielski. To dodatek do
+                            kursów, z którego możecie korzystać niezależnie.
+                        </div>
+                        <div class="legal-point">
+                            1.7. <strong>Materiały Edukacyjne</strong> to wszystko, co przygotowujemy specjalnie dla
+                            Was: prezentacje, zadania, nasze autorskie metody. Są owocem naszej pracy i dzielimy się
+                            nimi z Wami na potrzeby nauki.
+                        </div>
+                        <div class="legal-point">
+                            1.8. Rozpoczynając naukę z nami, akceptujecie niniejszy regulamin. Robicie to zaznaczając
+                            odpowiednie pole podczas zapisu lub dokonując pierwszej płatności. To formalność, która
+                            pozwala nam na klarowną współpracę.
                         </div>
                     </div>
 
                     <div class="legal-section-numbered">
-                        <h2>Definicje</h2>
+                        <h2>Jak wyglądają nasze zajęcia i kursy</h2>
                         <div class="legal-point">
-                            2.1. <strong>Usługodawca</strong> - Language Academy Maksymov, podmiot świadczący usługi edukacyjne.
-                        </div>
-                        <div class="legal-point">
-                            2.2. <strong>Usługobiorca</strong> - osoba fizyczna korzystająca z Usług, która ukończyła 16
-                            rok życia.
-                        </div>
-                        <div class="legal-point">
-                            2.3. <strong>Umowa</strong> - umowa o świadczenie usług edukacyjnych zawierana pomiędzy
-                            Usługodawcą a Usługobiorcą.
-                        </div>
-                        <div class="legal-point">
-                            2.4. <strong>Kurs</strong> - cykl zajęć językowych oferowany w formie online, prowadzony
-                            przez wykwalifikowanego lektora.
-                        </div>
-                    </div>
-
-                    <div class="legal-section-numbered">
-                        <h2>Warunki uczestnictwa</h2>
-                        <div class="legal-point">
-                            3.1. Warunkiem uczestnictwa w Kursach jest:
+                            2.1. Stworzyliśmy różne formy nauki, aby każdy mógł znaleźć coś dla siebie:
                             <ul>
-                                <li>ukończenie 16 roku życia</li>
-                                <li>posiadanie pełnej zdolności do czynności prawnych lub wyrażenie zgody przez
-                                    przedstawiciela ustawowego</li>
-                                <li>zaakceptowanie postanowień niniejszego Regulaminu</li>
-                            </ul>
-                        </div>
-                        <div class="legal-point">
-                            3.2. Wymagania techniczne:
-                            <ul>
-                                <li>stabilne łącze internetowe (min. 5 Mb/s)</li>
-                                <li>aktualna przeglądarka internetowa (Chrome, Firefox, Edge, Safari)</li>
-                                <li>mikrofon i kamera internetowa</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="legal-section-numbered">
-                        <h2>Rodzaje usług i zasady uczestnictwa</h2>
-                        <div class="legal-point">
-                            4.1. Language Academy Maksymov oferuje następujące rodzaje usług:
-                            <ul>
-                                <li><strong>Kursy grupowe</strong> - English Start (A1-A2), English Boost (B1-B2),
-                                    English Pro (C1-C2)</li>
-                                <li><strong>Zajęcia indywidualne</strong> - Personal English Plan</li>
-                                <li><strong>Rozmowy klubowe</strong> - English Talk Club</li>
-                            </ul>
-                        </div>
-                        <div class="legal-point">
-                            4.2. Kursy grupowe uruchamiane są po zebraniu minimalnej liczby 4 uczestników.
-                        </div>
-                    </div>
-
-                    <div class="legal-section-numbered">
-                        <h2>Płatności</h2>
-                        <div class="legal-point">
-                            5.1. Cennik Usług dostępny jest na stronie internetowej lam-english.com
-                        </div>
-                        <div class="legal-point">
-                            5.2. Aktualne ceny Kursów:
-                            <ul>
-                                <li>English Start (A1-A2): 279 zł za pakiet miesięczny (8 zajęć)</li>
-                                <li>English Boost (B1-B2): 329 zł za pakiet miesięczny (8 zajęć)</li>
-                                <li>English Pro (C1-C2): 429 zł za pakiet miesięczny (8 zajęć)</li>
-                                <li>Zajęcia indywidualne: 600 zł za pakiet 10 zajęć</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="legal-section-numbered">
-                        <h2>Prawo do odstąpienia od umowy</h2>
-                        <div class="legal-warning-box">
-                            <p><i class="fas fa-exclamation-circle"></i> <strong>WAŻNE:</strong> Zgodnie z art. 38
-                                ustawy o prawach konsumenta, konsument traci prawo do odstąpienia od umowy w przypadku,
-                                gdy przedsiębiorca wykonał w pełni usługę za wyraźną zgodą konsumenta, który został
-                                poinformowany o utracie prawa odstąpienia po wykonaniu usługi.</p>
-                        </div>
-                        <div class="legal-point">
-                            6.1. Usługobiorca będący konsumentem ma prawo odstąpić od Umowy w terminie 14 dni od jej
-                            zawarcia bez podawania przyczyny.
-                        </div>
-                        <div class="legal-point">
-                            6.2. W przypadku Kursów, prawo do odstąpienia przysługuje tylko do momentu rozpoczęcia
-                            świadczenia usługi.
-                        </div>
-                    </div>
-
-                    <div class="legal-section-numbered">
-                        <h2>Zasady dotyczące nieobecności i braku zwrotów</h2>
-                        <div class="legal-warning-box">
-                            <p><i class="fas fa-exclamation-triangle"></i> <strong>KLUCZOWA INFORMACJA:</strong> LAM English
-                                 <strong>NIE ZWRACA</strong> pieniędzy za nieodbyte zajęcia, zarówno grupowe jak i
-                                indywidualne. Zakup kursu oznacza rezerwację miejsca i czasu lektora, niezależnie od
-                                obecności uczestnika.</p>
-                        </div>
-                        <div class="legal-point">
-                            7.1. Usługobiorca zobowiązuje się do punktualnego uczestnictwa w zajęciach.
-                        </div>
-                        <div class="legal-point">
-                            7.2. <strong>Nieobecność na zajęciach NIE upoważnia do żądania zwrotu opłaty za te zajęcia
-                                ani do przeniesienia opłaty na inne zajęcia.</strong>
-                        </div>
-                        <div class="legal-point">
-                            7.3. W przypadku zajęć indywidualnych, Usługobiorca może odwołać zajęcia najpóźniej na 24
-                            godziny przed planowanym terminem. W przeciwnym razie zajęcia uznaje się za odbyte i
-                            <strong>NIE przysługuje zwrot.</strong>
-                        </div>
-                    </div>
-
-                    <div class="legal-section-numbered">
-                        <h2>Reklamacje</h2>
-                        <div class="legal-point">
-                            8.1. Usługobiorca ma prawo złożyć reklamację dotyczącą świadczonych Usług.
-                        </div>
-                        <div class="legal-point">
-                            8.2. Reklamację należy złożyć w formie pisemnej na adres e-mail:
-                            language.english.academy@gmail.com.
-                        </div>
-                    </div>
-
-                    <div class="legal-section-numbered">
-                        <h2>Odpowiedzialność</h2>
-                        <div class="legal-point">
-                            9.1. Usługodawca dokłada należytej staranności w świadczeniu Usług, jednak nie gwarantuje
-                            określonych rezultatów nauki.
-                        </div>
-                        <div class="legal-point">
-                            9.2. Usługodawca nie ponosi odpowiedzialności za:
-                            <ul>
-                                <li>przerwy w dostępie do Platformy spowodowane awariami technicznymi lub konserwacją
+                                <li><strong>Kursy grupowe (English Start, Boost, Pro):</strong> To 8 spotkań w miesiącu w
+                                    małej, stałej grupie. Skupiamy się głównie na mówieniu, abyście jak najszybciej
+                                    przełamali barierę językową. Terminy są stałe, co pomaga w regularności. Niestety,
+                                    z uwagi na dynamikę grupy, <strong>nie ma możliwości odrabiania nieobecności na
+                                        zajęciach grupowych.</strong>
                                 </li>
-                                <li>niemożność uczestnictwa w zajęciach wynikającą z problemów technicznych po stronie
-                                    Usługobiorcy</li>
+                                <li><strong>Zajęcia indywidualne (Personal English Plan):</strong> Lekcje "skrojone na
+                                    miarę", w terminach, które wspólnie ustalicie z lektorem. Możecie wykupić pojedyncze
+                                    spotkania lub pakiety.
+                                </li>
+                                <li><strong>Speaking Club:</strong> Darmowe miejsce do swobodnych rozmów po angielsku.
+                                    Dołączacie kiedy chcecie, bez zobowiązań.
+                                </li>
                             </ul>
+                        </div>
+                        <div class="legal-point">
+                            2.2. Zależy nam na ciągłości zajęć. Jeśli Wasz stały lektor z ważnych przyczyn (np. choroba)
+                            nie może prowadzić, zapewnimy zastępstwo lub kontynuację zajęć z innym, równie
+                            wykwalifikowanym lektorem.
+                        </div>
+                        <div class="legal-point">
+                            2.3. Aby zajęcia online były efektywne, potrzebujecie stabilnego internetu, mikrofonu,
+                            kamery i dostępu do wybranej platformy (Zoom/Teams/Meet). Pomożemy Wam w razie pytań
+                            technicznych!
                         </div>
                     </div>
 
                     <div class="legal-section-numbered">
-                        <h2>Ochrona własności intelektualnej</h2>
-                        <div class="legal-point">
-                            10.1. Wszystkie materiały edukacyjne stanowią własność intelektualną Language Academy Maksymov.
+                        <h2>Płatności - zasady, które pozwalają nam działać sprawnie</h2>
+                        <div class="legal-info-box">
+                            <p><i class="fas fa-handshake friendly-icon"></i> <strong>Jak to rozumieć:</strong> Opłata za
+                                kurs grupowy to abonament, który daje Wam <strong>dostęp</strong> do 8 zajęć w miesiącu,
+                                gwarantuje miejsce w grupie i pracę lektora. Podobnie jak w siłowni czy klubie
+                                fitness - płacicie za dostęp, niezależnie od liczby wizyt. Dzięki temu możemy utrzymać
+                                stałe, małe grupy i atrakcyjne ceny dla wszystkich uczestników.</p>
                         </div>
                         <div class="legal-point">
-                            10.2. Zabrania się:
+                            3.1. Wszystkie ceny podajemy w PLN i są to ceny ostateczne (brutto).
+                        </div>
+                        <div class="legal-point">
+                            3.2. <strong>Płatność z góry:</strong> Aby zarezerwować dla Was miejsce w grupie lub
+                            zarezerwować czas lektora na zajęcia indywidualne, pobieramy opłatę na początku każdego
+                            miesiąca lub za pakiet.
+                        </div>
+                        <div class="legal-point">
+                            3.3. <strong>Nieobecność na zajęciach:</strong> Rozumiemy, że czasem coś wypadnie. Niestety,
+                            opłata za kurs grupowy jest stała i nie podlega zwrotowi z tytułu pojedynczej nieobecności.
+                            Wasze miejsce w grupie jest cały czas zarezerwowane, a lektor przygotowuje się do zajęć. Nie
+                            możemy w tym modelu oferować odrabiania zajęć grupowych, ponieważ zakłóca to pracę całej
+                            grupy.
+                        </div>
+                        <div class="legal-point">
+                            3.4. <strong>Subskrypcja (automatyczne odnowienie):</strong> Wasz kurs grupowy trwa tak
+                            długo, jak tego chcecie. Umowa odnawia się z miesiąca na miesiąc, aby zapewnić ciągłość
+                            nauki. Możecie z niej zrezygnować w dowolnym momencie, o czym piszemy poniżej.
+                        </div>
+                        <div class="legal-point">
+                            3.5. Płatności przyjmujemy przelewem bankowym lub BLIK. Inne formy (gotówka, kryptowaluty)
+                            są możliwe tylko po indywidualnym uzgodnieniu.
+                        </div>
+                        <div class="legal-point">
+                            3.6. <strong>Co jeśli zapomnę zapłacić?</strong> Aby uniknąć przerw w nauce i chaosu w
+                            organizacji grup, dostęp do kursu i materiałów jest zawieszany do momentu uregulowania
+                            płatności. Prosimy o terminowe wpłaty - to pomaga nam skupić się na nauczaniu, a nie na
+                            administracji.
+                        </div>
+                    </div>
+
+                    <div class="legal-section-numbered">
+                        <h2>Rezygnacja z kursu - uczciwie i z wyprzedzeniem</h2>
+                        <div class="legal-info-box">
+                            <p><i class="fas fa-heart friendly-icon"></i> <strong>Chcemy, abyście byli z nami z
+                                    własnej woli.</strong> Rozumiemy, że plany się zmieniają. Jeśli musicie zrezygnować,
+                                zrobimy wszystko, aby proces ten był jasny i uczciwy dla obu stron.</p>
+                        </div>
+                        <div class="legal-point">
+                            4.1. Zgodnie z prawem konsumenta, macie prawo do <strong>14-dniowego okresu do
+                                odstąpienia</strong> od umowy zawartej na odległość, bez podania przyczyny.
+                        </div>
+                        <div class="legal-point">
+                            4.2. <strong>Ważna informacja:</strong> Ponieważ większość z Was chce rozpocząć naukę
+                            natychmiast, podczas zapisu poprosimy Was o wyrażenie zgody na to, abyśmy zaczęli
+                            świadczyć usługę (czyli udostępnili materiały i zaprosili na zajęcia) jeszcze przed
+                            upływem tych 14 dni. Jeśli taką zgodę wyrazicie (zaznaczając checkbox), tracicie prawo do
+                            odstąpienia, bo od razu zaczynamy wspólną pracę. To standardowe rozwiązanie w usługach,
+                            które zaczynają się od razu po zakupie.
+                        </div>
+                        <div class="legal-point">
+                            4.3. <strong>Rezygnacja z kursu grupowego w trakcie trwania:</strong> Jeśli po jakimś czasie
+                            zdecydujecie, że chcecie zakończyć naukę w grupie, wymagamy <strong>30-dniowego okresu
+                                wypowiedzenia</strong>. Liczy się go od końca miesiąca, w którym otrzymamy Wasze
+                            wypowiedzenie.
+                        </div>
+                        <div class="legal-point">
+                            4.4. <strong>Dlaczego aż 30 dni? To dla wspólnego dobra.</strong>
                             <ul>
-                                <li>kopiowania, modyfikowania, rozpowszechniania materiałów poza gronem uczestników
-                                    Kursu</li>
-                                <li>wykorzystywania materiałów w celach komercyjnych</li>
-                                <li>nagrywania zajęć bez wyraźnej zgody Usługodawcy</li>
+                                <li><strong>Dla Was:</strong> Abyście mogli spokojnie dokończyć aktualny cykl zajęć,
+                                    pożegnać się z grupą i lektorem, oraz otrzymać od nas ewentualne rekomendacje na
+                                    przyszłość.</li>
+                                <li><strong>Dla grupy:</strong> Abyśmy mogli w sposób zorganizowany znaleźć nową osobę
+                                    na zwalniające się miejsce. Małe, zgranie grupy to podstawa naszej efektywnej
+                                    nauki. Nagłe odejście jednej osoby zaburza dynamikę i jest nie fair wobec
+                                    pozostałych uczestników, którzy liczą na stały skład.</li>
+                                <li><strong>Dla nas:</strong> Abyśmy mogli odpowiedzialnie zaplanować pracę lektora i
+                                    finanse szkoły, co bezpośrednio przekłada się na stabilność i jakość wszystkich
+                                    naszych kursów.</li>
+                            </ul>
+                            Ten okres to standard w edukacji językowej, który szanuje czas i zaangażowanie wszystkich
+                            zaangażowanych stron.
+                        </div>
+                        <div class="legal-point">
+                            4.5. <strong>Jak to wygląda w praktyce?</strong> Przykład: Jeśli wypowiedzenie przyjdzie do
+                            nas 15 marca, to ostatnim miesiącem, za który pobierzemy pełną opłatę, będzie kwiecień.
+                            Wasze uczestnictwo zakończy się wraz z ostatnimi zajęciami w kwietniu. Macie więc cały marzec
+                            i kwiecień na pożegnanie i przygotowanie się do zmiany.
+                        </div>
+                        <div class="legal-point">
+                            4.6. Wypowiedzenie prosimy przesłać mailem na adres: language.english.academy@gmail.com.
+                            Odpowiemy, potwierdzając jego otrzymanie i datę zakończenia współpracy.
+                        </div>
+                        <div class="legal-point">
+                            4.7. <strong>Zajęcia indywidualne:</strong> Wykupiony pakiet lekcji indywidualnych jest do
+                            wykorzystania w ciągu 6 miesięcy (chyba że umówimy się inaczej). Zachęcamy do regularności,
+                            aby nauka była skuteczna!
+                        </div>
+                    </div>
+
+                    <div class="legal-section-numbered">
+                        <h2>Szacunek dla wspólnej pracy i prywatności</h2>
+                        <div class="legal-info-box">
+                            <p><i class="fas fa-user-shield friendly-icon"></i> <strong>Zasady nagrywania i
+                                    wykorzystywania materiałów.</strong> Zależy nam na stworzeniu bezpiecznej przestrzeni
+                                do nauki, gdzie wszyscy czują się komfortowo, mogą popełniać błędy i się rozwijać.</p>
+                        </div>
+                        <div class="legal-point">
+                            5.1. Wszystkie materiały, które dla Was tworzymy (prezentacje, struktury kursów, nasze metody
+                            nauczania), są owocem naszej pracy i chroni je prawo autorskie. Udostępniamy je Wam do
+                            osobistego użytku w nauce.
+                        </div>
+                        <div class="legal-point">
+                            5.2. <strong>Nagrywanie zajęć jest niedozwolone.</strong> To bardzo ważna zasada. Nasze
+                            zajęcia to przestrzeń wzajemnego zaufania. Niektóre osoby mogą czuć się skrępowane, wiedząc,
+                            że są nagrywane. Ponadto, nagrania bez zgody naruszają prawo do wizerunku i prywatności
+                            lektora oraz pozostałych uczestników. Jeśli macie szczególną potrzebę nagrania fragmentu
+                            (np. dla celów powtórki), należy to wcześniej uzgodnić z nami i uzyskać pisemną zgodę
+                            <strong>wszystkich</strong> osób obecnych na danym spotkaniu.
+                        </div>
+                        <div class="legal-point">
+                            5.3. Prosimy też, aby nie udostępniać, nie kopiować i nie wykorzystywać naszych materiałów w
+                            celach komercyjnych. Przygotowujemy je z myślą o Was, a nie do odsprzedaży.
+                        </div>
+                        <div class="legal-point">
+                            5.4. Naruszenie zakazu nagrywania lub kopiowania materiałów w sposób, który narusza prawa
+                            innych, niestety zmusza nas do podjęcia działań, w tym do usunięcia z kursu bez zwrotu
+                            opłaty. Zależy nam na partnerskich relacjach i wierzymy, że wspólnie możemy stworzyć
+                            przyjazne środowisko do nauki.
+                        </div>
+                    </div>
+
+                    <div class="legal-section-numbered">
+                        <h2>Nasze wzajemne zobowiązania i odpowiedzialność</h2>
+                        <div class="legal-point">
+                            6.1. Z naszej strony dokładamy wszelkich starań, aby zajęcia były ciekawe, przygotowane
+                            merytorycznie i odbywały się regularnie. Jesteśmy tu po to, by Wam pomóc.
+                        </div>
+                        <div class="legal-point">
+                            6.2. <strong>Efekt zależy od zespołu:</strong> My dajemy Wam narzędzia, wiedzę i okazję do
+                            praktyki, ale finalny sukces w nauce języka zależy od Waszego zaangażowania, regularności i
+                            pracy własnej. Nie możemy więc z góry "zagwarantować" zdania konkretnego egzaminu czy
+                            osiągnięcia konkretnego poziomu w określonym czasie - to zbyt indywidualna sprawa. Gwarantujemy
+                            natomiast nasze pełne zaangażowanie w Wasz rozwój.
+                        </div>
+                        <div class="legal-point">
+                            6.3. Jesteśmy odpowiedzialni za jakość usług, które świadczymy. Jeśli coś pójdzie nie po
+                            naszej myśli z naszej winy, poniesiemy tego konsekwencje. Nasza odpowiedzialność finansowa
+                            jest jednak ograniczona do rzeczywistych szkód i nie obejmuje "straconych korzyści".
+                        </div>
+                        <div class="legal-point">
+                            6.4. Za niektóre sytuacje po prostu nie możemy być odpowiedzialni:
+                            <ul>
+                                <li>Za awarie Waszego internetu, komputera lub problemy z oprogramowaniem.</li>
+                                <li>Za sytuacje losowe (tzw. siła wyższa), które uniemożliwią przeprowadzenie zajęć.
+                                </li>
+                                <li>Za treści publikowane przez innych uczestników w darmowym Speaking Club (chociaż
+                                    pilnujemy, aby panowała tam przyjazna atmosfera).</li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="legal-section-numbered">
-                        <h2>Ochrona danych osobowych</h2>
+                        <h2>Końcowe informacje i kontakt</h2>
                         <div class="legal-point">
-                            11.1. Administratorem danych osobowych jest Language Academy Maksymov z siedzibą w Warszawie.
+                            7.1. Wierzymy, że wszelkie ewentualne spory uda nam się rozwiązać polubownie. Jeśli jednak
+                            byłaby taka konieczność, miejsce rozstrzygania sporów to Warszawa, gdzie mamy siedzibę.
                         </div>
                         <div class="legal-point">
-                            11.2. Szczegółowe informacje dotyczące przetwarzania danych osobowych znajdują się w
-                            Polityce Prywatności dostępnej na stronie internetowej.
-                        </div>
-                    </div>
-
-                    <div class="legal-section-numbered">
-                        <h2>Postanowienia końcowe</h2>
-                        <div class="legal-point">
-                            12.1. Usługodawca zastrzega sobie prawo do zmiany Regulaminu z ważnych przyczyn.
+                            7.2. Ten regulamin może ewoluować (np. z powodu zmian w prawie). O wszelkich istotnych
+                            zmianach poinformujemy Was mailem z co najmniej 2-tygodniowym wyprzedzeniem. Kontynuacja
+                            nauki po tym czasie będzie oznaczała akceptację nowych zasad.
                         </div>
                         <div class="legal-point">
-                            12.2. O zmianach Usługobiorcy zostaną poinformowani z 14-dniowym wyprzedzeniem drogą
-                            mailową.
+                            7.3. <strong>Jesteśmy do Waszej dyspozycji:</strong>
+                            <div class="contact-info-legal">
+                                <p><strong>LAM English (Language Academy Maksymov)</strong><br>
+                                    Jednoosobowa działalność gospodarcza<br>
+                                    [ADRES_SIEDZIBY_JDG]<br>
+                                    NIP: [NUMER_NIP], REGON: [NUMER_REGON]<br>
+                                    <strong>E-mail:</strong> language.english.academy@gmail.com<br>
+                                    <strong>Telefon:</strong> +48 576 076 648<br>
+                                    <strong>Godziny kontaktu:</strong> Poniedziałek - Piątek: 8:00 - 20:00, Sobota: 9:00
+                                    - 15:00
+                                </p>
+                            </div>
                         </div>
                         <div class="legal-point">
-                            12.3. Niniejszy Regulamin wchodzi w życie z dniem 1 czerwca 2024 roku.
+                            7.4. Szanujemy Waszą prywatność. Wszystkie informacje o tym, jak przetwarzamy Wasze dane
+                            osobowe, znajdziecie w osobnej, jasnej <strong><a
+                                    href="privacy-policy.html">Polityce Prywatności</a></strong>.
                         </div>
-                        <div class="contact-info-legal">
-                            <h3>Dane kontaktowe do reklamacji i odstąpienia od umowy:</h3>
-                            <p><strong>Language Academy Maksymov</strong><br>
-                                E-mail: language.english.academy@gmail.com<br>
-                                Telefon: +48 576 076 648</p>
+                        <div class="legal-point">
+                            7.5. Wierzymy, że dobra współpraca opiera się na wzajemnym szacunku. My szanujemy Wasz czas
+                            i cele, a Wy prosimy o szacunek dla naszej pracy, metod i materiałów, które tworzymy.
+                        </div>
+                        <div class="legal-point">
+                            7.6. W sprawach, których nie opisaliśmy powyżej, kierujemy się po prostu uczciwością,
+                            zdrowym rozsądkiem i polskim prawem.
+                        </div>
+                        <div class="legal-point">
+                            7.7. Ten regulamin obowiązuje od 1 czerwca 2024 roku. Dziękujemy, że jesteście z nami!
                         </div>
                     </div>
 
@@ -775,8 +888,8 @@
                         aria-label="Instagram Language Academy Maksymov">
                         <i class="fab fa-instagram" aria-hidden="true"></i>
                     </a>
-                    <a href="https://www.linkedin.com/company/language-academy-maksymov" target="_blank" rel="noopener noreferrer"
-                        aria-label="LinkedIn Language Academy Maksymov">
+                    <a href="https://www.linkedin.com/company/language-academy-maksymov" target="_blank"
+                        rel="noopener noreferrer" aria-label="LinkedIn Language Academy Maksymov">
                         <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                     </a>
                     <a href="https://www.tiktok.com/@lam_english" target="_blank" rel="noopener noreferrer"

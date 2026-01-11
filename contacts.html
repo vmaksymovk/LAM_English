@@ -1275,6 +1275,18 @@
             margin-top: 1rem;
             font-style: italic;
         }
+        li a[href^="mailto:"] {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    max-width: 100%;
+}
+
+li a[href^="mailto:"] span,
+li a[href^="mailto:"] {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
     </style>
 
     <script>
