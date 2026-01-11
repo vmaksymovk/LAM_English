@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://lam-english.com/</loc>
+  <lastmod>2026-01-11T20:21:38+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://lam-english.com/index.html</loc>
+  <lastmod>2026-01-11T20:21:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lam-english.com/courses.html</loc>
+  <lastmod>2026-01-11T20:21:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lam-english.com/contacts.html</loc>
+  <lastmod>2026-01-11T20:21:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lam-english.com/blog.html</loc>
+  <lastmod>2026-01-11T20:21:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lam-english.com/contacts.html?course=English%20Start%20(A1-A2)&amp;level=A1-A2&amp;price=279&amp;type=group</loc>
+  <lastmod>2026-01-11T20:21:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lam-english.com/contacts.html?course=English%20Boost%20(B1-B2)&amp;level=B1-B2&amp;price=329&amp;type=group</loc>
+  <lastmod>2026-01-11T20:21:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lam-english.com/contacts.html?course=English%20Pro%20(C1-C2)&amp;level=C1-C2&amp;price=379&amp;type=group</loc>
+  <lastmod>2026-01-11T20:21:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lam-english.com/terms-of-service.html</loc>
+  <lastmod>2026-01-11T20:21:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lam-english.com/privacy-policy.html</loc>
+  <lastmod>2026-01-11T20:21:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lam-english.com/careers.html</loc>
+  <lastmod>2026-01-11T20:21:38+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lam-english.com/contacts.html?course=Zaj%C4%99cia%20indywidualne&amp;type=individual&amp;price=99</loc>
+  <lastmod>2026-01-11T20:21:38+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
