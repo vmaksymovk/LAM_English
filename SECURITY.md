@@ -15,7 +15,7 @@ Poniższe wersje projektu są obecnie wspierane aktualizacjami bezpieczeństwa:
 
 Jeśli znalazłeś/aś lukę w zabezpieczeniach, prosimy o jej zgłoszenie za pomocą e-maila:
 
-📧 **stepupspeakofficial@gmail.com**
+📧 **language.english.academy@gmail.com**
 
 Prosimy, aby nie zgłaszać problemów z bezpieczeństwem publicznie (np. przez Issues), dopóki nie zostaną one odpowiednio zaadresowane.
 
