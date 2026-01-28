@@ -32,6 +32,7 @@
     <meta name="twitter:image" content="https://www.lam-english.com/Images/mainImage2.jpg">
     
     <!-- Structured Data / Schema.org -->
+    <!-- Structured Data / Schema.org - POPRAWIONY KOD -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -103,26 +104,48 @@
                 "paymentAccepted": "Credit Card, Bank Transfer, BLIK, Cryptocurrency"
             },
             {
-                "@type": "Course",
+                "@type": "Product",
                 "name": "English Start - Kurs angielskiego dla początkujących",
                 "description": "Kurs angielskiego online dla początkujących (poziom A1-A2) z native speakerami",
-                "provider": {
-                    "@type": "Organization",
-                    "name": "Language Academy Maksymov",
-                    "sameAs": "https://www.lam-english.com/"
+                "image": "https://www.lam-english.com/Images/Logo_New_Bigger.png",
+                "brand": {
+                    "@type": "Brand",
+                    "name": "Language Academy Maksymov"
                 },
-                "courseCode": "ENG-START-A1A2",
-                "educationalLevel": "beginner",
-                "timeRequired": "PT8H",
-                "numberOfCredits": "1",
-                "typicalAgeRange": "18-",
-                "availableLanguage": ["Polish", "English"],
                 "offers": {
                     "@type": "Offer",
                     "price": "279",
                     "priceCurrency": "PLN",
+                    "priceValidUntil": "2025-12-31",
                     "availability": "https://schema.org/InStock",
-                    "url": "https://www.lam-english.com/contacts.html?course=English%20Start%20(A1-A2)"
+                    "url": "https://www.lam-english.com/contacts.html?course=English%20Start%20(A1-A2)",
+                    "shippingDetails": {
+                        "@type": "OfferShippingDetails",
+                        "shippingRate": {
+                            "@type": "MonetaryAmount",
+                            "value": "0",
+                            "currency": "PLN"
+                        },
+                        "shippingDestination": {
+                            "@type": "DefinedRegion",
+                            "addressCountry": "PL"
+                        },
+                        "deliveryTime": {
+                            "@type": "ShippingDeliveryTime",
+                            "businessDays": {
+                                "@type": "OpeningHoursSpecification",
+                                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+                            },
+                            "cutoffTime": "15:00-03:00"
+                        }
+                    },
+                    "hasMerchantReturnPolicy": {
+                        "@type": "MerchantReturnPolicy",
+                        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                        "merchantReturnDays": 14,
+                        "returnMethod": "https://schema.org/ReturnByMail",
+                        "returnFees": "https://schema.org/FreeReturn"
+                    }
                 },
                 "aggregateRating": {
                     "@type": "AggregateRating",
@@ -133,26 +156,48 @@
                 }
             },
             {
-                "@type": "Course",
+                "@type": "Product",
                 "name": "English Boost - Kurs angielskiego średnio-zaawansowany",
                 "description": "Kurs angielskiego online dla średnio-zaawansowanych (poziom B1-B2) z native speakerami",
-                "provider": {
-                    "@type": "Organization",
-                    "name": "Language Academy Maksymov",
-                    "sameAs": "https://www.lam-english.com/"
+                "image": "https://www.lam-english.com/Images/Logo_New_Bigger.png",
+                "brand": {
+                    "@type": "Brand",
+                    "name": "Language Academy Maksymov"
                 },
-                "courseCode": "ENG-BOOST-B1B2",
-                "educationalLevel": "intermediate",
-                "timeRequired": "PT10H",
-                "numberOfCredits": "1",
-                "typicalAgeRange": "18-",
-                "availableLanguage": ["Polish", "English"],
                 "offers": {
                     "@type": "Offer",
                     "price": "329",
                     "priceCurrency": "PLN",
+                    "priceValidUntil": "2025-12-31",
                     "availability": "https://schema.org/InStock",
-                    "url": "https://www.lam-english.com/contacts.html?course=English%20Boost%20(B1-B2)"
+                    "url": "https://www.lam-english.com/contacts.html?course=English%20Boost%20(B1-B2)",
+                    "shippingDetails": {
+                        "@type": "OfferShippingDetails",
+                        "shippingRate": {
+                            "@type": "MonetaryAmount",
+                            "value": "0",
+                            "currency": "PLN"
+                        },
+                        "shippingDestination": {
+                            "@type": "DefinedRegion",
+                            "addressCountry": "PL"
+                        },
+                        "deliveryTime": {
+                            "@type": "ShippingDeliveryTime",
+                            "businessDays": {
+                                "@type": "OpeningHoursSpecification",
+                                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+                            },
+                            "cutoffTime": "15:00-03:00"
+                        }
+                    },
+                    "hasMerchantReturnPolicy": {
+                        "@type": "MerchantReturnPolicy",
+                        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                        "merchantReturnDays": 14,
+                        "returnMethod": "https://schema.org/ReturnByMail",
+                        "returnFees": "https://schema.org/FreeReturn"
+                    }
                 },
                 "aggregateRating": {
                     "@type": "AggregateRating",
@@ -163,26 +208,48 @@
                 }
             },
             {
-                "@type": "Course",
+                "@type": "Product",
                 "name": "English Pro - Kurs angielskiego dla zaawansowanych",
                 "description": "Kurs angielskiego online dla zaawansowanych (poziom C1-C2) z native speakerami",
-                "provider": {
-                    "@type": "Organization",
-                    "name": "Language Academy Maksymov",
-                    "sameAs": "https://www.lam-english.com/"
+                "image": "https://www.lam-english.com/Images/Logo_New_Bigger.png",
+                "brand": {
+                    "@type": "Brand",
+                    "name": "Language Academy Maksymov"
                 },
-                "courseCode": "ENG-PRO-C1C2",
-                "educationalLevel": "advanced",
-                "timeRequired": "PT12H",
-                "numberOfCredits": "1",
-                "typicalAgeRange": "18-",
-                "availableLanguage": ["Polish", "English"],
                 "offers": {
                     "@type": "Offer",
                     "price": "379",
                     "priceCurrency": "PLN",
+                    "priceValidUntil": "2025-12-31",
                     "availability": "https://schema.org/InStock",
-                    "url": "https://www.lam-english.com/contacts.html?course=English%20Pro%20(C1-C2)"
+                    "url": "https://www.lam-english.com/contacts.html?course=English%20Pro%20(C1-C2)",
+                    "shippingDetails": {
+                        "@type": "OfferShippingDetails",
+                        "shippingRate": {
+                            "@type": "MonetaryAmount",
+                            "value": "0",
+                            "currency": "PLN"
+                        },
+                        "shippingDestination": {
+                            "@type": "DefinedRegion",
+                            "addressCountry": "PL"
+                        },
+                        "deliveryTime": {
+                            "@type": "ShippingDeliveryTime",
+                            "businessDays": {
+                                "@type": "OpeningHoursSpecification",
+                                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+                            },
+                            "cutoffTime": "15:00-03:00"
+                        }
+                    },
+                    "hasMerchantReturnPolicy": {
+                        "@type": "MerchantReturnPolicy",
+                        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                        "merchantReturnDays": 14,
+                        "returnMethod": "https://schema.org/ReturnByMail",
+                        "returnFees": "https://schema.org/FreeReturn"
+                    }
                 },
                 "aggregateRating": {
                     "@type": "AggregateRating",
@@ -220,56 +287,6 @@
     }
     </script>
     
-    <!-- Additional FAQ Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [{
-            "@type": "Question",
-            "name": "Jak mogę umówić się na bezpłatną lekcję próbną?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Aby umówić się na bezpłatną lekcję próbną, wystarczy wypełnić formularz kontaktowy na stronie, zadzwonić pod numer +48 576 076 648 lub napisać na adres language.english.academy@gmail.com. Nasz konsultant skontaktuje się w ciągu 24 godzin."
-            }
-        }, {
-            "@type": "Question",
-            "name": "Jak długo czeka się na odpowiedź na wiadomość?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Odpowiadamy na wszystkie wiadomości w ciągu 24 godzin w dni robocze. W przypadku pytań o kursy, nasz doradca językowy skontaktuje się z Tobą, aby omówić szczegóły."
-            }
-        }, {
-            "@type": "Question",
-            "name": "Czy mogę zmienić lub odwołać zaplanowaną lekcję?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Tak, możesz odwołać lub przełożyć lekcję, powiadamiając nas o tym co najmniej 24 godziny przed zaplanowanym terminem. W takim przypadku nie tracisz lekcji i możemy wspólnie ustalić nowy termin."
-            }
-        }, {
-            "@type": "Question",
-            "name": "Jakie są metody płatności za kurs?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Oferujemy różne metody płatności: przelew bankowy, karta płatnicza, BLIK i kryptowaluty."
-            }
-        }, {
-            "@type": "Question",
-            "name": "Czy otrzymam certyfikat po ukończeniu kursu?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Tak, każdy student otrzymuje imienny certyfikat potwierdzający ukończenie kursu na odpowiednim poziomie (A1-C2) z informacją o liczbie ukończonych godzin i zakresie materiału."
-            }
-        }, {
-            "@type": "Question",
-            "name": "Jak wygląda proces kwalifikacji do grupy?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Proces kwalifikacji składa się z trzech kroków: 1) bezpłatny test poziomujący online, 2) 15-minutowa rozmowa z lektorem, 3) przydział do idealnie dopasowanej grupy lub propozycja indywidualnego planu."
-            }
-        }]
-    }
-    </script>
     
     <!-- Performance & Security Headers -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';">
@@ -618,6 +635,13 @@
         li a[href^="mailto:"] span,li a[href^="mailto:"] {
             overflow-wrap:anywhere;word-break:break-word;
         }
+        .info-note {
+    background-color: #f0f7ff;
+    border-left: 4px solid #2196F3;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 0 4px 4px 0;
+}
         
         /* Mobile Media Queries */
         @media (max-width:768px) {
@@ -769,6 +793,7 @@
             }
             body {overflow-x:hidden;position:relative;}
         }
+        
     </style>
 
     <script>
@@ -1103,80 +1128,90 @@
             </div>
         </section>
 
-        <section class="testimonials" aria-labelledby="testimonials-heading" role="region">
-            <div class="section-header">
-                <h2 id="testimonials-heading">Opinie Naszych Studentów</h2>
-                <p>Przeczytaj, co mówią o nas uczniowie, którzy już osiągnęli sukces z Language Academy Maksymov</p>
-            </div>
+        <!-- Sekcja opinii - POPRAWIONE REVIEWS -->
+    <section class="testimonials" aria-labelledby="testimonials-heading" role="region">
+        <div class="section-header">
+            <h2 id="testimonials-heading">Opinie Naszych Studentów</h2>
+            <p>Przeczytaj, co mówią o nas uczniowie, którzy już osiągnęli sukces z Language Academy Maksymov</p>
+        </div>
 
-            <div class="testimonials-grid">
-                <div class="testimonial" itemscope itemtype="https://schema.org/Review">
-                    <div class="testimonial-content" itemprop="reviewBody">
-                        "Lekcje z Language Academy Maksymov całkowicie zmieniły moje podejście do nauki angielskiego. Dzięki native speakerom nabrałem pewności siebie w mówieniu i wreszcie przestałem bać się konwersacji."
-                    </div>
-                    <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                        <img src="Images/user1.jpeg" alt="Zdjęcie Marka - student Language Academy Maksymov" class="testimonial-avatar" loading="lazy" width="50" height="50" itemprop="image">
-                        <div class="testimonial-info">
-                            <h4 itemprop="name">Marek, 28 lat</h4>
-                            <p>Kurs Business English</p>
-                            <div class="rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <meta itemprop="ratingValue" content="5">
-                                <meta itemprop="bestRating" content="5">
-                            </div>
-                        </div>
-                    </div>
+        <div class="testimonials-grid">
+            <div class="testimonial" itemscope itemtype="https://schema.org/Review">
+                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
+                    <meta itemprop="name" content="Language Academy Maksymov">
                 </div>
-
-                <div class="testimonial" itemscope itemtype="https://schema.org/Review">
-                    <div class="testimonial-content" itemprop="reviewBody">
-                        "Jako mama dwójki dzieci doceniam elastyczny grafik zajęć. Moje dzieci uwielbiają lekcje z Step Up Speak - są interaktywne, angażujące, a nauczyciele mają wspaniałe podejście do młodych uczniów."
-                    </div>
-                    <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                        <img src="Images/user5.jpeg" alt="Zdjęcie Anny - studentka Language Academy Maksymov" class="testimonial-avatar" loading="lazy" width="50" height="50" itemprop="image">
-                        <div class="testimonial-info">
-                            <h4 itemprop="name">Anna, 35 lat</h4>
-                            <p>Kurs dla dzieci</p>
-                            <div class="rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <meta itemprop="ratingValue" content="5">
-                                <meta itemprop="bestRating" content="5">
-                            </div>
-                        </div>
-                    </div>
+                <div class="testimonial-content" itemprop="reviewBody">
+                    "Lekcje z Language Academy Maksymov całkowicie zmieniły moje podejście do nauki angielskiego. Dzięki native speakerom nabrałem pewności siebie w mówieniu i wreszcie przestałem bać się konwersacji."
                 </div>
-
-                <div class="testimonial" itemscope itemtype="https://schema.org/Review">
-                    <div class="testimonial-content" itemprop="reviewBody">
-                        "Po roku nauki z Language Academy Maksymov zdałem egzamin CAE z wynikiem A. To najlepsza inwestycja w moją edukację! Lektorzy nie tylko uczą języka, ale też pomagają zrozumieć kulturę anglojęzyczną."
-                    </div>
-                    <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                        <img src="Images/user3.jpeg" alt="Zdjęcie Piotra - student Language Academy Maksymov" class="testimonial-avatar" loading="lazy" width="50" height="50" itemprop="image">
-                        <div class="testimonial-info">
-                            <h4 itemprop="name">Piotr, 32 lata</h4>
-                            <p>Przygotowanie do CAE</p>
-                            <div class="rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <meta itemprop="ratingValue" content="5">
-                                <meta itemprop="bestRating" content="5">
-                            </div>
+                <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <img src="Images/user1.jpeg" alt="Zdjęcie Marka - student Language Academy Maksymov" class="testimonial-avatar" loading="lazy" width="50" height="50" itemprop="image">
+                    <div class="testimonial-info">
+                        <h4 itemprop="name">Marek, 28 lat</h4>
+                        <p>Kurs Business English</p>
+                        <div class="rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <meta itemprop="ratingValue" content="5">
+                            <meta itemprop="bestRating" content="5">
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <div class="testimonial" itemscope itemtype="https://schema.org/Review">
+                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
+                    <meta itemprop="name" content="Language Academy Maksymov">
+                </div>
+                <div class="testimonial-content" itemprop="reviewBody">
+                    "Jako mama dwójki dzieci doceniam elastyczny grafik zajęć. Moje dzieci uwielbiają lekcje z Step Up Speak - są interaktywne, angażujące, a nauczyciele mają wspaniałe podejście do młodych uczniów."
+                </div>
+                <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <img src="Images/user5.jpeg" alt="Zdjęcie Anny - studentka Language Academy Maksymov" class="testimonial-avatar" loading="lazy" width="50" height="50" itemprop="image">
+                    <div class="testimonial-info">
+                        <h4 itemprop="name">Anna, 35 lat</h4>
+                        <p>Kurs dla dzieci</p>
+                        <div class="rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <meta itemprop="ratingValue" content="5">
+                            <meta itemprop="bestRating" content="5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial" itemscope itemtype="https://schema.org/Review">
+                <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/Organization">
+                    <meta itemprop="name" content="Language Academy Maksymov">
+                </div>
+                <div class="testimonial-content" itemprop="reviewBody">
+                    "Po roku nauki z Language Academy Maksymov zdałem egzamin CAE z wynikiem A. To najlepsza inwestycja w moją edukację! Lektorzy nie tylko uczą języka, ale też pomagają zrozumieć kulturę anglojęzyczną."
+                </div>
+                <div class="testimonial-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <img src="Images/user3.jpeg" alt="Zdjęcie Piotra - student Language Academy Maksymov" class="testimonial-avatar" loading="lazy" width="50" height="50" itemprop="image">
+                    <div class="testimonial-info">
+                        <h4 itemprop="name">Piotr, 32 lata</h4>
+                        <p>Przygotowanie do CAE</p>
+                        <div class="rating" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <meta itemprop="ratingValue" content="5">
+                            <meta itemprop="bestRating" content="5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
         <section class="faq-section" id="faq" role="region" itemscope itemtype="https://schema.org/FAQPage">
             <div class="section-header">
@@ -1227,7 +1262,7 @@
 
                 <div class="faq-item" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
     <button class="faq-question" aria-expanded="false">
-        <span class="faq-number">04</span>
+        <span class="faq-number">03</span>
         <span class="faq-text" itemprop="name">Czy mogę odrobić opuszczone zajęcia grupowe?</span>
         <i class="fas fa-chevron-down"></i>
     </button>
@@ -1240,8 +1275,18 @@
                     <p><strong>Wspólnie ustalony termin</strong> zajęć grupowych zapewnia dogodny czas dla wszystkich uczestników.</p>
                 </div>
             </div>
-            <p>Zajęcia grupowe są organizowane w taki sposób, aby termin był jak najbardziej dogodny dla wszystkich uczestników. Dlatego też, przed rozpoczęciem kursu, wspólnie ustalamy harmonogram, biorąc pod uwagę dostępność każdej osoby. Niestety, ze względu na grupowy charakter tych zajęć, nie ma możliwości ich odrobienia w innym terminie. Zachęcamy do udziału w każdych zaplanowanych zajęciach, aby w pełni skorzystać z dynamiki grupy i wspólnego rozwoju.</p>
-            <p>W przypadku nieobecności, chętnie udostępnimy materiały z lekcji, abyś mógł nadrobić omawiane treści we własnym zakresie.</p>
+            <p>Zajęcia grupowe są organizowane w taki sposób, aby termin był jak najbardziej dogodny dla wszystkich uczestników. Dlatego też, przed rozpoczęciem kursu, wspólnie ustalamy harmonogram, biorąc pod uwagę dostępność każdej osoby. <div class="info-note">
+                            <p>Z tego powodu <strong>odrabianie zajęć grupowych nie jest możliwe</strong> - każda lekcja jest unikalnym doświadczeniem, które tworzy cała grupa w ustalonym, wspólnym terminie.</p>
+                        </div></p>
+            <p>Abyś jednak nie stracił ważnych treści, w przypadku nieobecności zapewniamy:</p>
+                        <ul class="faq-list">
+                            <li>📚 <strong>Pełne materiały</strong> z przeprowadzonych zajęć</li>
+                            <li>💬 <strong>Wsparcie mentora</strong> w ramach dodatkowych konsultacji</li>
+                            <li>👥 <strong>Kontakt z grupą</strong> w sprawie omówionych tematów</li>
+                            <li>📝 <strong>Dodatkowe ćwiczenia</strong> do samodzielnego wykonania</li>
+                        </ul>
+                        
+                        <p>Dziękujemy za zrozumienie - ta zasada pomaga nam tworzyć stabilne, wspierające środowisko nauki dla całej grupy! 🙏</p>
         </div>
     </div>
 </div>
