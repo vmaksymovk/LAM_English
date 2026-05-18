@@ -21,7 +21,7 @@
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://lam-english.com/courses.html">
-    
+    <link rel="stylesheet" href="popup/popup.css">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lam-english.com/courses.html">
@@ -2042,5 +2042,23 @@
         });
     </script>
     <script src="Cookies/cookie-banner.js" defer></script>
+
+    <script>
+fetch('/popup/popup.html')
+    .then(response => response.text())
+    .then(data => {
+
+        document.getElementById('popup-container').innerHTML = data;
+
+        const script = document.createElement('script');
+        script.src = '/popup/popup.js';
+
+        document.body.appendChild(script);
+
+    })
+    .catch(error => {
+        console.error('Popup load error:', error);
+    });
+</script>
 </body>
 </html>

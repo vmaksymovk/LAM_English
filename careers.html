@@ -33,7 +33,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+    <link rel="stylesheet" href="popup/popup.css">
     <style>
         :root {
             --primary-color: #2E8B57;
@@ -1136,6 +1136,24 @@ li a[href^="mailto:"] {
         });
     </script>
     <script src="Cookies/cookie-banner.js"></script>
+
+    <script>
+fetch('/popup/popup.html')
+    .then(response => response.text())
+    .then(data => {
+
+        document.getElementById('popup-container').innerHTML = data;
+
+        const script = document.createElement('script');
+        script.src = '/popup/popup.js';
+
+        document.body.appendChild(script);
+
+    })
+    .catch(error => {
+        console.error('Popup load error:', error);
+    });
+</script>
 </body>
 
 </html>

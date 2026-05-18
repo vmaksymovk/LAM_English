@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow, max-snippet:155, max-image-preview:large">
     <link rel="canonical" href="https://lam-english.com/blog.html">
-    
+    <link rel="stylesheet" href="popup/popup.css">
     <!-- Primary SEO Elements -->
     <title>Blog Ekspercki | Language Academy Maksymov - Strategie Językowe Potwierdzone Badaniami</title>
     <meta name="description" content="Ekspercki blog Language Academy Maksymov: naukowo potwierdzone metody nauki języków. Osiągnij płynność językową 3x szybciej dzięki naszym strategiom. Dowiedz się więcej o efektywnych metodach nauki angielskiego.">
@@ -2370,5 +2370,23 @@ li a[href^="mailto:"] {
     </script>
 
     <script src="Cookies/cookie-banner.js" defer></script>
+
+    <script>
+fetch('/popup/popup.html')
+    .then(response => response.text())
+    .then(data => {
+
+        document.getElementById('popup-container').innerHTML = data;
+
+        const script = document.createElement('script');
+        script.src = '/popup/popup.js';
+
+        document.body.appendChild(script);
+
+    })
+    .catch(error => {
+        console.error('Popup load error:', error);
+    });
+</script>
 </body>
 </html>
