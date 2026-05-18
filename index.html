@@ -324,6 +324,7 @@
     <!-- External Resources -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="Cookies/cookie-banner.css">
+    <link rel="stylesheet" href="popup/popup.css">
 
     <style>
         /* Minified CSS for better performance */
@@ -1545,5 +1546,24 @@
         });
     </script>
     <script defer src="Cookies/cookie-banner.js"></script>
+    <div id="popup-container"></div>
+
+<script>
+fetch('/popup/popup.html')
+    .then(response => response.text())
+    .then(data => {
+
+        document.getElementById('popup-container').innerHTML = data;
+
+        const script = document.createElement('script');
+        script.src = '/popup/popup.js';
+
+        document.body.appendChild(script);
+
+    })
+    .catch(error => {
+        console.error('Popup load error:', error);
+    });
+</script>
 </body>
 </html>

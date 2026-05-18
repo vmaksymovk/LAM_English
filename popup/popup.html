@@ -1,0 +1,182 @@
+<!-- =========================
+PLIK: popup.html
+WKLEJ PRZED </body> NA KAŻDEJ STRONIE
+========================= -->
+
+<div id="leadPopupOverlay" class="lead-popup-overlay">
+
+    <div class="lead-popup">
+
+        <!-- CLOSE -->
+        <button
+            class="lead-popup-close"
+            id="closeLeadPopup"
+            aria-label="Zamknij popup">
+
+            &times;
+
+        </button>
+
+        <!-- LEFT -->
+        <div class="lead-popup-left">
+
+            <span class="lead-popup-badge">
+                ⚡ Oferta ograniczona czasowo
+            </span>
+
+            <h2>
+                Odbierz <span>10% rabatu</span>
+                na pierwszy miesiąc nauki 🎁
+            </h2>
+
+            <p>
+                Zostaw kontakt i zarezerwuj miejsce na kurs jeszcze dziś.
+                Rabat zostanie automatycznie przypisany do Twojego zgłoszenia.
+            </p>
+
+            <div class="lead-popup-benefits">
+
+                <div class="benefit-item">
+                    ✅ 10% zniżki automatycznie przypisane do zgłoszenia
+                </div>
+
+                <div class="benefit-item">
+                    ✅ Priorytetowy kontakt z doradcą kursów
+                </div>
+
+                <div class="benefit-item">
+                    ✅ Pomoc w doborze idealnego poziomu nauki
+                </div>
+
+                <div class="benefit-item">
+                    ✅ Oferta dostępna wyłącznie dla nowych kursantów
+                </div>
+
+            </div>
+
+            <div class="lead-popup-urgency">
+                ⏰ Liczba miejsc na najbliższe grupy jest ograniczona
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="lead-popup-right">
+
+            <h3>Zapisz się teraz</h3>
+
+            <form
+                id="leadPopupForm"
+                action="https://formspree.io/f/mvgklngp"
+                method="POST">
+
+                <div class="popup-form-group">
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Imię i nazwisko *"
+                        required>
+                </div>
+
+                <div class="popup-form-group">
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Adres email *"
+                        required>
+                </div>
+
+                <div class="popup-form-group">
+                    <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Numer telefonu">
+                </div>
+
+                <div class="popup-form-group">
+
+                    <select
+                        name="course"
+                        id="popupCourseSelect">
+
+                        <option value="">
+                            Wybierz kurs
+                        </option>
+
+                        <option value="English Start (A1-A2)">
+                            English Start (A1-A2)
+                        </option>
+
+                        <option value="English Boost (B1-B2)">
+                            English Boost (B1-B2)
+                        </option>
+
+                        <option value="English Pro (C1-C2)">
+                            English Pro (C1-C2)
+                        </option>
+
+                        <option value="indywidualne">
+                            Zajęcia indywidualne
+                        </option>
+
+                        <option value="nie-wiem">
+                            Nie wiem, potrzebuję porady
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="popup-form-group">
+
+                    <textarea
+                        name="message"
+                        placeholder="Napisz czego potrzebujesz..."
+                        rows="4"></textarea>
+
+                </div>
+
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="NOWY LEAD POPUP - Language Academy Maksymov">
+
+                <input
+                    type="text"
+                    name="_gotcha"
+                    style="display:none">
+
+                <button
+                    type="submit"
+                    class="lead-popup-submit">
+
+                    🎁 Odbierz 10% zniżki
+
+                </button>
+
+                <div class="lead-popup-trust">
+                    🔒 Twoje dane są bezpieczne i nie trafiają do osób trzecich
+                </div>
+
+            </form>
+
+            <!-- SUCCESS -->
+            <div
+                id="leadPopupSuccess"
+                class="lead-popup-success">
+
+                <h4>🎉 Dziękujemy!</h4>
+
+                <p>
+                    Twoje zgłoszenie zostało wysłane poprawnie.
+                    10% rabatu zostało automatycznie przypisane do Twojego formularza.
+                    Skontaktujemy się z Tobą tak szybko jak to możliwe.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
