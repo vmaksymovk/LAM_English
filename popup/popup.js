@@ -117,20 +117,7 @@ closeLeadPopup.addEventListener(
     closePopup
 );
 
-/* =========================
-BACKDROP CLOSE
-========================= */
 
-leadPopup.addEventListener(
-    'click',
-    function(e){
-
-        if(e.target === leadPopup){
-            closePopup();
-        }
-
-    }
-);
 
 /* =========================
 AUTO OPEN
@@ -219,38 +206,6 @@ document
 
 });
 
-/* =========================
-SWIPE DOWN CLOSE MOBILE
-========================= */
-
-let touchStartY = 0;
-let touchEndY = 0;
-
-leadPopup.addEventListener(
-    'touchstart',
-    function(e){
-
-        touchStartY =
-            e.changedTouches[0].screenY;
-
-    }
-);
-
-leadPopup.addEventListener(
-    'touchend',
-    function(e){
-
-        touchEndY =
-            e.changedTouches[0].screenY;
-
-        if(
-            touchEndY - touchStartY > 120
-        ){
-            closePopup();
-        }
-
-    }
-);
 
 /* =========================
 FORMSPREE AJAX
