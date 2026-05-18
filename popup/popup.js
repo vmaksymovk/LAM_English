@@ -1,5 +1,6 @@
 /* =========================
 PLIK: popup.js
+NAJLEPSZA LOGIKA LEADOWA
 ========================= */
 
 const leadPopup = document.getElementById('leadPopupOverlay');
@@ -7,10 +8,22 @@ const closeLeadPopup = document.getElementById('closeLeadPopup');
 const popupForm = document.getElementById('leadPopupForm');
 const popupSuccess = document.getElementById('leadPopupSuccess');
 
-let popupAlreadyShown = false;
+/* =========================
+SETTINGS
+========================= */
 
-/* OPEN POPUP */
-function openLeadPopup(selectedCourse = '') {
+/* popup max raz na 24h */
+const POPUP_HIDE_TIME = 1000 * 60 * 60 * 24;
+
+/* desktop/mobile timings */
+const DESKTOP_DELAY = 25000;
+const MOBILE_DELAY = 40000;
+
+/* =========================
+HELPERS
+========================= */
+
+function wasPopupRecentlyClosed(){
 
     const popupClosedUntil =
         localStorage.getItem('leadPopupClosed');
@@ -19,6 +32,37 @@ function openLeadPopup(selectedCourse = '') {
         popupClosedUntil &&
         Date.now() < Number(popupClosedUntil)
     ){
+        return true;
+    }
+
+    return false;
+
+}
+
+function setPopupClosed(){
+
+    localStorage.setItem(
+        'leadPopupClosed',
+        Date.now() + POPUP_HIDE_TIME
+    );
+
+}
+
+/* =========================
+OPEN POPUP
+========================= */
+
+function openLeadPopup(selectedCourse = '') {
+
+    /* don't open if already visible */
+    if(
+        leadPopup.classList.contains('active')
+    ){
+        return;
+    }
+
+    /* don't open if recently closed */
+    if(wasPopupRecentlyClosed()){
         return;
     }
 
@@ -26,18 +70,21 @@ function openLeadPopup(selectedCourse = '') {
 
     document.body.style.overflow = 'hidden';
 
-    popupAlreadyShown = true;
-
+    /* set selected course */
     if(selectedCourse){
 
         const select =
-            document.getElementById('popupCourseSelect');
+            document.getElementById(
+                'popupCourseSelect'
+            );
 
-        select.value = selectedCourse;
+        if(select){
+            select.value = selectedCourse;
+        }
 
     }
 
-    /* AUTO FOCUS */
+    /* autofocus */
     setTimeout(() => {
 
         const firstInput =
@@ -51,52 +98,98 @@ function openLeadPopup(selectedCourse = '') {
 
 }
 
-/* CLOSE */
+/* =========================
+CLOSE
+========================= */
+
 function closePopup(){
 
     leadPopup.classList.remove('active');
 
     document.body.style.overflow = '';
 
-    localStorage.setItem(
-        'leadPopupClosed',
-        Date.now() + (1000 * 60 * 60 * 24 * 3)
-    );
+    setPopupClosed();
 
 }
 
-closeLeadPopup.addEventListener('click', closePopup);
+closeLeadPopup.addEventListener(
+    'click',
+    closePopup
+);
 
-/* CLOSE ON BACKDROP */
-leadPopup.addEventListener('click', function(e){
+/* =========================
+BACKDROP CLOSE
+========================= */
 
-    if(e.target === leadPopup){
-        closePopup();
+leadPopup.addEventListener(
+    'click',
+    function(e){
+
+        if(e.target === leadPopup){
+            closePopup();
+        }
+
     }
+);
 
-});
+/* =========================
+AUTO OPEN
+========================= */
 
-/* AUTO SHOW */
 setTimeout(() => {
 
-    if(!popupAlreadyShown){
-        openLeadPopup();
+    openLeadPopup();
+
+}, window.innerWidth < 768
+    ? MOBILE_DELAY
+    : DESKTOP_DELAY
+);
+
+/* =========================
+SCROLL TRIGGER
+========================= */
+
+let scrollPopupShown = false;
+
+window.addEventListener(
+    'scroll',
+    function(){
+
+        if(scrollPopupShown){
+            return;
+        }
+
+        const scrollPercent =
+            (
+                window.scrollY +
+                window.innerHeight
+            ) / document.body.scrollHeight;
+
+        if(scrollPercent > 0.55){
+
+            scrollPopupShown = true;
+
+            openLeadPopup();
+
+        }
+
     }
+);
 
-}, window.innerWidth < 768 ? 12000 : 30000);
+/* =========================
+EXIT INTENT DESKTOP
+========================= */
 
-/* EXIT INTENT ONLY DESKTOP */
 if(window.innerWidth > 768){
 
     document.addEventListener(
         'mouseleave',
         function(e){
 
-            if(
-                e.clientY <= 0 &&
-                !popupAlreadyShown
-            ){
+            if(e.clientY <= 0){
+
                 openLeadPopup();
+
             }
 
         }
@@ -104,7 +197,10 @@ if(window.innerWidth > 768){
 
 }
 
-/* BUTTONS */
+/* =========================
+BUTTONS OPEN
+========================= */
+
 document
 .querySelectorAll('.open-course-popup')
 .forEach(button => {
@@ -123,33 +219,10 @@ document
 
 });
 
-/* PRICING SECTION */
-const pricingSection =
-    document.querySelector('#pricing');
+/* =========================
+SWIPE DOWN CLOSE MOBILE
+========================= */
 
-if(pricingSection){
-
-    const pricingObserver =
-        new IntersectionObserver((entries) => {
-
-        entries.forEach(entry => {
-
-            if(
-                entry.isIntersecting &&
-                !popupAlreadyShown
-            ){
-                openLeadPopup();
-            }
-
-        });
-
-    }, { threshold:0.5 });
-
-    pricingObserver.observe(pricingSection);
-
-}
-
-/* SWIPE DOWN CLOSE MOBILE */
 let touchStartY = 0;
 let touchEndY = 0;
 
@@ -170,14 +243,19 @@ leadPopup.addEventListener(
         touchEndY =
             e.changedTouches[0].screenY;
 
-        if(touchEndY - touchStartY > 120){
+        if(
+            touchEndY - touchStartY > 120
+        ){
             closePopup();
         }
 
     }
 );
 
-/* FORMSPREE AJAX */
+/* =========================
+FORMSPREE AJAX
+========================= */
+
 popupForm.addEventListener(
     'submit',
     async function(e){
@@ -202,13 +280,17 @@ popupForm.addEventListener(
 
             if(response.ok){
 
-                popupForm.style.display = 'none';
+                popupForm.style.display =
+                    'none';
 
-                popupSuccess.style.display = 'block';
+                popupSuccess.style.display =
+                    'block';
 
+                /* hide popup for 7 days after lead */
                 localStorage.setItem(
                     'leadPopupClosed',
-                    Date.now() + (1000 * 60 * 60 * 24 * 7)
+                    Date.now() +
+                    (1000 * 60 * 60 * 24 * 7)
                 );
 
             }
