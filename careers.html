@@ -33,7 +33,6 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="popup/popup.css">
     <style>
         :root {
             --primary-color: #2E8B57;
@@ -821,7 +820,7 @@ li a[href^="mailto:"] {
                 <a href="index.html"><i class="fas fa-home"></i> Strona Główna</a>
                 <a href="courses.html"><i class="fas fa-book-open"></i> Kursy</a>
                 <a href="contacts.html"><i class="fas fa-envelope"></i> Kontakt</a>
-                <a href="blog.html"><i class="fas fa-blog"></i> Blog</a>
+                <a href="blog.html"><i class="fas fa-blog"></i> Jak uczymy</a>
             </nav>
             <a href="contacts.html" class="cta-button">
                 <i class="fas fa-paper-plane"></i> Skontaktuj się
@@ -1004,9 +1003,8 @@ li a[href^="mailto:"] {
                 <ul>
                     <li><a href="terms-of-service.html">Regulamin</a></li>
                     <li><a href="privacy-policy.html">Polityka prywatności</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="blog.html">Jak uczymy</a></li>
                     <li><a href="index.html#faq">FAQ</a></li>
-                    <li><a href="index.html#testimonials-heading">Opinie studentów</a></li>
                     <li><a href="careers.html">Kariera</a></li>
                 </ul>
             </div>
@@ -1056,24 +1054,6 @@ li a[href^="mailto:"] {
         });
     </script>
     <script src="Cookies/cookie-banner.js"></script>
-    <div id="popup-container"></div>
-    <script>
-fetch('/popup/popup.html')
-    .then(response => response.text())
-    .then(data => {
-
-        document.getElementById('popup-container').innerHTML = data;
-
-        const script = document.createElement('script');
-        script.src = '/popup/popup.js';
-
-        document.body.appendChild(script);
-
-    })
-    .catch(error => {
-        console.error('Popup load error:', error);
-    });
-</script>
 
 </body>
 
