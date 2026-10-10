@@ -61,6 +61,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://lam-english.com/blog/poziomy-angielskiego.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://lam-english.com/blog/small-talk-po-angielsku.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://lam-english.com/careers.html</loc>
     <lastmod>2026-10-10</lastmod>
     <changefreq>monthly</changefreq>
