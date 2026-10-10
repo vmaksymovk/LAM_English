@@ -22,7 +22,7 @@
 </url>
 <url>
   <loc>https://lam-english.com/blog.html</loc>
-  <lastmod>2026-01-11T20:21:38+00:00</lastmod>
+  <lastmod>2026-10-10T09:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -41,5 +41,35 @@
   <priority>0.80</priority>
 </url>
 
+<url>
+  <loc>https://lam-english.com/blog/blokada-mowienia-po-angielsku.html</loc>
+  <lastmod>2026-10-10T09:00:00+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://lam-english.com/blog/present-perfect-czy-past-simple.html</loc>
+  <lastmod>2026-10-10T09:00:00+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://lam-english.com/blog/zwroty-na-spotkanie-po-angielsku.html</loc>
+  <lastmod>2026-10-10T09:00:00+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://lam-english.com/blog/wymowa-th-po-angielsku.html</loc>
+  <lastmod>2026-10-10T09:00:00+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://lam-english.com/blog/jak-uczyc-sie-slowek.html</loc>
+  <lastmod>2026-10-10T09:00:00+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://lam-english.com/blog/angielski-15-minut-dziennie.html</loc>
+  <lastmod>2026-10-10T09:00:00+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
 
 </urlset>
