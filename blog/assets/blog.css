@@ -686,7 +686,7 @@ dialog.story-dialog[open] { animation: dialogIn .45s var(--ease-out); }
     .featured { grid-template-columns: 1fr; }
     .featured__body { padding: 8px 28px 32px; }
     .featured__media .cover { min-height: 240px; }
-    .post-layout { grid-template-columns: 1fr; }
+    .post-layout { grid-template-columns: minmax(0, 1fr); }
     .aside { position: static; grid-template-columns: 1fr 1fr; }
     .level-band { grid-template-columns: 1fr; }
 }
