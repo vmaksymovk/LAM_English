@@ -264,6 +264,14 @@ footer { background-color: var(--text-color); color: var(--white); padding: 3rem
 .blog-hero__topics { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; list-style: none; }
 .blog-hero__topics li { font: 500 .85rem/1 var(--font-head); color: var(--ink-soft); background: #fff; border: 1px solid var(--line); padding: 9px 13px; border-radius: 999px; }
 
+/* Lista zalet w hero (Kontakt, Kursy) */
+.hero-benefits { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; list-style: none; }
+.hero-benefits li {
+    display: inline-flex; align-items: center; gap: 8px; background: #fff; border: 1px solid var(--line);
+    padding: 9px 14px; border-radius: 999px; font: 500 .9rem/1.2 var(--font-head); color: var(--ink-soft);
+}
+.hero-benefits i { color: var(--green); }
+
 /* Scena 3D */
 .stage { position: relative; height: clamp(360px, 38vw, 500px); perspective: 1100px; perspective-origin: 50% 40%; }
 .scene {

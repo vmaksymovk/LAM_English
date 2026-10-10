@@ -4,12 +4,6 @@
 
 /* ---------- Hero ---------- */
 .contact-hero { padding-bottom: clamp(48px, 6vw, 88px); }
-.hero-benefits { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; list-style: none; }
-.hero-benefits li {
-    display: inline-flex; align-items: center; gap: 8px; background: #fff; border: 1px solid var(--line);
-    padding: 9px 14px; border-radius: 999px; font: 500 .9rem/1.2 var(--font-head); color: var(--ink-soft);
-}
-.hero-benefits i { color: var(--green); }
 
 /* Scena kanałów kontaktu */
 .channel { position: absolute; transform-style: preserve-3d; }
