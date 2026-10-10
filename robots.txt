@@ -1,0 +1,5 @@
+# LAM English — Language Academy Maksymov
+User-agent: *
+Allow: /
+
+Sitemap: https://lam-english.com/sitemap.xml
