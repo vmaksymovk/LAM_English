@@ -175,3 +175,29 @@
 @media (prefers-reduced-motion: reduce) {
     .why__item { transform: none !important; }
 }
+
+/* ---------- Kariera: końcowe CTA ---------- */
+.apply-cta {
+    position: relative; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 24px 40px;
+    background: var(--ink); color: #fff; border-radius: 28px; padding: clamp(24px, 4vw, 44px);
+    box-shadow: 0 40px 70px -40px rgba(11,42,30,.7);
+}
+.apply-cta::after { /* dekoracyjny pierścień */
+    content: ''; position: absolute; right: -70px; top: -70px; width: 220px; height: 220px; border-radius: 50%;
+    border: 28px solid rgba(127,208,161,.12); pointer-events: none;
+}
+.apply-cta__text { position: relative; z-index: 1; min-width: 0; }
+.apply-cta h2 { font: 700 clamp(1.4rem, 1.1rem + 1vw, 1.9rem)/1.2 var(--font-head); color: #fff; letter-spacing: -.015em; }
+.apply-cta p { color: #CFE0D6; margin-top: 8px; max-width: 54ch; }
+.apply-cta__mail { overflow-wrap: anywhere; }
+.apply-cta__mail i { color: #7FD0A1; margin-right: 4px; }
+.apply-cta__mail a { color: #fff; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.apply-cta__actions { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 10px; }
+.apply-cta .btn--primary { box-shadow: none; }
+.apply-cta .btn--outline-light { color: #fff; }
+@media (max-width: 860px) {
+    .apply-cta { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+    .apply-cta__actions .btn { flex: 1 1 100%; }
+}

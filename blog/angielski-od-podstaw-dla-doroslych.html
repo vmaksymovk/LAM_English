@@ -7,6 +7,9 @@
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        // Consent Mode v2: domyślnie brak zgody; zgoda zapisana w banerze cookies włącza tagi
+        gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500 });
+        try { if (localStorage.getItem('cookieConsent') === 'accepted') gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted' }); } catch (e) {}
         gtag('js', new Date());
         gtag('config', 'AW-17940816316');
     </script>
@@ -372,6 +375,6 @@
 </footer>
 
 <script src="../blog/assets/blog.js?v=85f806b9" defer></script>
-<script src="../Cookies/cookie-banner.js" defer></script>
+<script src="../Cookies/cookie-banner.js?v=c3a2581f" defer></script>
 </body>
 </html>

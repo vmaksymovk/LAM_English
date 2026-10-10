@@ -7,6 +7,9 @@
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        // Consent Mode v2: domyślnie brak zgody; zgoda zapisana w banerze cookies włącza tagi
+        gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500 });
+        try { if (localStorage.getItem('cookieConsent') === 'accepted') gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted' }); } catch (e) {}
         gtag('js', new Date());
         gtag('config', 'AW-17940816316');
     </script>
@@ -50,7 +53,7 @@
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
     <link rel="stylesheet" href="Cookies/cookie-banner.css">
     <link rel="stylesheet" href="blog/assets/blog.css?v=b0ad2514">
-    <link rel="stylesheet" href="blog/assets/pages.css?v=f8633502">
+    <link rel="stylesheet" href="blog/assets/pages.css?v=8dd14f08">
 
     <script type="application/ld+json">
 {
@@ -201,12 +204,15 @@
     </section>
 
     <section class="page-section wrap">
-        <aside class="inline-cta reveal" aria-labelledby="apply-title">
-            <h2 id="apply-title">Chcesz uczyć razem z nami?</h2>
-            <p>Napisz kilka słów o sobie i dołącz CV — odezwiemy się, gdy pojawi się miejsce w zespole.</p>
-            <div class="actions">
+        <aside class="apply-cta reveal" aria-labelledby="apply-title">
+            <div class="apply-cta__text">
+                <h2 id="apply-title">Chcesz uczyć razem z nami?</h2>
+                <p>Napisz kilka słów o sobie i dołącz CV — odezwiemy się, gdy pojawi się miejsce w zespole.</p>
+                <p class="apply-cta__mail"><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:language.english.academy@gmail.com?subject=CV%20-%20Language%20Academy%20Maksymov">language.english.academy@gmail.com</a></p>
+            </div>
+            <div class="apply-cta__actions">
                 <a class="btn btn--primary" href="contacts.html"><i class="fas fa-paper-plane" aria-hidden="true"></i> Wyślij aplikację</a>
-                <a class="btn btn--outline-light" href="mailto:language.english.academy@gmail.com?subject=CV%20-%20Language%20Academy%20Maksymov"><i class="fas fa-envelope" aria-hidden="true"></i> language.english.academy@gmail.com</a>
+                <a class="btn btn--outline-light" href="mailto:language.english.academy@gmail.com?subject=CV%20-%20Language%20Academy%20Maksymov"><i class="fas fa-envelope" aria-hidden="true"></i> Napisz e-mail</a>
             </div>
         </aside>
     </section>
@@ -252,6 +258,6 @@
 </footer>
 
 <script src="blog/assets/blog.js?v=85f806b9" defer></script>
-<script src="Cookies/cookie-banner.js" defer></script>
+<script src="Cookies/cookie-banner.js?v=c3a2581f" defer></script>
 </body>
 </html>
