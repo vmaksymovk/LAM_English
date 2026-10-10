@@ -5,6 +5,7 @@
 ## Najważniejsze strony
 - [Strona główna](https://lam-english.com/): oferta, cennik, opinie, FAQ
 - [Kursy i ceny](https://lam-english.com/courses.html): English Start (A1–A2), Boost (B1–B2), Pro (C1–C2), zajęcia indywidualne, Speaking Club
+- [Lekcje angielskiego online 1:1](https://lam-english.com/zajecia-indywidualne.html): 69 zł / 60 min, pakiet 10 zajęć 599 zł
 - [Kontakt](https://lam-english.com/contacts.html): formularz, telefon, godziny pracy (Pn–Pt 8–20, Sb 9–15)
 - [Blog](https://lam-english.com/blog.html): artykuły o nauce angielskiego i historie uczniów
 
@@ -17,6 +18,7 @@
 - [Angielski w 15 minut dziennie: plan dla zapracowanych](https://lam-english.com/blog/angielski-15-minut-dziennie.html): Jak nauczyć się angielskiego samemu, w domu, mając mało czasu? Plan na 15 minut dziennie: słuchanie, mówienie, słownictwo i powtórki.
 - [Poziomy angielskiego A1–C2: co oznaczają i jak sprawdzić swój?](https://lam-english.com/blog/poziomy-angielskiego.html): Poziomy angielskiego po kolei: A1, A2, B1, B2, C1, C2. Co potrafisz na każdym poziomie, czym różni się B1 od B2, co wpisać do CV i jak sprawdzić swój poziom.
 - [Small talk po angielsku: pytania, odpowiedzi i gotowe zwroty](https://lam-english.com/blog/small-talk-po-angielsku.html): Small talk po angielsku bez stresu: jak zacząć rozmowę, jakie pytania zadawać, jak odpowiadać i kończyć. Zwroty, przykładowy dialog i small talk w pracy.
+- [Angielski od podstaw dla dorosłych: jak zacząć i nie zrezygnować](https://lam-english.com/blog/angielski-od-podstaw-dla-doroslych.html): Angielski od podstaw dla dorosłych: od czego zacząć, czego uczyć się najpierw, ile to trwa i jak nie zrezygnować po miesiącu. Plan pierwszych 4 tygodni.
 
 ## Informacje prawne
 - [Regulamin](https://lam-english.com/terms-of-service.html)
