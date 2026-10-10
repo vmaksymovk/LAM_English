@@ -559,7 +559,7 @@ dialog.story-dialog[open] { animation: dialogIn .45s var(--ease-out); }
 /* FAQ (natywne <details>) */
 .faq { padding: clamp(64px, 8vw, 112px) 0 0; }
 .faq__list { display: grid; gap: 12px; max-width: 860px; }
-.faq details { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-md); transition: box-shadow .3s; }
+.faq details { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-md); transition: box-shadow .3s; min-width: 0; overflow-wrap: anywhere; }
 .faq details[open] { box-shadow: var(--shadow-card); }
 .faq summary {
     list-style: none; cursor: pointer; padding: 20px 56px 20px 22px; position: relative;
@@ -573,6 +573,22 @@ dialog.story-dialog[open] { animation: dialogIn .45s var(--ease-out); }
 }
 .faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
 .faq details p { padding: 0 22px 20px; color: var(--ink-soft); }
+
+/* FAQ — bogatsza treść odpowiedzi */
+.faq .answer { padding: 0 22px 22px; color: var(--ink-soft); display: grid; gap: 12px; min-width: 0; overflow-wrap: anywhere; }
+.faq .answer .note { padding: 12px 14px; }
+.faq .answer > * { min-width: 0; }
+.faq .answer p { padding: 0; }
+.faq .answer ul { padding-left: 1.2em; display: grid; gap: 6px; }
+.faq .answer a { color: var(--green-text); font-weight: 600; }
+.note { background: var(--paper); border-left: 3px solid var(--orange); border-radius: 10px; padding: 12px 14px; }
+.pay-methods { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0 !important; }
+.pay-methods li { display: inline-flex; align-items: center; gap: 8px; background: var(--paper); border: 1px solid var(--line); border-radius: 999px; padding: 9px 14px; font-weight: 500; }
+.pay-methods i { color: var(--green); }
+.steps-mini { list-style: none; padding: 0 !important; display: grid; gap: 10px; }
+.steps-mini li { display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: start; }
+.steps-mini b { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--mint); color: var(--green-text); font-family: var(--font-head); }
+.steps-mini strong { display: block; color: var(--ink); font-family: var(--font-head); }
 
 /* Końcowe CTA */
 .final {
