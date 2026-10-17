@@ -1,6 +1,6 @@
-# LAM English (Language Academy Maksymov)
+# Akademia Językowa LAM English (Language Academy Maksymov)
 
-> LAM English to szkoła angielskiego online dla dorosłych, którzy rozumieją angielski, ale blokują się przy mówieniu. Kursy grupowe A1–C2 od 279 zł/mies. i lekcje indywidualne 1:1 od 69 zł, prowadzone przez Google Meet w całej Polsce. Pierwszy krok to bezpłatna konsultacja telefoniczna; można też umówić bezpłatną lekcję próbną.
+> Akademia Językowa LAM English (w skrócie LAM English) to szkoła angielskiego online dla dorosłych, którzy rozumieją angielski, ale blokują się przy mówieniu. Kursy grupowe A1–C2 od 279 zł/mies. i lekcje indywidualne 1:1 od 69 zł, prowadzone przez Google Meet w całej Polsce. Pierwszy krok to bezpłatna konsultacja telefoniczna; można też umówić bezpłatną lekcję próbną.
 
 ## Najważniejsze fakty
 - Forma: wyłącznie online (Google Meet). Brak lekcji stacjonarnych, obsługujemy całą Polskę.
@@ -10,7 +10,7 @@
 - Kursy grupowe (stała grupa 4–6 osób, 8 zajęć w miesiącu, 2 razy w tygodniu): English Start A1–A2 — 279 zł/mies. (8 × 60 min); English Boost B1–B2 — 329 zł/mies. (8 × 75 min); English Pro C1–C2 — 379 zł/mies. (8 × 90 min).
 - Lekcje 1:1: 69 zł / 60 min, pakiet 10 lekcji 599 zł.
 - Po ukończeniu kursu: imienny certyfikat ukończenia.
-- Płatność: przelew bankowy, karta płatnicza, BLIK.
+- Płatność: BLIK lub karta płatnicza.
 - Nie oferujemy przygotowania do matury. Główna oferta jest dla dorosłych; zajęcia z dziećmi możliwe po konsultacji.
 - Kontakt: +48 576 076 648, language.english.academy@gmail.com, Pn–Pt 8–20, Sb 9–15.
 
@@ -18,6 +18,9 @@
 - [Strona główna](https://lam-english.com/): czym jest LAM English, cennik, opinie, FAQ
 - [Kursy i ceny](https://lam-english.com/courses.html): English Start, Boost, Pro i lekcje 1:1, porównanie, pierwszy miesiąc
 - [Lekcje angielskiego online 1:1](https://lam-english.com/zajecia-indywidualne.html): 69 zł / 60 min, pakiet 10 zajęć 599 zł
+- [Kurs angielskiego na blokadę w mówieniu](https://lam-english.com/kurs-angielskiego-blokada-mowienia.html): dla dorosłych, którzy rozumieją, ale nie mówią — jak pracujemy i który kurs wybrać
+- [Ile kosztuje kurs angielskiego online?](https://lam-english.com/ile-kosztuje-kurs-angielskiego-online.html): porównanie: aplikacja, lektor 1:1, kurs grupowy, szkoła stacjonarna; koszt godziny
+- [O nas](https://lam-english.com/o-nas.html): założyciel Vladyslav Maksymov, lektorzy, zasady, dla kogo jesteśmy
 - [Kontakt i bezpłatna konsultacja](https://lam-english.com/contacts.html): formularz, telefon, godziny pracy
 - [Blog](https://lam-english.com/blog.html): artykuły o mówieniu, gramatyce, wymowie i słownictwie
 

@@ -25,12 +25,12 @@ ABOUT_URL = SITE + 'o-nas.html'
 ORGANIZATION = {
     '@type': 'EducationalOrganization',
     '@id': ORG,
-    'name': 'LAM English',
-    'alternateName': ['Language Academy Maksymov', 'Akademia Językowa LAM English'],
+    'name': 'Akademia Językowa LAM English',
+    'alternateName': ['LAM English', 'Language Academy Maksymov'],
     'url': SITE,
     'logo': {'@type': 'ImageObject', '@id': SITE + '#logo', 'url': LOGO, 'width': 512, 'height': 512},
     'image': IMAGE,
-    'description': ('LAM English (Language Academy Maksymov) to szkoła angielskiego online dla dorosłych, '
+    'description': ('Akademia Językowa LAM English (Language Academy Maksymov) to szkoła angielskiego online dla dorosłych, '
                     'którzy rozumieją język, ale blokują się przy mówieniu. Kursy grupowe A1–C2 od 279 zł/mies. '
                     'i lekcje 1:1 od 69 zł, prowadzone przez Google Meet w całej Polsce.'),
     'telephone': '+48576076648',
@@ -66,6 +66,8 @@ FOUNDER_PERSON = {
     '@id': FOUNDER,
     'name': 'Vladyslav Maksymov',
     'jobTitle': 'Założyciel i lektor angielskiego',
+    'url': ABOUT_URL,
+    'image': SITE + 'blog/assets/vlad-320.jpg',
     'worksFor': {'@id': ORG},
 }
 

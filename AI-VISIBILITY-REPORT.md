@@ -26,19 +26,16 @@ CSS, JS, układ sekcji, kolory, fonty i nawigacja główna: **bez zmian** (`git 
 
 ## 2. Otwarte TODO-VLAD
 
-1. **Opinia Marka (strona główna).** Oryginał brzmiał: „Dzięki native speakerom nabrałem pewności…”. Wyciąłem to zdanie i zaznaczyłem „[…]”. Potwierdź z Markiem albo podmień opinię.
-2. **Piotr, „Przygotowanie do CAE”.** Czy prowadzicie przygotowanie do CAE? Jeśli nie, zmień podpis na kurs, w którym Piotr faktycznie był.
-3. **Historie na blogu:** Katarzyna P., Tomasz L., Magdalena R. oraz metryki („Pewność 3/10 → 9/10”, „4 oferty pracy”, „awans na Senior Managera”). Potwierdź, że są prawdziwe i że masz zgodę autorów.
-4. **„Odpowiadamy w ciągu 24 godzin w dni robocze”.** Czy to prawda?
-5. **Proces zapisu do grupy.** FAQ i „Twój pierwszy miesiąc” opisują test online + 15-minutową rozmowę z lektorem. Według Ciebie konsultacja odbywa się przez telefon. Ujednolić?
-6. **Płatność kartą.** FAQ podaje kartę, regulamin (pkt 3.5) mówi „przelew lub BLIK”. Która wersja jest prawdziwa?
-7. **Regulamin nadal opisuje darmowy Speaking Club** (pkt 1.3, 1.6, 2.1 i odpowiedzialność). Nie zmieniałem go, bo zmiana regulaminu wymaga powiadomienia klientów. Zdecyduj, kiedy go zaktualizować.
-8. **Autorstwo artykułów.** Podpisałem je „Vladyslav Maksymov”. Jeśli wolisz „Zespół LAM English”, daj znać.
-9. **Ocena 5,0 w Google** (14 opinii, stan na 17.10.2026) widnieje w pasku zaufania i w statystykach bloga. Zaktualizuj, jeśli się zmieni.
-10. **Nazwa w Google Business Profile** to „Akademia Językowa LAM English”, a na stronie „LAM English”. Wybierz jedną nazwę wszędzie. W schemacie obie są w `alternateName`.
-11. **Do potwierdzenia:** „Mierzalne Rezultaty: regularne testy postępów i raporty” (index), „Wsparcie mentorskie” (courses), „Certyfikat… (A1–C1+)”.
-12. **Opinie z Google** nie zostały skopiowane na stronę: to cudze teksty i potrzebna jest zgoda autorów. Wklej wybrane sam albo zostaw link (już dodany).
-13. **Strona „O nas” i dwie strony usługowe** czekają na akceptację planu (sekcja 6). Po ich publikacji dodam `url` autora w schemacie i link w stopce.
+Rozstrzygnięte 17.10: opinia Marka (potwierdzona), podpis Piotra („Uczeń LAM English” — nie prowadzimy przygotowania do CAE), historie na blogu (prawdziwe), płatność (BLIK lub karta — przelew usunięty z FAQ), nazwa jak w Google Maps („Akademia Językowa LAM English” w schemacie, nagłówku i stopce), opinie Google (zostaje link).
+
+1. **Regulamin** — pkt 3.5 mówi „przelew lub BLIK” (faktycznie: BLIK lub karta) i nadal opisuje darmowy Speaking Club (pkt 1.3, 1.6, 2.1). Zmiana regulaminu wymaga powiadomienia klientów — nie zmieniałem.
+2. **„Odpowiadamy w ciągu 24 godzin w dni robocze”** — potwierdź.
+3. **Proces zapisu do grupy** — FAQ i „Twój pierwszy miesiąc” opisują test online + 15-minutową rozmowę z lektorem; konsultacja jest telefoniczna. Ujednolicić?
+4. **Autorstwo artykułów** podpisane „Vladyslav Maksymov” — zmień, jeśli wolisz „Zespół LAM English”.
+5. **Ocena 5,0 w Google** (14 opinii, 17.10.2026) — aktualizuj, jeśli się zmieni.
+6. **Do potwierdzenia:** „Mierzalne Rezultaty: regularne testy postępów i raporty” (index), „Wsparcie mentorskie” (courses).
+7. **O nas** — zdjęcie `Images/Creator.jpg` jako Twoje zdjęcie (potwierdź); brak imion i bio pozostałych lektorów (`<!-- TODO-VLAD -->` w `o-nas.html`).
+8. **Ile kosztuje kurs** — ceny aplikacji i lektorów 1:1 na rynku oznaczone jako szacunkowe; dodaj 3–5 źródeł z datą (`<!-- TODO-VLAD -->`). Ceny szkół stacjonarnych: cenauslug.pl (2026).
 
 ## 3. URL-e do walidacji schematu (po wdrożeniu)
 
@@ -72,7 +69,7 @@ Uwagi techniczne: GitHub Pages nie obsługuje przekierowań 301, więc `/index.h
 - [ ] Katalogi firm (Panorama Firm, pkt.pl, Oferteo, katalogi szkół językowych): wszędzie identyczne dane (nazwa, telefon, strona, „online, cała Polska”).
 - [ ] Napisz do autorów rankingów „kurs angielskiego online” z prośbą o dodanie do zestawienia albo z propozycją tekstu gościnnego.
 
-## 6. Plan nowych podstron (czeka na Twoją akceptację)
+## 6. Nowe podstrony (szkice gotowe — do akceptacji)
 
 **`/o-nas.html`** (kopia szablonu `zajecia-indywidualne.html`, schema `AboutPage` + `Person`)
 - H1: „O LAM English: uczymy dorosłych mówić po angielsku”
