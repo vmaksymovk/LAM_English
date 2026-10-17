@@ -54,180 +54,222 @@
 
     <!-- Structured Data: Organization (bez zmian) -->
     <script type="application/ld+json">
-    {
+{
       "@context": "https://schema.org",
-      "@type": "EducationalOrganization",
-      "name": "LAM English | Language Academy Maksymov",
-      "url": "https://lam-english.com",
-      "logo": "https://lam-english.com/Images/Logo_New_Bigger.png",
-      "description": "Profesjonalne kursy angielskiego online dla Polaków. Przełam barierę mówienia, zdaj rozmowę kwalifikacyjną, awansuj.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Warszawa",
-        "addressCountry": "PL"
-      },
-      "sameAs": [
-        "https://www.facebook.com/groups/1007789447828292",
-        "https://www.instagram.com/lam_english_/",
-        "https://www.linkedin.com/company/language-academy-maksymov",
-        "https://www.tiktok.com/@lam_english"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+48576076648",
-        "contactType": "customer service",
-        "availableLanguage": "pl",
-        "areaServed": "PL"
-      }
+      "@graph": [
+        {
+          "@type": "EducationalOrganization",
+          "@id": "https://lam-english.com/#organization",
+          "name": "LAM English",
+          "alternateName": [
+            "Language Academy Maksymov",
+            "Akademia Językowa LAM English"
+          ],
+          "url": "https://lam-english.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://lam-english.com/#logo",
+            "url": "https://lam-english.com/Images/logo-512.png",
+            "width": 512,
+            "height": 512
+          },
+          "image": "https://lam-english.com/Images/og-home.jpg",
+          "description": "LAM English (Language Academy Maksymov) to szkoła angielskiego online dla dorosłych, którzy rozumieją język, ale blokują się przy mówieniu. Kursy grupowe A1–C2 od 279 zł/mies. i lekcje 1:1 od 69 zł, prowadzone przez Google Meet w całej Polsce.",
+          "telephone": "+48576076648",
+          "email": "language.english.academy@gmail.com",
+          "areaServed": {
+            "@type": "Country",
+            "name": "Polska"
+          },
+          "knowsLanguage": [
+            "pl",
+            "en",
+            "ru",
+            "uk"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "telephone": "+48576076648",
+            "email": "language.english.academy@gmail.com",
+            "areaServed": "PL",
+            "availableLanguage": [
+              "pl",
+              "en",
+              "ru",
+              "uk"
+            ],
+            "hoursAvailable": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday"
+                ],
+                "opens": "08:00",
+                "closes": "20:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "15:00"
+              }
+            ]
+          },
+          "founder": {
+            "@id": "https://lam-english.com/#vladyslav-maksymov"
+          },
+          "sameAs": [
+            "https://www.instagram.com/lam_english_/",
+            "https://www.tiktok.com/@lam_english",
+            "https://www.linkedin.com/company/language-academy-maksymov",
+            "https://maps.app.goo.gl/jvcghaR6eMgSRf9W9",
+            "https://www.facebook.com/groups/1007789447828292"
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://lam-english.com/#vladyslav-maksymov",
+          "name": "Vladyslav Maksymov",
+          "jobTitle": "Założyciel i lektor angielskiego",
+          "worksFor": {
+            "@id": "https://lam-english.com/#organization"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://lam-english.com/#website",
+          "url": "https://lam-english.com/",
+          "name": "LAM English",
+          "alternateName": "Language Academy Maksymov",
+          "inLanguage": "pl",
+          "publisher": {
+            "@id": "https://lam-english.com/#organization"
+          }
+        },
+        {
+          "@type": "CollectionPage",
+          "@id": "https://lam-english.com/blog.html#webpage",
+          "url": "https://lam-english.com/blog.html",
+          "name": "Blog o nauce angielskiego i mówieniu | LAM English",
+          "description": "Praktyczne artykuły o nauce angielskiego: jak przełamać blokadę w mówieniu, gramatyka z przykładami, zwroty na spotkania, wymowa i historie uczniów.",
+          "isPartOf": {
+            "@id": "https://lam-english.com/#website"
+          },
+          "inLanguage": "pl",
+          "breadcrumb": {
+            "@id": "https://lam-english.com/blog.html#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://lam-english.com/blog.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Strona główna",
+              "item": "https://lam-english.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://lam-english.com/blog.html"
+            }
+          ]
+        },
+        {
+          "@type": "Blog",
+          "@id": "https://lam-english.com/blog.html#blog",
+          "name": "Blog LAM English",
+          "url": "https://lam-english.com/blog.html",
+          "inLanguage": "pl",
+          "publisher": {
+            "@id": "https://lam-english.com/#organization"
+          },
+          "blogPost": [
+            {
+              "@id": "https://lam-english.com/blog/angielski-15-minut-dziennie.html#article"
+            },
+            {
+              "@id": "https://lam-english.com/blog/angielski-od-podstaw-dla-doroslych.html#article"
+            },
+            {
+              "@id": "https://lam-english.com/blog/blokada-mowienia-po-angielsku.html#article"
+            },
+            {
+              "@id": "https://lam-english.com/blog/jak-uczyc-sie-slowek.html#article"
+            },
+            {
+              "@id": "https://lam-english.com/blog/poziomy-angielskiego.html#article"
+            },
+            {
+              "@id": "https://lam-english.com/blog/present-perfect-czy-past-simple.html#article"
+            },
+            {
+              "@id": "https://lam-english.com/blog/small-talk-po-angielsku.html#article"
+            },
+            {
+              "@id": "https://lam-english.com/blog/wymowa-th-po-angielsku.html#article"
+            },
+            {
+              "@id": "https://lam-english.com/blog/zwroty-na-spotkanie-po-angielsku.html#article"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://lam-english.com/blog.html#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Jak długo trwa przełamanie bariery językowej?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "To zależy od poziomu wyjściowego i regularności. Przy zajęciach 2 razy w tygodniu, na których co najmniej 80% czasu mówimy po angielsku, pierwsze swobodniejsze rozmowy zwykle pojawiają się po kilku tygodniach."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy kursy online LAM English są skuteczne dla początkujących?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak. Nasze programy English Start (A1-A2) są stworzone z myślą o osobach rozpoczynających naukę. Skupiamy się na budowaniu pewności siebie i praktycznym użyciu języka w codziennych sytuacjach."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje kurs angielskiego online?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Przygotowaliśmy różne opcje cenowe – od 279 zł/miesiąc za kurs English Start. Najlepiej sprawdzić aktualną ofertę na stronie cennika lub skontaktować się z nami po darmową konsultację."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy oferujecie certyfikat po ukończeniu kursu?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, po zakończeniu kursu wydajemy imienny certyfikat ukończenia, z osiągniętym poziomem i liczbą godzin zajęć."
+              }
+            }
+          ],
+          "isPartOf": {
+            "@id": "https://lam-english.com/blog.html#webpage"
+          },
+          "inLanguage": "pl"
+        }
+      ]
     }
     </script>
     <!-- BreadcrumbList -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Strona główna",
-          "item": "https://lam-english.com"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Blog",
-          "item": "https://lam-english.com/blog.html"
-        }
-      ]
-    }
-    </script>
     <!-- Blog + lista artykułów -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "@id": "https://lam-english.com/blog.html#blog",
-      "name": "Blog LAM English",
-      "url": "https://lam-english.com/blog.html",
-      "inLanguage": "pl-PL",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Language Academy Maksymov",
-        "url": "https://lam-english.com/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://lam-english.com/Images/Logo_New_Bigger.png"
-        }
-      },
-      "blogPost": [
-        {
-          "@type": "BlogPosting",
-          "headline": "Rozumiesz, ale nie mówisz? 7 sposobów na blokadę przy mówieniu po angielsku",
-          "url": "https://lam-english.com/blog/blokada-mowienia-po-angielsku.html",
-          "datePublished": "2026-10-10",
-          "articleSection": "Mówienie"
-        },
-        {
-          "@type": "BlogPosting",
-          "headline": "Present Perfect czy Past Simple? Prosta zasada z przykładami",
-          "url": "https://lam-english.com/blog/present-perfect-czy-past-simple.html",
-          "datePublished": "2026-10-10",
-          "articleSection": "Gramatyka"
-        },
-        {
-          "@type": "BlogPosting",
-          "headline": "Angielski na spotkaniu i callu: 30 zwrotów, które warto znać",
-          "url": "https://lam-english.com/blog/zwroty-na-spotkanie-po-angielsku.html",
-          "datePublished": "2026-10-10",
-          "articleSection": "Business English"
-        },
-        {
-          "@type": "BlogPosting",
-          "headline": "Jak wymawiać „th” po angielsku — ćwiczenia dla Polaków",
-          "url": "https://lam-english.com/blog/wymowa-th-po-angielsku.html",
-          "datePublished": "2026-10-10",
-          "articleSection": "Wymowa"
-        },
-        {
-          "@type": "BlogPosting",
-          "headline": "Jak uczyć się słówek, żeby używać ich w rozmowie",
-          "url": "https://lam-english.com/blog/jak-uczyc-sie-slowek.html",
-          "datePublished": "2026-10-10",
-          "articleSection": "Słownictwo"
-        },
-        {
-          "@type": "BlogPosting",
-          "headline": "Angielski w 15 minut dziennie: plan dla zapracowanych",
-          "url": "https://lam-english.com/blog/angielski-15-minut-dziennie.html",
-          "datePublished": "2026-10-10",
-          "articleSection": "Porady"
-        },
-        {
-          "@type": "BlogPosting",
-          "headline": "Poziomy angielskiego A1–C2: co oznaczają i jak sprawdzić swój?",
-          "url": "https://lam-english.com/blog/poziomy-angielskiego.html",
-          "datePublished": "2026-10-10",
-          "articleSection": "Porady"
-        },
-        {
-          "@type": "BlogPosting",
-          "headline": "Small talk po angielsku: pytania, odpowiedzi i gotowe zwroty",
-          "url": "https://lam-english.com/blog/small-talk-po-angielsku.html",
-          "datePublished": "2026-10-10",
-          "articleSection": "Mówienie"
-        },
-        {
-          "@type": "BlogPosting",
-          "headline": "Angielski od podstaw dla dorosłych: jak zacząć i nie zrezygnować",
-          "url": "https://lam-english.com/blog/angielski-od-podstaw-dla-doroslych.html",
-          "datePublished": "2026-10-10",
-          "articleSection": "Porady"
-        }
-      ]
-    }
-    </script>
     <!-- FAQ — treść widoczna w sekcji #faq -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Jak długo trwa przełamanie bariery językowej?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "To zależy od poziomu wyjściowego i regularności. Przy zajęciach 2 razy w tygodniu, na których co najmniej 80% czasu mówimy po angielsku, pierwsze swobodniejsze rozmowy zwykle pojawiają się po kilku tygodniach."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Czy kursy online LAM English są skuteczne dla początkujących?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Tak. Nasze programy English Start (A1-A2) są stworzone z myślą o osobach rozpoczynających naukę. Skupiamy się na budowaniu pewności siebie i praktycznym użyciu języka w codziennych sytuacjach."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Ile kosztuje kurs angielskiego online?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Przygotowaliśmy różne opcje cenowe – od 279 zł/miesiąc za kurs English Start. Najlepiej sprawdzić aktualną ofertę na stronie cennika lub skontaktować się z nami po darmową konsultację."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Czy oferujecie certyfikat po ukończeniu kursu?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Tak, po zakończeniu kursu wydajemy imienny certyfikat ukończenia, z osiągniętym poziomem i liczbą godzin zajęć."
-          }
-        }
-      ]
-    }
-    </script>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Przejdź do treści</a>

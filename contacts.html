@@ -39,132 +39,197 @@
 
     <!-- Structured Data (bez zmian) -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": ["EducationalOrganization", "LocalBusiness"],
-                "@id": "https://lam-english.com/#organization",
-                "name": "Language Academy Maksymov",
-                "url": "https://lam-english.com/",
-                "logo": "https://lam-english.com/Images/Logo_New_Bigger.png",
-                "image": "https://lam-english.com/Images/Advertise_1.png",
-                "description": "Szkoła angielskiego online dla dorosłych z naciskiem na mówienie",
-                "telephone": "+48-576-076-648",
-                "email": "language.english.academy@gmail.com",
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressCountry": "PL"
-                },
-                "openingHours": [
-                    "Mo-Fr 08:00-20:00",
-                    "Sa 09:00-15:00"
-                ],
-                "contactPoint": {
-                    "@type": "ContactPoint",
-                    "telephone": "+48-576-076-648",
-                    "contactType": "customer service",
-                    "areaServed": "PL",
-                    "availableLanguage": ["Polish", "English"],
-                    "email": "language.english.academy@gmail.com"
-                },
-                "sameAs": [
-                    "https://www.facebook.com/groups/1007789447828292",
-                    "https://www.instagram.com/lam_english_/",
-                    "https://www.linkedin.com/company/language-academy-maksymov",
-                    "https://www.tiktok.com/@lam_english"
-                ]
-            },
-            {
-                "@type": "ContactPage",
-                "@id": "https://lam-english.com/contacts.html#webpage",
-                "url": "https://lam-english.com/contacts.html",
-                "name": "Kontakt - Language Academy Maksymov | Szkoła Językowa Online",
-                "description": "Strona kontaktowa szkoły językowej Language Academy Maksymov",
-                "isPartOf": {
-                    "@id": "https://lam-english.com/#website"
-                },
-                "breadcrumb": {
-                    "@id": "https://lam-english.com/contacts.html#breadcrumb"
-                }
-            },
-            {
-                "@type": "BreadcrumbList",
-                "@id": "https://lam-english.com/contacts.html#breadcrumb",
-                "itemListElement": [
-                    {
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "Strona główna",
-                        "item": "https://lam-english.com/"
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "Kontakt"
-                    }
-                ]
-            }
-        ]
-    }
-    </script>
-    <!-- FAQ — ta sama treść co w sekcji #faq -->
-    <script type="application/ld+json">
-    {
+{
       "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
+      "@graph": [
         {
-          "@type": "Question",
-          "name": "Jak umówić bezpłatną konsultację i lekcję próbną?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Pierwszy krok to bezpłatna konsultacja telefoniczna. Żeby ją umówić, wypełnij formularz kontaktowy, zadzwoń pod numer +48 576 076 648 lub napisz na adres language.english.academy@gmail.com. Oddzwonimy, porozmawiamy o Twoim celu i poziomie, a jeśli chcesz — umówimy bezpłatną lekcję próbną na Google Meet w dogodnym dla Ciebie terminie."
+          "@type": "EducationalOrganization",
+          "@id": "https://lam-english.com/#organization",
+          "name": "LAM English",
+          "alternateName": [
+            "Language Academy Maksymov",
+            "Akademia Językowa LAM English"
+          ],
+          "url": "https://lam-english.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://lam-english.com/#logo",
+            "url": "https://lam-english.com/Images/logo-512.png",
+            "width": 512,
+            "height": 512
+          },
+          "image": "https://lam-english.com/Images/og-home.jpg",
+          "description": "LAM English (Language Academy Maksymov) to szkoła angielskiego online dla dorosłych, którzy rozumieją język, ale blokują się przy mówieniu. Kursy grupowe A1–C2 od 279 zł/mies. i lekcje 1:1 od 69 zł, prowadzone przez Google Meet w całej Polsce.",
+          "telephone": "+48576076648",
+          "email": "language.english.academy@gmail.com",
+          "areaServed": {
+            "@type": "Country",
+            "name": "Polska"
+          },
+          "knowsLanguage": [
+            "pl",
+            "en",
+            "ru",
+            "uk"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "telephone": "+48576076648",
+            "email": "language.english.academy@gmail.com",
+            "areaServed": "PL",
+            "availableLanguage": [
+              "pl",
+              "en",
+              "ru",
+              "uk"
+            ],
+            "hoursAvailable": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday"
+                ],
+                "opens": "08:00",
+                "closes": "20:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "15:00"
+              }
+            ]
+          },
+          "founder": {
+            "@id": "https://lam-english.com/#vladyslav-maksymov"
+          },
+          "sameAs": [
+            "https://www.instagram.com/lam_english_/",
+            "https://www.tiktok.com/@lam_english",
+            "https://www.linkedin.com/company/language-academy-maksymov",
+            "https://maps.app.goo.gl/jvcghaR6eMgSRf9W9",
+            "https://www.facebook.com/groups/1007789447828292"
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://lam-english.com/#vladyslav-maksymov",
+          "name": "Vladyslav Maksymov",
+          "jobTitle": "Założyciel i lektor angielskiego",
+          "worksFor": {
+            "@id": "https://lam-english.com/#organization"
           }
         },
         {
-          "@type": "Question",
-          "name": "Jak długo czeka się na odpowiedź na wiadomość?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Odpowiadamy na wszystkie wiadomości w ciągu 24 godzin w dni robocze. W przypadku pytań o kursy, nasz doradca językowy skontaktuje się z Tobą, aby omówić szczegóły i zaproponować najlepsze rozwiązanie dopasowane do Twoich potrzeb."
+          "@type": "WebSite",
+          "@id": "https://lam-english.com/#website",
+          "url": "https://lam-english.com/",
+          "name": "LAM English",
+          "alternateName": "Language Academy Maksymov",
+          "inLanguage": "pl",
+          "publisher": {
+            "@id": "https://lam-english.com/#organization"
           }
         },
         {
-          "@type": "Question",
-          "name": "Czy mogę odrobić opuszczone zajęcia grupowe?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Termin zajęć grupowych ustalamy wspólnie przed rozpoczęciem kursu, biorąc pod uwagę dostępność każdej osoby. Z tego powodu odrabianie zajęć grupowych nie jest możliwe. W przypadku nieobecności zapewniamy pełne materiały z zajęć, wsparcie mentora w ramach dodatkowych konsultacji, kontakt z grupą oraz dodatkowe ćwiczenia do samodzielnego wykonania."
+          "@type": "ContactPage",
+          "@id": "https://lam-english.com/contacts.html#webpage",
+          "url": "https://lam-english.com/contacts.html",
+          "name": "Kontakt i bezpłatna konsultacja | LAM English",
+          "description": "Kontakt z LAM English: tel. +48 576 076 648, e-mail language.english.academy@gmail.com. Pn–Pt 8–20, Sb 9–15. Umów bezpłatną konsultację.",
+          "isPartOf": {
+            "@id": "https://lam-english.com/#website"
+          },
+          "inLanguage": "pl",
+          "breadcrumb": {
+            "@id": "https://lam-english.com/contacts.html#breadcrumb"
           }
         },
         {
-          "@type": "Question",
-          "name": "Jakie są metody płatności za kurs?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oferujemy różne metody płatności: przelew bankowy, kartę płatniczą lub BLIK."
-          }
+          "@type": "BreadcrumbList",
+          "@id": "https://lam-english.com/contacts.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Strona główna",
+              "item": "https://lam-english.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Kontakt",
+              "item": "https://lam-english.com/contacts.html"
+            }
+          ]
         },
         {
-          "@type": "Question",
-          "name": "Czy otrzymam certyfikat po ukończeniu kursu?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Tak, każdy student otrzymuje imienny certyfikat potwierdzający ukończenie kursu na odpowiednim poziomie. Certyfikat zawiera informacje o osiągniętym poziomie językowym (A1-C1+), liczbie ukończonych godzin lekcyjnych, zakresie omówionego materiału i umiejętnościach językowych."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Jak wygląda proces kwalifikacji do grupy?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Proces kwalifikacji składa się z trzech kroków: bezpłatny test poziomujący (krótki test online), 15-minutowa rozmowa z lektorem oceniająca płynność mówienia oraz dopasowanie do grupy lub propozycja indywidualnego planu."
-          }
+          "@type": "FAQPage",
+          "@id": "https://lam-english.com/contacts.html#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Jak umówić bezpłatną konsultację i lekcję próbną?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pierwszy krok to bezpłatna konsultacja telefoniczna. Żeby ją umówić, wystarczy: Wypełnić formularz kontaktowy na tej stronie; Zadzwonić pod numer +48 576 076 648; Napisać na adres language.english.academy@gmail.com. Oddzwonimy, porozmawiamy o Twoim celu i poziomie, a jeśli chcesz — umówimy bezpłatną lekcję próbną na Google Meet w dogodnym dla Ciebie terminie."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak długo czeka się na odpowiedź na wiadomość?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Szybka odpowiedź. Odpowiadamy na wszystkie wiadomości w ciągu 24 godzin w dni robocze. W przypadku pytań o kursy, nasz doradca językowy skontaktuje się z Tobą, aby omówić szczegóły i zaproponować najlepsze rozwiązanie dopasowane do Twoich potrzeb."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy mogę odrobić opuszczone zajęcia grupowe?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Harmonogram dopasowany do grupy. Wspólnie ustalony termin zajęć grupowych zapewnia dogodny czas dla wszystkich uczestników. Zajęcia grupowe są organizowane w taki sposób, aby termin był jak najbardziej dogodny dla wszystkich uczestników. Dlatego też, przed rozpoczęciem kursu, wspólnie ustalamy harmonogram, biorąc pod uwagę dostępność każdej osoby. Z tego powodu odrabianie zajęć grupowych nie jest możliwe - każda lekcja jest unikalnym doświadczeniem, które tworzy cała grupa w ustalonym, wspólnym terminie. Abyś jednak nie stracił ważnych treści, w przypadku nieobecności zapewniamy: 📚 Pełne materiały z przeprowadzonych zajęć; 💬 Wsparcie mentora w ramach dodatkowych konsultacji; 👥 Kontakt z grupą w sprawie omówionych tematów; 📝 Dodatkowe ćwiczenia do samodzielnego wykonania. Dziękujemy za zrozumienie - ta zasada pomaga nam tworzyć stabilne, wspierające środowisko nauki dla całej grupy! 🙏"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie są metody płatności za kurs?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oferujemy różne metody płatności dla Twojej wygody: Przelew bankowy; Karta płatnicza; BLIK."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy otrzymam certyfikat po ukończeniu kursu?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Certyfikat ukończenia kursu. Tak, każdy student otrzymuje imienny certyfikat potwierdzający ukończenie kursu na odpowiednim poziomie. Certyfikat zawiera informacje o: Osiągniętym poziomie językowym (A1-C1+); Liczbie ukończonych godzin lekcyjnych; Zakresie omówionego materiału; Umiejętnościach językowych."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak wygląda proces kwalifikacji do grupy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Proces kwalifikacji składa się z trzech prostych kroków: Bezpłatny test poziomujący: Krótki test online sprawdzający Twoje umiejętności; Rozmowa z lektorem: 15-minutowa rozmowa oceniająca płynność mówienia; Dopasowanie grupy: Przydział do idealnie dopasowanej grupy lub propozycja indywidualnego planu."
+              }
+            }
+          ],
+          "isPartOf": {
+            "@id": "https://lam-english.com/contacts.html#webpage"
+          },
+          "inLanguage": "pl"
         }
       ]
     }
     </script>
+    <!-- FAQ — ta sama treść co w sekcji #faq -->
 
     <!-- Favicon & theme -->
     <link rel="icon" type="image/svg+xml" href="FaviconForWebPage/favicon.svg">

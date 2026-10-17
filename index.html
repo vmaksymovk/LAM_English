@@ -33,38 +33,50 @@
 
     <!-- Structured Data -->
     <script type="application/ld+json">
-    {
+{
       "@context": "https://schema.org",
       "@graph": [
         {
           "@type": "EducationalOrganization",
           "@id": "https://lam-english.com/#organization",
-          "name": "Language Academy Maksymov",
-          "alternateName": "LAM English",
+          "name": "LAM English",
+          "alternateName": [
+            "Language Academy Maksymov",
+            "Akademia Językowa LAM English"
+          ],
           "url": "https://lam-english.com/",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://lam-english.com/Images/Logo_New_Bigger.png"
+            "@id": "https://lam-english.com/#logo",
+            "url": "https://lam-english.com/Images/logo-512.png",
+            "width": 512,
+            "height": 512
           },
-          "image": "https://lam-english.com/Images/Advertise_1.png",
-          "description": "Szkoła języka angielskiego online z naciskiem na mówienie: kursy grupowe A1–C2 i zajęcia indywidualne.",
-          "email": "language.english.academy@gmail.com",
+          "image": "https://lam-english.com/Images/og-home.jpg",
+          "description": "LAM English (Language Academy Maksymov) to szkoła angielskiego online dla dorosłych, którzy rozumieją język, ale blokują się przy mówieniu. Kursy grupowe A1–C2 od 279 zł/mies. i lekcje 1:1 od 69 zł, prowadzone przez Google Meet w całej Polsce.",
           "telephone": "+48576076648",
-          "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "PL"
+          "email": "language.english.academy@gmail.com",
+          "areaServed": {
+            "@type": "Country",
+            "name": "Polska"
           },
-          "areaServed": "PL",
+          "knowsLanguage": [
+            "pl",
+            "en",
+            "ru",
+            "uk"
+          ],
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+48576076648",
             "contactType": "customer service",
+            "telephone": "+48576076648",
             "email": "language.english.academy@gmail.com",
+            "areaServed": "PL",
             "availableLanguage": [
-              "Polish",
-              "English",
-              "Russian",
-              "Ukrainian"
+              "pl",
+              "en",
+              "ru",
+              "uk"
             ],
             "hoursAvailable": [
               {
@@ -87,21 +99,33 @@
               }
             ]
           },
+          "founder": {
+            "@id": "https://lam-english.com/#vladyslav-maksymov"
+          },
           "sameAs": [
-            "https://www.facebook.com/groups/1007789447828292",
             "https://www.instagram.com/lam_english_/",
-            "https://www.linkedin.com/company/language-academy-maksymov",
             "https://www.tiktok.com/@lam_english",
-            "https://maps.app.goo.gl/jvcghaR6eMgSRf9W9"
+            "https://www.linkedin.com/company/language-academy-maksymov",
+            "https://maps.app.goo.gl/jvcghaR6eMgSRf9W9",
+            "https://www.facebook.com/groups/1007789447828292"
           ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://lam-english.com/#vladyslav-maksymov",
+          "name": "Vladyslav Maksymov",
+          "jobTitle": "Założyciel i lektor angielskiego",
+          "worksFor": {
+            "@id": "https://lam-english.com/#organization"
+          }
         },
         {
           "@type": "WebSite",
           "@id": "https://lam-english.com/#website",
           "url": "https://lam-english.com/",
-          "name": "Language Academy Maksymov",
-          "alternateName": "LAM English",
-          "inLanguage": "pl-PL",
+          "name": "LAM English",
+          "alternateName": "Language Academy Maksymov",
+          "inLanguage": "pl",
           "publisher": {
             "@id": "https://lam-english.com/#organization"
           }
@@ -110,161 +134,212 @@
           "@type": "WebPage",
           "@id": "https://lam-english.com/#webpage",
           "url": "https://lam-english.com/",
-          "name": "Szkoła angielskiego online dla dorosłych | LAM English",
-          "description": "Kursy angielskiego online dla dorosłych: grupy A1–C2 od 279 zł/mies. i lekcje 1:1. 80% lekcji to mówienie. Bezpłatna lekcja próbna — zapisz się!",
+          "name": "Kurs angielskiego online dla dorosłych | LAM English",
+          "description": "Szkoła angielskiego online dla dorosłych, którzy rozumieją, ale boją się mówić. Grupy od 279 zł/mies., lekcje 1:1 od 69 zł. Bezpłatna konsultacja.",
           "isPartOf": {
             "@id": "https://lam-english.com/#website"
           },
+          "inLanguage": "pl",
           "about": {
             "@id": "https://lam-english.com/#organization"
-          },
-          "inLanguage": "pl-PL"
+          }
         },
         {
           "@type": "Course",
           "@id": "https://lam-english.com/courses.html#course-start",
-          "name": "English Start (A1-A2)",
-          "description": "Kurs angielskiego online na poziomie A1-A2: 8 zajęć miesięcznie po 60 minut, nacisk na mówienie.",
+          "name": "English Start (A1–A2)",
+          "description": "Kurs grupowy angielskiego online dla początkujących: 8 zajęć w miesiącu po 60 minut, małe grupy 4–6 osób, nacisk na mówienie.",
           "url": "https://lam-english.com/courses.html#course-start",
-          "inLanguage": "en",
-          "educationalLevel": "A1-A2",
           "provider": {
             "@id": "https://lam-english.com/#organization"
           },
-          "offers": {
-            "@type": "Offer",
-            "category": "Paid",
-            "price": "279",
-            "priceCurrency": "PLN",
-            "availability": "https://schema.org/InStock",
-            "url": "https://lam-english.com/contacts.html?course=English%20Start%20(A1-A2)&level=A1-A2&price=279&type=group"
-          },
+          "educationalLevel": "A1–A2",
+          "inLanguage": "en",
           "hasCourseInstance": {
             "@type": "CourseInstance",
             "courseMode": "Online",
+            "location": "Google Meet",
+            "courseWorkload": "PT8H",
             "courseSchedule": {
               "@type": "Schedule",
               "repeatCount": 8,
               "repeatFrequency": "P1M",
               "duration": "PT60M"
             }
+          },
+          "offers": {
+            "@type": "Offer",
+            "category": "Subscription",
+            "price": "279",
+            "priceCurrency": "PLN",
+            "availability": "https://schema.org/InStock",
+            "url": "https://lam-english.com/courses.html#course-start"
           }
         },
         {
           "@type": "Course",
           "@id": "https://lam-english.com/courses.html#course-boost",
-          "name": "English Boost (B1-B2)",
-          "description": "Kurs angielskiego online na poziomie B1-B2: 8 zajęć miesięcznie po 75 minut, nacisk na mówienie.",
+          "name": "English Boost (B1–B2)",
+          "description": "Kurs grupowy angielskiego online dla osób, które rozumieją sporo, ale trudno im mówić: 8 zajęć w miesiącu po 75 minut, małe grupy 4–6 osób.",
           "url": "https://lam-english.com/courses.html#course-boost",
-          "inLanguage": "en",
-          "educationalLevel": "B1-B2",
           "provider": {
             "@id": "https://lam-english.com/#organization"
           },
-          "offers": {
-            "@type": "Offer",
-            "category": "Paid",
-            "price": "329",
-            "priceCurrency": "PLN",
-            "availability": "https://schema.org/InStock",
-            "url": "https://lam-english.com/contacts.html?course=English%20Boost%20(B1-B2)&level=B1-B2&price=329&type=group"
-          },
+          "educationalLevel": "B1–B2",
+          "inLanguage": "en",
           "hasCourseInstance": {
             "@type": "CourseInstance",
             "courseMode": "Online",
+            "location": "Google Meet",
+            "courseWorkload": "PT10H",
             "courseSchedule": {
               "@type": "Schedule",
               "repeatCount": 8,
               "repeatFrequency": "P1M",
               "duration": "PT75M"
             }
+          },
+          "offers": {
+            "@type": "Offer",
+            "category": "Subscription",
+            "price": "329",
+            "priceCurrency": "PLN",
+            "availability": "https://schema.org/InStock",
+            "url": "https://lam-english.com/courses.html#course-boost"
           }
         },
         {
           "@type": "Course",
           "@id": "https://lam-english.com/courses.html#course-pro",
-          "name": "English Pro (C1-C2)",
-          "description": "Kurs angielskiego online na poziomie C1-C2: 8 zajęć miesięcznie po 90 minut, nacisk na mówienie.",
+          "name": "English Pro (C1–C2)",
+          "description": "Kurs grupowy angielskiego online dla zaawansowanych: 8 zajęć w miesiącu po 90 minut, dyskusje i prezentacje w pracy.",
           "url": "https://lam-english.com/courses.html#course-pro",
-          "inLanguage": "en",
-          "educationalLevel": "C1-C2",
           "provider": {
             "@id": "https://lam-english.com/#organization"
           },
-          "offers": {
-            "@type": "Offer",
-            "category": "Paid",
-            "price": "379",
-            "priceCurrency": "PLN",
-            "availability": "https://schema.org/InStock",
-            "url": "https://lam-english.com/contacts.html?course=English%20Pro%20(C1-C2)&level=C1-C2&price=379&type=group"
-          },
+          "educationalLevel": "C1–C2",
+          "inLanguage": "en",
           "hasCourseInstance": {
             "@type": "CourseInstance",
             "courseMode": "Online",
+            "location": "Google Meet",
+            "courseWorkload": "PT12H",
             "courseSchedule": {
               "@type": "Schedule",
               "repeatCount": 8,
               "repeatFrequency": "P1M",
               "duration": "PT90M"
             }
-          }
-        }
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Jak umówić bezpłatną konsultację i lekcję próbną?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Pierwszy krok to bezpłatna konsultacja telefoniczna. Żeby ją umówić, wypełnij formularz kontaktowy, zadzwoń pod numer +48 576 076 648 lub napisz na adres language.english.academy@gmail.com. Oddzwonimy, porozmawiamy o Twoim celu i poziomie, a jeśli chcesz — umówimy bezpłatną lekcję próbną na Google Meet w dogodnym dla Ciebie terminie."
+          },
+          "offers": {
+            "@type": "Offer",
+            "category": "Subscription",
+            "price": "379",
+            "priceCurrency": "PLN",
+            "availability": "https://schema.org/InStock",
+            "url": "https://lam-english.com/courses.html#course-pro"
           }
         },
         {
-          "@type": "Question",
-          "name": "Jak długo czeka się na odpowiedź na wiadomość?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Odpowiadamy na wszystkie wiadomości w ciągu 24 godzin w dni robocze. W przypadku pytań o kursy, nasz doradca językowy skontaktuje się z Tobą, aby omówić szczegóły i zaproponować najlepsze rozwiązanie dopasowane do Twoich potrzeb."
-          }
+          "@type": "Course",
+          "@id": "https://lam-english.com/zajecia-indywidualne.html#course",
+          "name": "Lekcje angielskiego online 1:1",
+          "description": "Indywidualne lekcje angielskiego online dla dorosłych: 60 minut, program dopasowany do celu ucznia, elastyczny grafik.",
+          "url": "https://lam-english.com/zajecia-indywidualne.html",
+          "provider": {
+            "@id": "https://lam-english.com/#organization"
+          },
+          "educationalLevel": "A1–C2",
+          "inLanguage": "en",
+          "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "location": "Google Meet",
+            "courseWorkload": "PT1H",
+            "courseSchedule": {
+              "@type": "Schedule",
+              "repeatFrequency": "P1W",
+              "duration": "PT60M"
+            }
+          },
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Lekcja 60 minut",
+              "category": "Paid",
+              "price": "69",
+              "priceCurrency": "PLN",
+              "availability": "https://schema.org/InStock",
+              "url": "https://lam-english.com/zajecia-indywidualne.html"
+            },
+            {
+              "@type": "Offer",
+              "name": "Pakiet 10 zajęć",
+              "category": "Paid",
+              "price": "599",
+              "priceCurrency": "PLN",
+              "availability": "https://schema.org/InStock",
+              "url": "https://lam-english.com/zajecia-indywidualne.html"
+            }
+          ]
         },
         {
-          "@type": "Question",
-          "name": "Czy mogę odrobić opuszczone zajęcia grupowe?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Termin zajęć grupowych ustalamy wspólnie przed rozpoczęciem kursu, biorąc pod uwagę dostępność każdej osoby. Z tego powodu odrabianie zajęć grupowych nie jest możliwe. W przypadku nieobecności zapewniamy pełne materiały z zajęć, wsparcie mentora w ramach dodatkowych konsultacji, kontakt z grupą oraz dodatkowe ćwiczenia do samodzielnego wykonania."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Jakie są metody płatności za kurs?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oferujemy różne metody płatności: przelew bankowy, kartę płatniczą lub BLIK."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Czy otrzymam certyfikat po ukończeniu kursu?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Tak, każdy student otrzymuje imienny certyfikat potwierdzający ukończenie kursu na odpowiednim poziomie. Certyfikat zawiera informacje o osiągniętym poziomie językowym (A1-C1+), liczbie ukończonych godzin lekcyjnych, zakresie omówionego materiału i umiejętnościach językowych."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Jak wygląda proces kwalifikacji do grupy?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Proces kwalifikacji składa się z trzech kroków: bezpłatny test poziomujący (krótki test online), 15-minutowa rozmowa z lektorem oceniająca płynność mówienia oraz dopasowanie do grupy lub propozycja indywidualnego planu."
-          }
+          "@type": "FAQPage",
+          "@id": "https://lam-english.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Jak umówić bezpłatną konsultację i lekcję próbną?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pierwszy krok to bezpłatna konsultacja telefoniczna. Żeby ją umówić, wystarczy: Wypełnić formularz kontaktowy na tej stronie; Zadzwonić pod numer +48 576 076 648; Napisać na adres language.english.academy@gmail.com. Oddzwonimy, porozmawiamy o Twoim celu i poziomie, a jeśli chcesz — umówimy bezpłatną lekcję próbną na Google Meet w dogodnym dla Ciebie terminie."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak długo czeka się na odpowiedź na wiadomość?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Szybka odpowiedź. Odpowiadamy na wszystkie wiadomości w ciągu 24 godzin w dni robocze. W przypadku pytań o kursy, nasz doradca językowy skontaktuje się z Tobą, aby omówić szczegóły i zaproponować najlepsze rozwiązanie dopasowane do Twoich potrzeb."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy mogę odrobić opuszczone zajęcia grupowe?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Harmonogram dopasowany do grupy. Wspólnie ustalony termin zajęć grupowych zapewnia dogodny czas dla wszystkich uczestników. Zajęcia grupowe są organizowane w taki sposób, aby termin był jak najbardziej dogodny dla wszystkich uczestników. Dlatego też, przed rozpoczęciem kursu, wspólnie ustalamy harmonogram, biorąc pod uwagę dostępność każdej osoby. Z tego powodu odrabianie zajęć grupowych nie jest możliwe - każda lekcja jest unikalnym doświadczeniem, które tworzy cała grupa w ustalonym, wspólnym terminie. Abyś jednak nie stracił ważnych treści, w przypadku nieobecności zapewniamy: 📚 Pełne materiały z przeprowadzonych zajęć; 💬 Wsparcie mentora w ramach dodatkowych konsultacji; 👥 Kontakt z grupą w sprawie omówionych tematów; 📝 Dodatkowe ćwiczenia do samodzielnego wykonania. Dziękujemy za zrozumienie - ta zasada pomaga nam tworzyć stabilne, wspierające środowisko nauki dla całej grupy! 🙏"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie są metody płatności za kurs?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oferujemy różne metody płatności dla Twojej wygody: Przelew bankowy; Karta płatnicza; BLIK."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy otrzymam certyfikat po ukończeniu kursu?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Certyfikat ukończenia kursu. Tak, każdy student otrzymuje imienny certyfikat potwierdzający ukończenie kursu na odpowiednim poziomie. Certyfikat zawiera informacje o: Osiągniętym poziomie językowym (A1-C1+); Liczbie ukończonych godzin lekcyjnych; Zakresie omówionego materiału; Umiejętnościach językowych."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak wygląda proces kwalifikacji do grupy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Proces kwalifikacji składa się z trzech prostych kroków: Bezpłatny test poziomujący: Krótki test online sprawdzający Twoje umiejętności; Rozmowa z lektorem: 15-minutowa rozmowa oceniająca płynność mówienia; Dopasowanie grupy: Przydział do idealnie dopasowanej grupy lub propozycja indywidualnego planu."
+              }
+            }
+          ],
+          "isPartOf": {
+            "@id": "https://lam-english.com/#webpage"
+          },
+          "inLanguage": "pl"
         }
       ]
     }

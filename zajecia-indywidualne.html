@@ -52,104 +52,218 @@
     <link rel="stylesheet" href="Cookies/cookie-banner.css">
     <link rel="stylesheet" href="blog/assets/blog.css?v=41a052a9">
     <link rel="stylesheet" href="blog/assets/courses.css?v=8e2dc1de">
-
     <script type="application/ld+json">
-    {
+{
       "@context": "https://schema.org",
-      "@type": "Course",
-      "@id": "https://lam-english.com/zajecia-indywidualne.html#course",
-      "name": "Zajęcia indywidualne z angielskiego online (1:1)",
-      "description": "Indywidualne lekcje angielskiego online dla dorosłych: program dopasowany do celu ucznia, 60 minut, elastyczny grafik.",
-      "url": "https://lam-english.com/zajecia-indywidualne.html",
-      "inLanguage": "en",
-      "provider": {
-        "@id": "https://lam-english.com/#organization"
-      },
-      "offers": [
+      "@graph": [
         {
-          "@type": "Offer",
-          "name": "Lekcja 60 minut",
-          "price": "69",
-          "priceCurrency": "PLN",
-          "category": "Paid",
-          "availability": "https://schema.org/InStock",
-          "url": "https://lam-english.com/contacts.html?course=Zaj%C4%99cia%20indywidualne&type=individual&price=69"
+          "@type": "EducationalOrganization",
+          "@id": "https://lam-english.com/#organization",
+          "name": "LAM English",
+          "alternateName": [
+            "Language Academy Maksymov",
+            "Akademia Językowa LAM English"
+          ],
+          "url": "https://lam-english.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://lam-english.com/#logo",
+            "url": "https://lam-english.com/Images/logo-512.png",
+            "width": 512,
+            "height": 512
+          },
+          "image": "https://lam-english.com/Images/og-home.jpg",
+          "description": "LAM English (Language Academy Maksymov) to szkoła angielskiego online dla dorosłych, którzy rozumieją język, ale blokują się przy mówieniu. Kursy grupowe A1–C2 od 279 zł/mies. i lekcje 1:1 od 69 zł, prowadzone przez Google Meet w całej Polsce.",
+          "telephone": "+48576076648",
+          "email": "language.english.academy@gmail.com",
+          "areaServed": {
+            "@type": "Country",
+            "name": "Polska"
+          },
+          "knowsLanguage": [
+            "pl",
+            "en",
+            "ru",
+            "uk"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "telephone": "+48576076648",
+            "email": "language.english.academy@gmail.com",
+            "areaServed": "PL",
+            "availableLanguage": [
+              "pl",
+              "en",
+              "ru",
+              "uk"
+            ],
+            "hoursAvailable": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday"
+                ],
+                "opens": "08:00",
+                "closes": "20:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "15:00"
+              }
+            ]
+          },
+          "founder": {
+            "@id": "https://lam-english.com/#vladyslav-maksymov"
+          },
+          "sameAs": [
+            "https://www.instagram.com/lam_english_/",
+            "https://www.tiktok.com/@lam_english",
+            "https://www.linkedin.com/company/language-academy-maksymov",
+            "https://maps.app.goo.gl/jvcghaR6eMgSRf9W9",
+            "https://www.facebook.com/groups/1007789447828292"
+          ]
         },
         {
-          "@type": "Offer",
-          "name": "Pakiet 10 zajęć",
-          "price": "599",
-          "priceCurrency": "PLN",
-          "category": "Paid",
-          "availability": "https://schema.org/InStock",
-          "url": "https://lam-english.com/contacts.html?course=Zaj%C4%99cia%20indywidualne&type=individual&price=69"
-        }
-      ],
-      "hasCourseInstance": {
-        "@type": "CourseInstance",
-        "courseMode": "Online",
-        "courseSchedule": {
-          "@type": "Schedule",
-          "duration": "PT60M",
-          "repeatFrequency": "P1W"
-        }
-      }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Strona główna",
-          "item": "https://lam-english.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Kursy",
-          "item": "https://lam-english.com/courses.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Zajęcia indywidualne",
-          "item": "https://lam-english.com/zajecia-indywidualne.html"
-        }
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Jak umówić bezpłatną konsultację i lekcję próbną?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Pierwszy krok to bezpłatna konsultacja telefoniczna. Żeby ją umówić, wypełnij formularz kontaktowy, zadzwoń pod numer +48 576 076 648 lub napisz na adres language.english.academy@gmail.com. Oddzwonimy, porozmawiamy o Twoim celu i poziomie, a jeśli chcesz — umówimy bezpłatną lekcję próbną na Google Meet w dogodnym dla Ciebie terminie."
+          "@type": "Person",
+          "@id": "https://lam-english.com/#vladyslav-maksymov",
+          "name": "Vladyslav Maksymov",
+          "jobTitle": "Założyciel i lektor angielskiego",
+          "worksFor": {
+            "@id": "https://lam-english.com/#organization"
           }
         },
         {
-          "@type": "Question",
-          "name": "Jak długo czeka się na odpowiedź na wiadomość?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Odpowiadamy na wszystkie wiadomości w ciągu 24 godzin w dni robocze. W przypadku pytań o kursy, nasz doradca językowy skontaktuje się z Tobą, aby omówić szczegóły i zaproponować najlepsze rozwiązanie dopasowane do Twoich potrzeb."
+          "@type": "WebSite",
+          "@id": "https://lam-english.com/#website",
+          "url": "https://lam-english.com/",
+          "name": "LAM English",
+          "alternateName": "Language Academy Maksymov",
+          "inLanguage": "pl",
+          "publisher": {
+            "@id": "https://lam-english.com/#organization"
           }
         },
         {
-          "@type": "Question",
-          "name": "Jakie są metody płatności za kurs?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oferujemy różne metody płatności: przelew bankowy, kartę płatniczą lub BLIK."
+          "@type": "WebPage",
+          "@id": "https://lam-english.com/zajecia-indywidualne.html#webpage",
+          "url": "https://lam-english.com/zajecia-indywidualne.html",
+          "name": "Lekcje angielskiego online indywidualnie (1:1) | LAM English",
+          "description": "Indywidualne lekcje angielskiego online dla dorosłych: 69 zł za 60 minut lub pakiet 10 zajęć za 599 zł. Program pod Twój cel. Bezpłatna konsultacja.",
+          "isPartOf": {
+            "@id": "https://lam-english.com/#website"
+          },
+          "inLanguage": "pl",
+          "breadcrumb": {
+            "@id": "https://lam-english.com/zajecia-indywidualne.html#breadcrumb"
           }
+        },
+        {
+          "@type": "Course",
+          "@id": "https://lam-english.com/zajecia-indywidualne.html#course",
+          "name": "Lekcje angielskiego online 1:1",
+          "description": "Indywidualne lekcje angielskiego online dla dorosłych: 60 minut, program dopasowany do celu ucznia, elastyczny grafik.",
+          "url": "https://lam-english.com/zajecia-indywidualne.html",
+          "provider": {
+            "@id": "https://lam-english.com/#organization"
+          },
+          "educationalLevel": "A1–C2",
+          "inLanguage": "en",
+          "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "location": "Google Meet",
+            "courseWorkload": "PT1H",
+            "courseSchedule": {
+              "@type": "Schedule",
+              "repeatFrequency": "P1W",
+              "duration": "PT60M"
+            }
+          },
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Lekcja 60 minut",
+              "category": "Paid",
+              "price": "69",
+              "priceCurrency": "PLN",
+              "availability": "https://schema.org/InStock",
+              "url": "https://lam-english.com/zajecia-indywidualne.html"
+            },
+            {
+              "@type": "Offer",
+              "name": "Pakiet 10 zajęć",
+              "category": "Paid",
+              "price": "599",
+              "priceCurrency": "PLN",
+              "availability": "https://schema.org/InStock",
+              "url": "https://lam-english.com/zajecia-indywidualne.html"
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://lam-english.com/zajecia-indywidualne.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Strona główna",
+              "item": "https://lam-english.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Kursy",
+              "item": "https://lam-english.com/courses.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Zajęcia indywidualne",
+              "item": "https://lam-english.com/zajecia-indywidualne.html"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://lam-english.com/zajecia-indywidualne.html#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Jak umówić bezpłatną konsultację i lekcję próbną?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pierwszy krok to bezpłatna konsultacja telefoniczna. Żeby ją umówić, wystarczy: Wypełnić formularz kontaktowy na tej stronie; Zadzwonić pod numer +48 576 076 648; Napisać na adres language.english.academy@gmail.com. Oddzwonimy, porozmawiamy o Twoim celu i poziomie, a jeśli chcesz — umówimy bezpłatną lekcję próbną na Google Meet w dogodnym dla Ciebie terminie."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak długo czeka się na odpowiedź na wiadomość?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Szybka odpowiedź. Odpowiadamy na wszystkie wiadomości w ciągu 24 godzin w dni robocze. W przypadku pytań o kursy, nasz doradca językowy skontaktuje się z Tobą, aby omówić szczegóły i zaproponować najlepsze rozwiązanie dopasowane do Twoich potrzeb."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie są metody płatności za kurs?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oferujemy różne metody płatności dla Twojej wygody: Przelew bankowy; Karta płatnicza; BLIK."
+              }
+            }
+          ],
+          "isPartOf": {
+            "@id": "https://lam-english.com/zajecia-indywidualne.html#webpage"
+          },
+          "inLanguage": "pl"
         }
       ]
     }
