@@ -17,7 +17,8 @@ class CookieConsent {
     }
 
     loadConsent() {
-        const stored = localStorage.getItem(this.storageKey);
+        let stored = null;
+        try { stored = localStorage.getItem(this.storageKey); } catch (e) {}
         if (stored) {
             this.consentGiven = stored === 'accepted';
         }
@@ -83,7 +84,7 @@ class CookieConsent {
 
     handleAccept() {
         this.consentGiven = true;
-        localStorage.setItem(this.storageKey, 'accepted');
+        try { localStorage.setItem(this.storageKey, 'accepted'); } catch (e) {}
         this.hideBanner();
         this.applyConsent();
 
@@ -95,7 +96,7 @@ class CookieConsent {
 
     handleReject() {
         this.consentGiven = false;
-        localStorage.setItem(this.storageKey, 'rejected');
+        try { localStorage.setItem(this.storageKey, 'rejected'); } catch (e) {}
         this.hideBanner();
         this.applyConsent();
 
@@ -118,13 +119,21 @@ class CookieConsent {
     }
 
     loadAnalytics() {
-        // Placeholder for analytics loading
-        console.log('Loading analytics scripts...');
+        // Consent Mode v2: zgoda włącza tagi Google; Meta Pixel ładuje się dopiero teraz
+        if (typeof window.gtag === 'function') {
+            window.gtag('consent', 'update', {
+                ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted'
+            });
+        }
+        if (typeof window.lamLoadPixel === 'function') window.lamLoadPixel();
     }
 
     blockAnalytics() {
-        // Placeholder for blocking analytics
-        console.log('Analytics blocked due to user rejection');
+        if (typeof window.gtag === 'function') {
+            window.gtag('consent', 'update', {
+                ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied'
+            });
+        }
     }
 
     removeNonEssentialCookies() {

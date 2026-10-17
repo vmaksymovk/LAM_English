@@ -7,6 +7,9 @@
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        // Consent Mode v2: domyślnie brak zgody; zgoda zapisana w banerze cookies włącza tagi
+        gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500 });
+        try { if (localStorage.getItem('cookieConsent') === 'accepted') gtag('consent', 'update', { ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted', analytics_storage: 'granted' }); } catch (e) {}
         gtag('js', new Date());
         gtag('config', 'AW-17940816316');
     </script>
@@ -25,7 +28,7 @@
         content="Kontakt z LAM English: tel. +48 576 076 648, e-mail language.english.academy@gmail.com. Pn–Pt 8–20, Sb 9–15. Umów bezpłatną konsultację.">
     <meta property="og:image" content="https://lam-english.com/Images/og-home.jpg">
     <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="627">
+    <meta property="og:image:height" content="628">
     <meta property="og:locale" content="pl_PL">
     <meta property="og:site_name" content="LAM English">
     
@@ -267,26 +270,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
     <link rel="stylesheet" href="Cookies/cookie-banner.css">
-    <link rel="stylesheet" href="blog/assets/blog.css?v=41a052a9">
+    <link rel="stylesheet" href="blog/assets/blog.css?v=b0ad2514">
     <link rel="stylesheet" href="blog/assets/contact.css?v=0c57ebbe">
 
-    <!-- Meta Pixel (bez zmian) -->
+    <!-- Meta Pixel: ładowany dopiero po zgodzie na cookies (Cookies/cookie-banner.js) -->
     <script>
-        !function(f,b,e,v,n,t,s){
-            if(f.fbq)return;n=f.fbq=function(){
-                n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)
-            };
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '2092523381239454');
-        fbq('track', 'PageView');
+        window.lamLoadPixel = function () {
+            if (window.fbq) return;
+            !function(f,b,e,v,n,t,s){
+                if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                n.queue=[];t=b.createElement(e);t.async=!0;
+                t.src=v;s=b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t,s)}(window,document,'script',
+                'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '2092523381239454');
+            fbq('track', 'PageView');
+        };
+        try { if (localStorage.getItem('cookieConsent') === 'accepted') window.lamLoadPixel(); } catch (e) {}
     </script>
-    <noscript><img height="1" width="1" style="display:none" alt=""
-            src="https://www.facebook.com/tr?id=2092523381239454&ev=PageView&noscript=1" /></noscript>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Przejdź do treści</a>
@@ -645,6 +648,6 @@
 
 <script src="blog/assets/blog.js?v=85f806b9" defer></script>
 <script src="blog/assets/contact.js?v=8201a7d2" defer></script>
-<script src="Cookies/cookie-banner.js" defer></script>
+<script src="Cookies/cookie-banner.js?v=c3a2581f" defer></script>
 </body>
 </html>
