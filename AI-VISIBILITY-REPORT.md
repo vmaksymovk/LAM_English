@@ -35,7 +35,6 @@ Rozstrzygnięte 17.10: opinia Marka (potwierdzona), podpis Piotra („Uczeń LAM
 5. **Ocena 5,0 w Google** (14 opinii, 17.10.2026) — aktualizuj, jeśli się zmieni.
 6. **Do potwierdzenia:** „Mierzalne Rezultaty: regularne testy postępów i raporty” (index), „Wsparcie mentorskie” (courses).
 7. **O nas** — zdjęcie `Images/Creator.jpg` jako Twoje zdjęcie (potwierdź); brak imion i bio pozostałych lektorów (`<!-- TODO-VLAD -->` w `o-nas.html`).
-8. **Ile kosztuje kurs** — ceny aplikacji i lektorów 1:1 na rynku oznaczone jako szacunkowe; dodaj 3–5 źródeł z datą (`<!-- TODO-VLAD -->`). Ceny szkół stacjonarnych: cenauslug.pl (2026).
 
 ## 3. URL-e do walidacji schematu (po wdrożeniu)
 
@@ -85,10 +84,7 @@ Uwagi techniczne: GitHub Pages nie obsługuje przekierowań 301, więc `/index.h
 - Objawy blokady, skąd się bierze (krótko, z linkiem do artykułu), jak pracujemy na zajęciach, który kurs wybrać (Boost/Start/1:1 z cenami), FAQ (4–5 pytań), CTA.
 - Link z artykułu o blokadzie, z FAQ na stronie głównej i ze stopki.
 
-**`/ile-kosztuje-kurs-angielskiego-online.html`** (kopia szablonu artykułu)
-- Bezpośrednia odpowiedź na górze i tabela: aplikacja / lektor 1:1 / kurs grupowy online / szkoła stacjonarna.
-- Nasze ceny dokładnie. Rynek tylko jako **widełki oznaczone „szacunkowo”**, z TODO na źródła (cenniki 3–5 szkół z datą).
-- Co wpływa na cenę, jak policzyć koszt jednej godziny, CTA.
+Strona `/ile-kosztuje-kurs-angielskiego-online.html` została usunięta na prośbę właściciela (17.10.2026).
 
 ## 7. 10 promptów testowych (sprawdzaj co miesiąc w ChatGPT, Perplexity, Gemini, Claude, Copilot)
 

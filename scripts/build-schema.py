@@ -161,7 +161,6 @@ PAGES = {
     'privacy-policy.html': ('WebPage', [('Polityka prywatności', 'privacy-policy.html')], []),
     'o-nas.html': ('AboutPage', [('O nas', 'o-nas.html')], []),
     'kurs-angielskiego-blokada-mowienia.html': ('WebPage', [('Kursy', 'courses.html'), ('Kurs angielskiego na blokadę mówienia', 'kurs-angielskiego-blokada-mowienia.html')], COURSES),
-    'ile-kosztuje-kurs-angielskiego-online.html': ('WebPage', [('Ile kosztuje kurs angielskiego online', 'ile-kosztuje-kurs-angielskiego-online.html')], []),
 }
 
 LD_RE = re.compile(r'\s*<script type="application/ld\+json">.*?</script>', re.S)
