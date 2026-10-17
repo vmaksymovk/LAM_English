@@ -219,7 +219,7 @@ def build(path, page_html):
     if path.startswith('blog/'):
         old = next((n for n in old_nodes(page_html) if n.get('@type') == 'BlogPosting'), {})
         h1 = text(re.search(r'<h1[^>]*>(.*?)</h1>', page_html, re.S).group(1))
-        modified = re.search(r'<time[^>]*itemprop="dateModified"[^>]*datetime="([^"]+)"', page_html)
+        modified = re.search(r'<time class="dt-updated" datetime="([^"]+)"', page_html)
         graph.append(dict(page, breadcrumb={'@id': url + '#breadcrumb'}))
         graph.append({
             '@type': 'BlogPosting',
