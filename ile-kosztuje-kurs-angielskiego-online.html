@@ -310,28 +310,94 @@
         </div>
     </section>
 
-    <section class="compare" aria-labelledby="forms-title">
+    <section class="pricing" aria-labelledby="forms-title">
         <div class="wrap">
             <div class="section-head">
                 <div>
                     <span class="eyebrow">Porównanie</span>
-                    <h2 id="forms-title">Aplikacja, lektor 1:1, kurs grupowy czy szkoła stacjonarna?</h2>
+                    <h2 id="forms-title">Aplikacja, kurs w grupie czy lekcje 1:1?</h2>
                 </div>
-                <p>Ceny rynkowe to orientacyjne widełki — sprawdzaj zawsze, ile minut trwa lekcja i ile godzin obejmuje kurs.</p>
+                <p>Porównuj zawsze koszt 60 minut — i to, ile w tym czasie naprawdę mówisz.</p>
             </div>
-            <div class="compare__wrap reveal" tabindex="0" role="region" aria-label="Porównanie kosztów form nauki angielskiego">
-                <table>
-                    <thead><tr><td></td><th scope="col" class="is-featured">Kurs grupowy online</th><th scope="col">Aplikacja</th><th scope="col">Lektor 1:1 online</th><th scope="col">Szkoła stacjonarna (grupa)</th></tr></thead>
-                    <tbody>
-                        <tr><th scope="row">Typowy koszt</th><td class="is-featured">kilkaset zł / mies. — w LAM English 279–379 zł</td><td>od 0 zł (wersje darmowe) do kilkudziesięciu zł / mies.*</td><td>kilkadziesiąt zł za 60 min* — w LAM English 69 zł</td><td>ok. 2 350–2 950 zł za semestr (~60 godz. lekcyjnych)**</td></tr>
-                        <tr><th scope="row">Koszt 60 minut</th><td class="is-featured">w LAM English ok. 32–35 zł</td><td>najniższy</td><td>najwyższy</td><td>ok. 50–65 zł**</td></tr>
-                        <tr><th scope="row">Mówienie z człowiekiem</th><td class="is-featured">dużo, w grupie 4–6 osób</td><td>brak lub minimalne</td><td>najwięcej</td><td>zależy od wielkości grupy</td></tr>
-                        <tr><th scope="row">Elastyczność</th><td class="is-featured">stałe terminy grupy</td><td>pełna</td><td>pełna</td><td>stałe terminy, dojazd</td></tr>
-                        <tr><th scope="row">Najlepsze dla</th><td class="is-featured">osób, które chcą regularnie mówić w niższej cenie</td><td>słownictwa i nawyku między zajęciami</td><td>konkretnego celu i nieregularnego grafiku</td><td>osób, które wolą zajęcia na miejscu</td></tr>
-                    </tbody>
-                </table>
+            <div class="price-grid">
+                <article class="price-card reveal" data-tilt="4">
+                    <div class="price-card__top">
+                        <span class="price-card__level">Samodzielnie</span>
+                        <span class="price-card__icon" aria-hidden="true"><i class="fas fa-mobile-alt"></i></span>
+                    </div>
+                    <div>
+                        <h3>Aplikacja</h3>
+                        <p class="price-card__value">Do słówek i codziennego nawyku</p>
+                    </div>
+                    <p class="price"><span class="price__num">od 0</span><span class="price__unit">zł / mies.*</span></p>
+                    <div class="price-meta">
+                        <span>Rozmowa z człowiekiem: <strong>brak</strong></span>
+                        <span>Terminy: <strong>kiedy chcesz</strong></span>
+                    </div>
+                    <div class="learn">
+                        <h4>Dobre, jeśli</h4>
+                        <ul>
+                            <li><i class="fas fa-check" aria-hidden="true"></i><span>Chcesz codziennie powtarzać słówka</span></li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i><span>Masz 10–15 minut dziennie</span></li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i><span>Uzupełniasz zajęcia z lektorem</span></li>
+                        </ul>
+                    </div>
+                    <a href="blog/angielski-15-minut-dziennie.html" class="btn btn--ghost">Plan na 15 minut dziennie <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                </article>
+                <article class="price-card price-card--featured reveal" data-tilt="4">
+                    <span class="price-card__ribbon"><i class="fas fa-star" aria-hidden="true"></i> Najniższy koszt rozmowy</span>
+                    <div class="price-card__top">
+                        <span class="price-card__level">Grupa 4–6 osób</span>
+                        <span class="price-card__icon" aria-hidden="true"><i class="fas fa-users"></i></span>
+                    </div>
+                    <div>
+                        <h3>Kurs grupowy online</h3>
+                        <p class="price-card__value">W LAM English: Start, Boost, Pro</p>
+                    </div>
+                    <p class="price"><span class="price__num">≈ 33</span><span class="price__unit">zł / godzina</span></p>
+                    <div class="price-meta">
+                        <span><strong>279–379 zł / mies.</strong> za 8 zajęć</span>
+                        <span>Rozmowa z człowiekiem: <strong>dużo</strong></span>
+                        <span>Terminy: <strong>stałe, 2× w tygodniu</strong></span>
+                    </div>
+                    <div class="learn">
+                        <h4>Dobre, jeśli</h4>
+                        <ul>
+                            <li><i class="fas fa-check" aria-hidden="true"></i><span>Chcesz regularnie mówić w niższej cenie</span></li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i><span>Motywuje Cię grupa</span></li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i><span>Masz stały grafik</span></li>
+                        </ul>
+                    </div>
+                    <a href="courses.html#pricing" class="btn btn--primary">Zobacz kursy <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                </article>
+                <article class="price-card reveal" data-tilt="4">
+                    <div class="price-card__top">
+                        <span class="price-card__level">Indywidualnie</span>
+                        <span class="price-card__icon" aria-hidden="true"><i class="fas fa-user"></i></span>
+                    </div>
+                    <div>
+                        <h3>Lekcje 1:1 online</h3>
+                        <p class="price-card__value">W LAM English: 69 zł za 60 minut</p>
+                    </div>
+                    <p class="price"><span class="price__num">69</span><span class="price__unit">zł / godzina</span></p>
+                    <div class="price-meta">
+                        <span>Pakiet 10 lekcji: <strong>59,90 zł / godz.</strong></span>
+                        <span>Rozmowa z człowiekiem: <strong>najwięcej</strong></span>
+                        <span>Terminy: <strong>elastyczne</strong></span>
+                    </div>
+                    <div class="learn">
+                        <h4>Dobre, jeśli</h4>
+                        <ul>
+                            <li><i class="fas fa-check" aria-hidden="true"></i><span>Masz konkretny cel, np. rozmowę rekrutacyjną</span></li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i><span>Masz nieregularny grafik</span></li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i><span>Stresujesz się mówieniem przy innych</span></li>
+                        </ul>
+                    </div>
+                    <a href="zajecia-indywidualne.html" class="btn btn--ghost">Lekcje 1:1 <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                </article>
             </div>
-            <p style="margin-top:16px;color:var(--muted);font-size:.9rem">* Szacunkowo, na podstawie publicznie dostępnych cenników; ceny zależą od platformy, lektora i promocji. <!-- TODO-VLAD: dodać 3–5 źródeł z datą --><br>** Według zestawienia <a href="https://cenauslug.pl/edukacja-i-szkolenia/kurs-jezyka-angielskiego-grupowy" target="_blank" rel="noopener noreferrer">cenauslug.pl</a> (2026): średnio 2 621 zł za semestr kursu grupowego B1/B2, ok. 60 godzin lekcyjnych, bez podręczników. Koszt 60 minut przeliczony przez nas.</p>
+            <p style="margin-top:24px"><strong>A szkoła stacjonarna?</strong> Kurs grupowy na miejscu kosztuje średnio ok. 2 350–2 950 zł za semestr (ok. 60 godzin lekcyjnych), czyli ok. 50–65 zł za godzinę zegarową — do tego dojazd i podręczniki. Grupy są zwykle większe niż online.**</p>
+            <p style="margin-top:12px;color:var(--muted);font-size:.9rem">* Szacunkowo, na podstawie publicznie dostępnych cenników aplikacji; ceny zależą od platformy i promocji. <!-- TODO-VLAD: dodać 3–5 źródeł z datą --><br>** Według zestawienia <a href="https://cenauslug.pl/edukacja-i-szkolenia/kurs-jezyka-angielskiego-grupowy" target="_blank" rel="noopener noreferrer">cenauslug.pl</a> (2026): średnio 2 621 zł za semestr kursu grupowego B1/B2, ok. 60 godzin lekcyjnych, bez podręczników. Koszt 60 minut przeliczony przez nas.</p>
         </div>
     </section>
 
@@ -346,11 +412,11 @@
             </div>
             <div class="compare__wrap reveal" tabindex="0" role="region" aria-label="Cennik LAM English">
                 <table>
-                    <thead><tr><td></td><th scope="col" class="is-featured">English Boost (B1–B2)</th><th scope="col">English Start (A1–A2)</th><th scope="col">English Pro (C1–C2)</th><th scope="col">Lekcje 1:1</th></tr></thead>
+                    <thead><tr><td></td><th scope="col">Start<small>A1–A2</small></th><th scope="col" class="is-featured">Boost<small>B1–B2</small></th><th scope="col">Pro<small>C1–C2</small></th><th scope="col">Lekcje 1:1<small>każdy poziom</small></th></tr></thead>
                     <tbody>
-                        <tr><th scope="row">Cena</th><td class="is-featured">329 zł / mies.</td><td>279 zł / mies.</td><td>379 zł / mies.</td><td>69 zł / 60 min, 10 lekcji 599 zł</td></tr>
-                        <tr><th scope="row">Zajęcia</th><td class="is-featured">8 × 75 min</td><td>8 × 60 min</td><td>8 × 90 min</td><td>w terminach ustalanych indywidualnie</td></tr>
-                        <tr><th scope="row">Koszt 60 minut</th><td class="is-featured">≈ 32,90 zł</td><td>≈ 34,88 zł</td><td>≈ 31,58 zł</td><td>69 zł (w pakiecie 59,90 zł)</td></tr>
+                        <tr><th scope="row">Cena</th><td>279 zł / mies.</td><td class="is-featured">329 zł / mies.</td><td>379 zł / mies.</td><td>69 zł / lekcja</td></tr>
+                        <tr><th scope="row">Zajęcia</th><td>8 × 60 min</td><td class="is-featured">8 × 75 min</td><td>8 × 90 min</td><td>60 min, terminy indywidualne</td></tr>
+                        <tr><th scope="row">Koszt 60 minut</th><td>≈ 34,88 zł</td><td class="is-featured">≈ 32,90 zł</td><td>≈ 31,58 zł</td><td>69 zł (pakiet 10 lekcji: 59,90 zł)</td></tr>
                     </tbody>
                 </table>
             </div>
