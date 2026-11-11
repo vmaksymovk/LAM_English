@@ -89,7 +89,7 @@
                 html = '<span class="eyebrow">Podpowiedź</span>' +
                     '<h3>Zacznij od testu poziomującego</h3>' +
                     '<p>Krótki test online pokaże Twój poziom, a na bezpłatnej konsultacji dobierzemy kurs.</p>' +
-                    '<div class="actions"><a class="btn btn--light" href="https://forms.gle/MKBUsiVjzs7CXFPp9" target="_blank" rel="noopener noreferrer">Sprawdź swój poziom</a>' +
+                    '<div class="actions"><a class="btn btn--light" href="test.html">Sprawdź swój poziom</a>' +
                     '<a class="btn btn--outline-light" href="contacts.html">Bezpłatna konsultacja</a></div>';
             } else {
                 var c = COURSES[key];

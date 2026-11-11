@@ -29,6 +29,8 @@ class CookieConsent {
         const overlay = document.createElement('div');
         overlay.className = 'cookie-overlay';
         overlay.id = 'cookie-overlay';
+        overlay.setAttribute('role', 'region');
+        overlay.setAttribute('aria-label', 'Zgoda na pliki cookies');
 
         // Create banner
         const banner = document.createElement('div');
@@ -37,9 +39,8 @@ class CookieConsent {
             <div class="cookie-content">
                 <div class="cookie-text">
                     <h3>🍪 Używamy plików cookies</h3>
-                    <p>Ta strona korzysta z plików cookie, aby zapewnić najlepsze doświadczenia użytkownika. 
-                    Korzystamy z cookies w celach statystycznych, funkcjonalnych i marketingowych. 
-                    <a href="privacy-policy.html" target="_blank">Dowiedz się więcej</a></p>
+                    <p>Korzystamy z cookies w celach statystycznych, funkcjonalnych i marketingowych — tylko za Twoją zgodą.
+                    <a href="/privacy-policy.html" target="_blank" rel="noopener">Dowiedz się więcej</a></p>
                 </div>
                 <div class="cookie-buttons">
                     <button class="cookie-btn cookie-btn-reject" id="cookie-reject">
@@ -63,16 +64,27 @@ class CookieConsent {
     }
 
     showBanner() {
+        // Baner nie blokuje strony: treść i przyciski kontaktu pozostają dostępne od pierwszej sekundy.
         setTimeout(() => {
             this.banner.classList.add('active');
-            // Prevent body scroll when banner is visible
-            document.body.style.overflow = 'hidden';
+            this.updateOffset();
+            this.onResize = () => this.updateOffset();
+            window.addEventListener('resize', this.onResize);
         }, 1000);
+    }
+
+    // Pływające przyciski kontaktu przesuwają się nad baner (zmienna CSS --cookie-offset).
+    updateOffset() {
+        if (!this.banner) return;
+        const box = this.banner.querySelector('.cookie-banner');
+        const h = box ? Math.ceil(box.getBoundingClientRect().height) + 12 : 0;
+        document.documentElement.style.setProperty('--cookie-offset', h + 'px');
     }
 
     hideBanner() {
         this.banner.classList.remove('active');
-        document.body.style.overflow = '';
+        if (this.onResize) window.removeEventListener('resize', this.onResize);
+        document.documentElement.style.setProperty('--cookie-offset', '0px');
 
         // Remove from DOM after animation
         setTimeout(() => {

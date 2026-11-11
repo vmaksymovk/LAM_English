@@ -155,6 +155,7 @@ PAGES = {
     'courses.html': ('CollectionPage', [('Kursy', 'courses.html')], COURSES),
     'zajecia-indywidualne.html': ('WebPage', [('Kursy', 'courses.html'), ('Zajęcia indywidualne', 'zajecia-indywidualne.html')], COURSES[3:]),
     'contacts.html': ('ContactPage', [('Kontakt', 'contacts.html')], []),
+    'test.html': ('WebPage', [('Test poziomu', 'test.html')], []),
     'blog.html': ('CollectionPage', [('Blog', 'blog.html')], []),
     'careers.html': ('WebPage', [('Kariera', 'careers.html')], []),
     'terms-of-service.html': ('WebPage', [('Regulamin', 'terms-of-service.html')], []),

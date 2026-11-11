@@ -187,3 +187,8 @@ a.channel-tile:hover, .channel-tile:focus-within { --lift: -4px; box-shadow: var
     .ch-mail .channel-card__value { font-size: .8rem; }
     .form-card { border-radius: 26px; }
 }
+
+/* WhatsApp + kolejne kroki po wysłaniu */
+.channel-tile--wa .channel-card__icon { background: #0F7A5F; }
+.channel-tile--wa .channel-card__icon i { font-size: 1.35rem; }
+.success-message__actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }

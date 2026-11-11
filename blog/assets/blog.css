@@ -111,6 +111,20 @@ nav#main-nav a:hover, nav#main-nav a:focus, nav#main-nav a[aria-current="page"] 
 }
 .cta-button:hover, .cta-button:focus { background-color: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 7px 14px rgba(50,50,93,0.1); }
 .mobile-menu-button { display: none; background: none; border: none; font-size: 1.5rem; color: var(--text-color); cursor: pointer; padding: 0.5rem; }
+nav#main-nav a, .logo-name, .tagline { white-space: nowrap; }
+/* Węższe ekrany komputerów i tablety: pięć pozycji menu mieści się w jednej linii */
+@media (min-width: 769px) and (max-width: 1240px) {
+    #header { padding: 1rem 1.25rem; }
+    .nav-container { gap: 1rem; }
+    nav#main-nav { gap: .25rem; }
+    nav#main-nav a { padding: .5rem .7rem; font-size: .95rem; }
+    nav#main-nav a i { display: none; }
+    #header .logo-text .logo-name { font-size: 1.45rem; }
+    .cta-button { padding: .7rem 1.1rem; }
+}
+@media (min-width: 769px) and (max-width: 980px) {
+    .logo-text { display: none; }
+}
 
 /* ---------- Stopka (jak na reszcie strony) ---------- */
 footer { background-color: var(--text-color); color: var(--white); padding: 3rem 2rem 2rem; margin-top: auto; font-family: var(--font-head); }
@@ -127,7 +141,20 @@ footer { background-color: var(--text-color); color: var(--white); padding: 3rem
 .social-links a:hover { background: var(--primary-color); transform: translateY(-3px); }
 .copyright { padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.9rem; color: #A0AEC0; text-align: center; }
 
-.sticky-cta { display: none; }
+/* Pływające przyciski kontaktu: WhatsApp (zawsze), telefon (tylko telefon komórkowy) */
+.sticky-cta { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; position: fixed; right: 20px; bottom: calc(20px + var(--cookie-offset, 0px)); z-index: 900; transition: bottom .3s var(--ease-out); }
+.wa-cta {
+    display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 20px 0 16px;
+    border-radius: 999px; background: #0F7A5F; color: #fff; text-decoration: none;
+    font: 600 .95rem/1 var(--font-head); box-shadow: 0 12px 28px -10px rgba(11,42,30,.55);
+    transition: transform .25s var(--ease-out), background-color .25s;
+}
+.wa-cta i { font-size: 1.6rem; }
+.wa-cta:hover, .wa-cta:focus-visible { background: #0B6650; transform: translateY(-2px); }
+.phone-cta { display: none; }
+.btn--wa { background: #0F7A5F; color: #fff; box-shadow: 0 10px 24px -12px rgba(15,122,95,.8); }
+.btn--wa:hover { background: #0B6650; transform: translateY(-2px); }
+.btn--wa i { font-size: 1.15em; }
 
 @media (max-width: 768px) {
     .mobile-menu-button { display: block; min-width: 44px; min-height: 44px; }
@@ -146,7 +173,10 @@ footer { background-color: var(--text-color); color: var(--white); padding: 3rem
     .footer-column h3::after { margin: 0.5rem auto; }
     .footer-column a { justify-content: center; }
     .social-links { justify-content: center; }
-    .sticky-cta { display: block; position: fixed; right: 16px; bottom: 16px; z-index: 900; }
+    .sticky-cta { right: 16px; bottom: calc(16px + var(--cookie-offset, 0px)); }
+    .wa-cta { width: 56px; height: 56px; min-height: 0; padding: 0; justify-content: center; }
+    .wa-cta span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+    .wa-cta i { font-size: 1.9rem; }
     .phone-cta {
         display: inline-flex; align-items: center; justify-content: center; gap: 8px;
         width: 56px; height: 56px; border-radius: 50%; background: var(--primary-color); color: #fff;

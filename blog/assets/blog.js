@@ -222,6 +222,72 @@
         counters.forEach(function (c) { co.observe(c); });
     }
 
+    /* ---------- Źródło wejścia → formularze (bez cookies i bez pamięci przeglądarki) ----------
+       Skąd przyszła osoba: parametr ?src= / ?utm_source= albo domena strony odsyłającej.
+       Wartość wędruje między podstronami w adresie linków wewnętrznych i trafia do ukrytych pól
+       formularzy Formspree, żeby każde zgłoszenie miało znane źródło. */
+    var LAM = window.LAM = window.LAM || {};
+    (function () {
+        var p;
+        try { p = new URLSearchParams(window.location.search); } catch (e) { return; }
+        function clean(v, max) { return (v || '').toString().replace(/[^\w.\-\/]/g, '').slice(0, max); }
+        var src = clean(p.get('src') || p.get('utm_source'), 40);
+        var lp = clean(p.get('lp'), 120);
+        var ref = '';
+        try {
+            if (document.referrer) {
+                var r = new URL(document.referrer);
+                if (r.hostname !== window.location.hostname) ref = r.hostname.replace(/^www\./, '');
+            }
+        } catch (e) {}
+        if (!src && ref) src = 'ref-' + clean(ref, 40);
+        if (src && !lp) lp = clean(window.location.pathname, 120);
+        LAM.source = { src: src, lp: lp };
+
+        if (src) {
+            document.addEventListener('click', function (e) {
+                var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+                if (!a) return;
+                var raw = a.getAttribute('href') || '';
+                if (raw.charAt(0) === '#') return;
+                var u;
+                try { u = new URL(a.href, window.location.href); } catch (err) { return; }
+                if (u.origin !== window.location.origin || u.searchParams.has('src')) return;
+                u.searchParams.set('src', src);
+                if (lp) u.searchParams.set('lp', lp);
+                a.href = u.toString();
+            }, true);
+        }
+
+        LAM.addSourceFields = function (form) {
+            var fields = {
+                zrodlo: src || 'bezposrednio-lub-nieznane',
+                strona_wejscia: lp || window.location.pathname,
+                strona_formularza: window.location.pathname
+            };
+            Object.keys(fields).forEach(function (name) {
+                var input = form.querySelector('input[name="' + name + '"]');
+                if (!input) {
+                    input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = name;
+                    form.appendChild(input);
+                }
+                input.value = fields[name];
+            });
+        };
+        document.querySelectorAll('form[action*="formspree.io"]').forEach(LAM.addSourceFields);
+    })();
+
+    /* ---------- WhatsApp: zdarzenie kliknięcia ---------- */
+    document.querySelectorAll('a[data-wa]').forEach(function (a) {
+        a.addEventListener('click', function () {
+            if (window.dataLayer) {
+                window.dataLayer.push({ 'event': 'cta_click', 'cta_type': 'whatsapp', 'cta_location': a.getAttribute('data-wa') || 'page' });
+            }
+        });
+    });
+
     /* ---------- Spis treści: aktywna sekcja ---------- */
     var tocLinks = document.querySelectorAll('.toc a');
     if (tocLinks.length && 'IntersectionObserver' in window) {
