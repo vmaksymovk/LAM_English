@@ -182,7 +182,7 @@
               "name": "Jak umówić bezpłatną konsultację i lekcję próbną?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Pierwszy krok to bezpłatna konsultacja telefoniczna. Żeby ją umówić, wystarczy: Wypełnić formularz kontaktowy na tej stronie; Zadzwonić pod numer +48 576 076 648; Napisać na adres language.english.academy@gmail.com. Oddzwonimy, porozmawiamy o Twoim celu i poziomie, a jeśli chcesz — umówimy bezpłatną lekcję próbną na Google Meet w dogodnym dla Ciebie terminie."
+                "text": "Pierwszy krok to bezpłatna konsultacja telefoniczna. Żeby ją umówić, wystarczy: Wypełnić formularz kontaktowy na tej stronie; Napisać na WhatsApp; Zadzwonić pod numer +48 576 076 648; Napisać na adres language.english.academy@gmail.com. Oddzwonimy, porozmawiamy o Twoim celu i poziomie, a jeśli chcesz — umówimy bezpłatną lekcję próbną na Google Meet w dogodnym dla Ciebie terminie."
               }
             },
             {
@@ -269,9 +269,9 @@
     <noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,500&family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
-    <link rel="stylesheet" href="Cookies/cookie-banner.css">
-    <link rel="stylesheet" href="blog/assets/blog.css?v=b0ad2514">
-    <link rel="stylesheet" href="blog/assets/contact.css?v=0c57ebbe">
+    <link rel="stylesheet" href="Cookies/cookie-banner.css?v=e4da98a1">
+    <link rel="stylesheet" href="blog/assets/blog.css?v=e5bae10a">
+    <link rel="stylesheet" href="blog/assets/contact.css?v=2d7f693e">
 
     <!-- Meta Pixel: ładowany dopiero po zgodzie na cookies (Cookies/cookie-banner.js) -->
     <script>
@@ -308,6 +308,7 @@
         <nav id="main-nav" aria-label="Główne menu">
             <a href="/"><i class="fas fa-home" aria-hidden="true"></i> Strona Główna</a>
             <a href="courses.html"><i class="fas fa-book-open" aria-hidden="true"></i> Kursy</a>
+            <a href="test.html"><i class="fas fa-clipboard-check" aria-hidden="true"></i> Test poziomu</a>
             <a href="contacts.html" aria-current="page"><i class="fas fa-envelope" aria-hidden="true"></i> Kontakt</a>
             <a href="blog.html"><i class="fas fa-blog" aria-hidden="true"></i> Blog</a>
         </nav>
@@ -334,7 +335,8 @@
                     <li><i class="fas fa-check-circle" aria-hidden="true"></i> Rozmowa po PL / EN / RU / UA</li>
                 </ul>
                 <div class="blog-hero__actions">
-                    <a href="#contact-form" class="btn btn--primary"><i class="fas fa-paper-plane" aria-hidden="true"></i> Wyślij wiadomość</a>
+                    <a href="https://wa.me/48576076648?text=Dzie%C5%84%20dobry%21%20Chc%C4%99%20zacz%C4%85%C4%87%20m%C3%B3wi%C4%87%20po%20angielsku.%20Prosz%C4%99%20o%20informacje%20o%20zaj%C4%99ciach." class="btn btn--wa" data-wa="contact-hero" target="_blank" rel="noopener"><i class="fab fa-whatsapp" aria-hidden="true"></i> Napisz na WhatsApp</a>
+                    <a href="#contact-form" class="btn btn--ghost"><i class="fas fa-paper-plane" aria-hidden="true"></i> Zostaw kontakt</a>
                     <a href="tel:+48576076648" class="btn btn--ghost"><i class="fas fa-phone-alt" aria-hidden="true"></i> Zadzwoń +48 576 076 648</a>
                 </div>
             </div>
@@ -387,25 +389,26 @@
             <div class="contact-grid">
                 <div class="form-card reveal">
                     <div id="form-intro">
-                        <h2>Wyślij wiadomość</h2>
-                        <p>Wypełnij poniższe pola, aby skontaktować się z nami.</p>
+                        <h2>Zostaw kontakt — odezwiemy się</h2>
+                        <p>Wystarczy imię i numer telefonu albo e-mail. Wiadomość możesz dopisać, ale nie musisz.</p>
                     </div>
 
                     <form id="contactForm" action="https://formspree.io/f/mnpnnobe" method="POST" novalidate>
                         <div class="form-grid">
                             <div class="field">
-                                <label for="contact-name">Imię i nazwisko *</label>
-                                <input type="text" id="contact-name" name="name" placeholder="Wprowadź swoje imię i nazwisko" required autocomplete="name" aria-describedby="contactNameError">
+                                <label for="contact-name">Imię *</label>
+                                <input type="text" id="contact-name" name="name" placeholder="Jak masz na imię?" required autocomplete="given-name" aria-describedby="contactNameError">
                                 <div class="error-message" id="contactNameError" role="alert"></div>
                             </div>
                             <div class="field">
-                                <label for="contact-email">Adres email *</label>
-                                <input type="email" id="contact-email" name="email" placeholder="Wprowadź swój email" required autocomplete="email" inputmode="email" aria-describedby="contactEmailError">
-                                <div class="error-message" id="contactEmailError" role="alert"></div>
+                                <label for="contact-phone">Numer telefonu <small>(telefon albo e-mail — wystarczy jedno)</small></label>
+                                <input type="tel" id="contact-phone" name="phone" placeholder="np. 600 100 200" autocomplete="tel" inputmode="tel" aria-describedby="contactPhoneError">
+                                <div class="error-message" id="contactPhoneError" role="alert"></div>
                             </div>
                             <div class="field">
-                                <label for="contact-phone">Numer telefonu <small>(opcjonalnie, dla szybszego kontaktu)</small></label>
-                                <input type="tel" id="contact-phone" name="phone" placeholder="Wprowadź swój numer telefonu" autocomplete="tel" inputmode="tel">
+                                <label for="contact-email">Adres e-mail <small>(jeśli wolisz odpowiedź mailem)</small></label>
+                                <input type="email" id="contact-email" name="email" placeholder="np. anna@example.com" autocomplete="email" inputmode="email" aria-describedby="contactEmailError">
+                                <div class="error-message" id="contactEmailError" role="alert"></div>
                             </div>
                             <div class="field">
                                 <label for="contact-course">Interesujący mnie kurs</label>
@@ -420,9 +423,8 @@
                                 </select>
                             </div>
                             <div class="field field--full">
-                                <label for="contact-message">Twoja wiadomość *</label>
-                                <textarea id="contact-message" name="message" placeholder="Opisz nam, w czym możemy Ci pomóc..." required aria-describedby="contactMessageError"></textarea>
-                                <div class="error-message" id="contactMessageError" role="alert"></div>
+                                <label for="contact-message">Wiadomość <small>(opcjonalnie)</small></label>
+                                <textarea id="contact-message" name="message" placeholder="Np. w jakich sytuacjach najbardziej potrzebujesz angielskiego?"></textarea>
                             </div>
                         </div>
 
@@ -430,10 +432,10 @@
                         <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
 
                         <div class="form-foot">
-                            <button type="submit" class="submit" aria-label="Wyślij formularz kontaktowy">
+                            <button type="submit" class="submit">
                                 <span class="spinner" aria-hidden="true"></span>
                                 <i class="fas fa-paper-plane" aria-hidden="true"></i>
-                                <span class="label">Wyślij wiadomość</span>
+                                <span class="label">Poproszę o kontakt</span>
                             </button>
                             <div class="trust-badges">
                                 <span class="trust-badge"><i class="fas fa-shield-alt" aria-hidden="true"></i> Twoje dane są bezpieczne</span>
@@ -450,11 +452,22 @@
                         <div class="success-message__icon" aria-hidden="true"><i class="fas fa-check"></i></div>
                         <h3>Dziękujemy za wiadomość!</h3>
                         <p>Odpowiemy na Twoje pytanie w ciągu 24 godzin. W przypadku pytań o kursy, nasz doradca skontaktuje się z Tobą, aby omówić szczegóły i zaproponować najlepsze rozwiązanie.</p>
-                        <a class="btn btn--ghost" href="blog.html">W międzyczasie zajrzyj na blog <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        <div class="success-message__actions">
+                            <a class="btn btn--primary" href="test.html"><i class="fas fa-clipboard-check" aria-hidden="true"></i> Sprawdź swój poziom w 2 minuty</a>
+                            <a class="btn btn--ghost" href="https://wa.me/48576076648?text=Dzie%C5%84%20dobry%21%20Chc%C4%99%20zacz%C4%85%C4%87%20m%C3%B3wi%C4%87%20po%20angielsku.%20Prosz%C4%99%20o%20informacje%20o%20zaj%C4%99ciach." data-wa="contact-success" target="_blank" rel="noopener"><i class="fab fa-whatsapp" aria-hidden="true"></i> Nie chcesz czekać? Napisz na WhatsApp</a>
+                        </div>
                     </div>
                 </div>
 
                 <aside class="side" aria-label="Dane kontaktowe">
+                    <div class="channel-tile channel-tile--wa reveal" data-tilt="5">
+                        <span class="channel-card__icon" aria-hidden="true"><i class="fab fa-whatsapp"></i></span>
+                        <div class="channel-tile__body">
+                            <p class="channel-card__label">WhatsApp</p>
+                            <a class="channel-tile__value stretched" href="https://wa.me/48576076648?text=Dzie%C5%84%20dobry%21%20Chc%C4%99%20zacz%C4%85%C4%87%20m%C3%B3wi%C4%87%20po%20angielsku.%20Prosz%C4%99%20o%20informacje%20o%20zaj%C4%99ciach." data-wa="contact-tile" target="_blank" rel="noopener">Napisz do nas na WhatsApp</a>
+                            <p class="channel-tile__hint">Najszybsza droga — wystarczy jedno zdanie</p>
+                        </div>
+                    </div>
                     <div class="channel-tile reveal" data-tilt="5">
                         <span class="channel-card__icon" aria-hidden="true"><i class="fas fa-phone-alt"></i></span>
                         <div class="channel-tile__body">
@@ -490,7 +503,7 @@
                             <li><strong>Bezpłatna konsultacja</strong><span>Rozmawiamy o Twoim celu i obecnym poziomie.</span></li>
                             <li><strong>Dobór kursu i terminu</strong><span>Grupa albo zajęcia indywidualne — tak, jak Ci wygodniej.</span></li>
                         </ol>
-                        <a class="btn btn--light" href="https://forms.gle/MKBUsiVjzs7CXFPp9" target="_blank" rel="noopener noreferrer"><i class="fas fa-clipboard-check" aria-hidden="true"></i> Sprawdź swój poziom</a>
+                        <a class="btn btn--light" href="test.html"><i class="fas fa-clipboard-check" aria-hidden="true"></i> Sprawdź swój poziom w 2 minuty</a>
                     </div>
                 </aside>
             </div>
@@ -514,6 +527,7 @@
                         <p>Pierwszy krok to bezpłatna konsultacja telefoniczna. Żeby ją umówić, wystarczy:</p>
                         <ul>
                             <li>Wypełnić formularz kontaktowy na tej stronie</li>
+                            <li>Napisać na <a href="https://wa.me/48576076648?text=Dzie%C5%84%20dobry%21%20Chc%C4%99%20zacz%C4%85%C4%87%20m%C3%B3wi%C4%87%20po%20angielsku.%20Prosz%C4%99%20o%20informacje%20o%20zaj%C4%99ciach." data-wa="faq" target="_blank" rel="noopener">WhatsApp</a></li>
                             <li>Zadzwonić pod numer <a href="tel:+48576076648">+48 576 076 648</a></li>
                             <li>Napisać na adres <a href="mailto:language.english.academy@gmail.com">language.english.academy@gmail.com</a></li>
                         </ul>
@@ -608,6 +622,10 @@
 </main>
 
 <div class="sticky-cta">
+    <a href="https://wa.me/48576076648?text=Dzie%C5%84%20dobry%21%20Chc%C4%99%20zacz%C4%85%C4%87%20m%C3%B3wi%C4%87%20po%20angielsku.%20Prosz%C4%99%20o%20informacje%20o%20zaj%C4%99ciach." class="wa-cta" data-wa="sticky" target="_blank" rel="noopener" aria-label="Napisz do LAM English na WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        <span>Napisz na WhatsApp</span>
+    </a>
     <a href="tel:+48576076648" class="phone-cta" aria-label="Zadzwoń do LAM English">
         <i class="fas fa-phone-alt" aria-hidden="true"></i>
         <span>Zadzwoń</span>
@@ -646,8 +664,8 @@
     <div class="copyright"><p>&copy; 2026 Akademia Językowa LAM English (Language Academy Maksymov). Wszelkie prawa zastrzeżone.</p></div>
 </footer>
 
-<script src="blog/assets/blog.js?v=85f806b9" defer></script>
-<script src="blog/assets/contact.js?v=8201a7d2" defer></script>
-<script src="Cookies/cookie-banner.js?v=c3a2581f" defer></script>
+<script src="blog/assets/blog.js?v=01b830b3" defer></script>
+<script src="blog/assets/contact.js?v=ea040e33" defer></script>
+<script src="Cookies/cookie-banner.js?v=92e3eed1" defer></script>
 </body>
 </html>

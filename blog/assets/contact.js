@@ -1,5 +1,5 @@
 /* LAM English — Kontakt: formularz, baner kursu, status dostępności.
-   Zachowuje logikę poprzedniej wersji (Formspree, zdarzenia dataLayer, uzupełnianie z URL). */
+   Formspree, zdarzenia dataLayer, uzupełnianie z URL. Wymagane: imię + telefon albo e-mail. */
 (function () {
     'use strict';
 
@@ -54,22 +54,33 @@
     var formError = document.getElementById('contactFormError');
     var submitBtn = form ? form.querySelector('.submit') : null;
     var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    function digits(v) { return (v || '').replace(/\D/g, ''); }
+    function phoneOk(v) { var d = digits(v); return d.length >= 9 && d.length <= 15; }
+    // Imię jest wymagane. Kontakt: telefon ALBO e-mail (wystarczy jedno); wiadomość jest opcjonalna.
     var rules = {
-        'contact-name': { err: 'contactNameError', msg: 'Proszę podać imię i nazwisko', ok: function (v) { return v.trim().length > 0; } },
-        'contact-email': { err: 'contactEmailError', msg: 'Proszę podać poprawny adres e-mail', ok: function (v) { return emailRe.test(v.trim()); } },
-        'contact-message': { err: 'contactMessageError', msg: 'Proszę wpisać wiadomość', ok: function (v) { return v.trim().length > 0; } }
+        'contact-name': { err: 'contactNameError', ok: function (v) { return v.trim().length > 0 ? '' : 'Podaj swoje imię'; } },
+        'contact-phone': { err: 'contactPhoneError', ok: function (v) {
+            var email = (document.getElementById('contact-email') || {}).value || '';
+            if (!v.trim()) return emailRe.test(email.trim()) ? '' : 'Podaj numer telefonu albo adres e-mail';
+            return phoneOk(v) ? '' : 'Sprawdź numer telefonu — powinien mieć co najmniej 9 cyfr';
+        } },
+        'contact-email': { err: 'contactEmailError', ok: function (v) {
+            if (!v.trim()) return '';
+            return emailRe.test(v.trim()) ? '' : 'Sprawdź adres e-mail';
+        } }
     };
 
     function check(id, show) {
         var el = document.getElementById(id), r = rules[id];
         if (!el || !r) return true;
-        var valid = r.ok(el.value);
+        var message = r.ok(el.value);
+        var valid = !message;
         var field = el.closest('.field');
         var err = document.getElementById(r.err);
         if (show) {
             field.classList.toggle('is-invalid', !valid);
             el.setAttribute('aria-invalid', valid ? 'false' : 'true');
-            if (err) err.textContent = valid ? '' : r.msg;
+            if (err) err.textContent = message;
         }
         field.classList.toggle('is-valid', valid && el.value.trim().length > 0);
         return valid;
@@ -82,6 +93,11 @@
             el.addEventListener('blur', function () { if (el.value.trim()) check(id, true); });
             el.addEventListener('input', function () {
                 if (el.closest('.field').classList.contains('is-invalid')) check(id, true); else check(id, false);
+                // wpisany e-mail zdejmuje błąd „podaj telefon albo e-mail” z pola telefonu
+                if (id === 'contact-email') {
+                    var phoneField = document.getElementById('contact-phone');
+                    if (phoneField && phoneField.closest('.field').classList.contains('is-invalid')) check('contact-phone', true);
+                }
             });
         });
 
@@ -101,7 +117,14 @@
             sending = true;
             if (submitBtn) { submitBtn.disabled = true; submitBtn.classList.add('is-loading'); submitBtn.querySelector('.label').textContent = 'Wysyłanie…'; }
 
-            fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+            if (window.LAM && window.LAM.addSourceFields) window.LAM.addSourceFields(form);
+            var data = new FormData(form);
+            // puste pola kontaktu nie są wysyłane (Formspree sprawdza format pola „email”)
+            ['email', 'phone', 'message', 'course'].forEach(function (name) {
+                if (!String(data.get(name) || '').trim()) data.delete(name);
+            });
+
+            fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
                 .then(function (response) {
                     if (!response.ok) throw new Error('Form submission failed');
                     form.reset();
@@ -122,7 +145,7 @@
                 })
                 .then(function () {
                     sending = false;
-                    if (submitBtn) { submitBtn.disabled = false; submitBtn.classList.remove('is-loading'); submitBtn.querySelector('.label').textContent = 'Wyślij wiadomość'; }
+                    if (submitBtn) { submitBtn.disabled = false; submitBtn.classList.remove('is-loading'); submitBtn.querySelector('.label').textContent = 'Poproszę o kontakt'; }
                 });
         });
     }
