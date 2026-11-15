@@ -279,6 +279,26 @@
         document.querySelectorAll('form[action*="formspree.io"]').forEach(LAM.addSourceFields);
     })();
 
+    /* ---------- WhatsApp: skąd przyszła wiadomość ----------
+       Do gotowej wiadomości dopisujemy krótki znacznik strony i źródła (np. „[test · tt]”),
+       żeby po pierwszym zdaniu było wiadomo, z której strony i kanału ktoś napisał. */
+    (function () {
+        var path = window.location.pathname.replace(/\/+$/, '').replace(/\.html$/, '');
+        var page = path.split('/').filter(Boolean).slice(-2).join('/') || 'start';
+        page = page.replace(/[^\w\-\/]/g, '').slice(0, 50);
+        var s = (window.LAM && LAM.source && LAM.source.src) || '';
+        var tag = ' [' + page + (s ? ' · ' + s : '') + ']';
+        document.querySelectorAll('a[href*="wa.me/"]').forEach(function (a) {
+            try {
+                var u = new URL(a.href);
+                var t = u.searchParams.get('text') || 'Dzień dobry!';
+                if (t.indexOf(' [') !== -1) return;
+                u.searchParams.set('text', t + tag);
+                a.href = u.toString();
+            } catch (e) {}
+        });
+    })();
+
     /* ---------- WhatsApp: zdarzenie kliknięcia ---------- */
     document.querySelectorAll('a[data-wa]').forEach(function (a) {
         a.addEventListener('click', function () {
