@@ -43,6 +43,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://lam-english.com/angielski-dla-programistow.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://lam-english.com/konwersacje-angielski-online.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://lam-english.com/blog.html</loc>
     <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
